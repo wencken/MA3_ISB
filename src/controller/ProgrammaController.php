@@ -1,40 +1,43 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
-require_once __DIR__ . '/../dao/PlayerDAO.php';
+require_once __DIR__ . '/../dao/ProgrammaDAO.php';
 
-class PlayersController extends Controller {
+class ProgrammaController extends Controller {
 
   private $todoDAO;
 
   function __construct() {
-    $this->playerDAO = new PlayerDAO();
+    $this->programmaDAO = new ProgrammaDAO();
   }
 
   public function index() {
     if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $players = $this->playerDAO->search($_GET['term']);
-      $this->set('title', "Players for ". $_GET['term']);
+      $acts = $this->programmaDAO->search($_GET['term']);
+      $this->set('title', "Acts for ". $_GET['term']);
       $this->set('term',$_GET['term']);
     }else{
-      $players = $this->playerDAO->selectTopPlayers();
-      $this->set('title', "Top 10");
+      $acts = $this->programmaDAO->selectAll();
+      $this->set('title', "Alle");
       $this->set('term','');
     }
 
-    $this->set('players', $players);
+    $this->set('acts', $acts);
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-
       header('Content-Type: application/json');
-      echo json_encode($players);
+      echo json_encode($acts);
       exit();
     }
+  }
+
+  public function detail(){
+
   }
 /*
   private function handleSearchPlayer() {
 
-    if (!$searchPlayersResult) {
-      $errors = "No players found";
+    if (!$searchActsResult) {
+      $errors = "No acts found";
       $this->set('errors', $errors);
       if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
         header('Content-Type: application/json');
@@ -52,13 +55,13 @@ class PlayersController extends Controller {
         header('Content-Type: application/json');
         echo json_encode(array(
           'result' => 'ok',
-          'todo' => $searchPlayersResult
+          'todo' => $searchActsResult
         ));
         exit();
       }else{
-        return searchPlayersResult;
+        return searchActsResult;
       }
-      $_SESSION['info'] = count($searchPlayersResult). " players found";
+      $_SESSION['info'] = count($searchActsResult). " acts found";
       header('Location: index.php');
       exit();
     }

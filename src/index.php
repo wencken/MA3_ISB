@@ -5,8 +5,12 @@ error_reporting(E_ALL);
 
 $routes = array(
   'home' => array(
-    'controller' => 'Players',
+    'controller' => 'Programma',
     'action' => 'index'
+  ),
+  'detail' => array(
+    'controller' => 'Programma',
+    'action' => 'detail'
   )
 );
 

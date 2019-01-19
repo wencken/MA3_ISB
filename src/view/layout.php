@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__title">Resultaten<spans class="header__title--variant">Programma</span></h1>
+      <h1 class="header__title"><spans class="header__title--variant">Programma</span></h1>
     </header>
       <?php
         if(!empty($_SESSION['error'])) {
@@ -19,8 +19,6 @@
           echo '<div class="info box">' . $_SESSION['info'] . '</div>';
         }
       ?>
-
-
 
   <section class="filter">
     <h2 class="filter__title">Filter</h2>
@@ -35,7 +33,7 @@
   </section>
 
       <section class="players">
-          <h2 class="hidden">Players</h2>
+          <h2 class="hidden">Resultaten</h2>
         <?php echo $content;?>
         </section>
     <?php echo $js; ?>
