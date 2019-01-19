@@ -1,11 +1,18 @@
 <?php
 
 class DAO {
+  // // Properties
+  // private static $dbHost = "ID276153_scores.db.webhosting.be";
+	// private static $dbName = "ID276153_scores";
+	// private static $dbUser = "ID276153_scores";
+	// private static $dbPass = "U9x4r_48";
+	// private static $sharedPDO;
+  // protected $pdo;
 
   // Properties
   private static $dbHost = "localhost";
-	private static $dbName = "fifa";
-	private static $dbUser = "root";
+	private static $dbName = "ma3";
+	private static $dbUser = "ma3";
 	private static $dbPass = "root";
 	private static $sharedPDO;
 	protected $pdo;
