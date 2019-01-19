@@ -3,9 +3,8 @@
   foreach($acts as $act){
     ?>
     <li class='player'>
-        <span class='player__stat'><?php echo $act["datum"];?></span>
-        <span class='player__name'><?php echo $act["act_id"];?></span>
-        <span class='player__stat'><?php echo $act["locatie_id"];?> | <?php echo $act["beginuur"];?></span>
+        <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
+        <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
     </li>
     <?php
   }

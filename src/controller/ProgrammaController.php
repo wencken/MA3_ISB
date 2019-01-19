@@ -12,15 +12,15 @@ class ProgrammaController extends Controller {
   }
 
   public function index() {
-    if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $acts = $this->programmaDAO->search($_GET['term']);
-      $this->set('title', "Acts for ". $_GET['term']);
-      $this->set('term',$_GET['term']);
-    }else{
+    // if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
+    //   $acts = $this->programmaDAO->search($_GET['term']);
+    //   $this->set('title', "Acts for ". $_GET['term']);
+    //   $this->set('term',$_GET['term']);
+    // }else{
       $acts = $this->programmaDAO->selectAll();
       $this->set('title', "Alle");
-      $this->set('term','');
-    }
+      // $this->set('term','');
+    // }
 
     $this->set('acts', $acts);
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
