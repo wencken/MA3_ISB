@@ -20,6 +20,6 @@
     <main>
       <?php echo $content;?>
     </main>
-    <?php echo $js; ?>
+    <?php echo $js;?>
   </body>
 </html>

@@ -38,6 +38,23 @@ class PagesController extends Controller {
       header('Location: index.php');
     }
     $this->set('act', $act);
+
+    $knoppen = $this->pagesDAO->selectAll();
+    $ids = array();
+    foreach($knoppen as $knop){
+      $ids[] = $knop["id"];
+    }
+    $current = array_search($act["id"], $ids);
+    $next = $current + 1;
+    $previous = $current - 1;
+    if($next == count($ids)){
+      $next = 0;
+    }
+    if($previous < 0){
+      $previous = count($ids)-1;
+    }
+    $this->set('next', $ids[$next]);
+    $this->set('previous', $ids[$previous]);
   }
 
 /*
