@@ -1,30 +1,17 @@
 require('./style.css');
 {
   const $filterForm = document.querySelector(`.filter__form`),
-    $players = document.querySelector(`.players__list`);
+    $resultaten = document.querySelector(`.players__list`);
 
   const init = () => {
+    // const $buttons = document.querySelectorAll(`button`);
+    // $buttons.forEach($button => {
+    //   $button.addEventListener(`click`, handleClickButton);
+    // });
+
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
-  };
-
-  const handleLoadPlayers = data => {
-    $players.innerHTML = data
-      .map(player => createPlayerListItem(player))
-      .join(``);
-  };
-
-  const createPlayerListItem = player => {
-    return ` <li class='player'>
-    <img src="${player['Photo'].replace('/4/', '/10/')}" alt="Profile picture ${
-  player['Name']
-}" class="player__pic">
-    <span class='player__name'>${player['Name']}</span>
-    <span class='player__stat'>${player['Age']} ${player['Nationality']}</span>
-    <span class='player__info'>${player['Club']}</span>
-    <span class='player__more'>more</span>
-</li>`;
   };
 
   const handleSubmitFilterForm = e => {
@@ -40,13 +27,35 @@ require('./style.css');
       method: 'get'
     })
       .then(r => r.json())
-      .then(data => handleLoadPlayers(data));
+      .then(data => handleLoadActs(data));
     window.history.pushState(
       {},
       '',
       `${window.location.href.split('?')[0]}?${qs}`
     );
   };
+
+  const createActListItem = act => {
+    // console.log(act);
+    return `<li class='player'>
+    <a href="index.php?page=detail&amp;id=${act['id']}">
+    <span class='player__name'>${act['type']} | ${act['artiest_naam']} (${act['land']}) | ${act['act_naam']}</span>
+    <span class='player__stat'>${act['datum']} | ${act['locatie_naam']} | ${act['beginuur']}</span>
+    </a>
+    </li>`;
+  };
+
+  const handleLoadActs = data => {
+    console.log(data);
+    $resultaten.innerHTML = data
+      .map(act => createActListItem(act))
+      .join(``);
+  };
+
+  const handleClickButton = e => {
+    const $buttons = e.currentTarget;
+    console.log($buttons);
+  }
 
   init();
 }

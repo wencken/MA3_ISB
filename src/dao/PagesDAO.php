@@ -2,7 +2,7 @@
 
 require_once( __DIR__ . '/DAO.php');
 
-class ProgrammaDAO extends DAO {
+class PagesDAO extends DAO {
   public function selectAll() {
     $sql = "SELECT * FROM `ISB_programmatie`
     INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
@@ -22,7 +22,7 @@ class ProgrammaDAO extends DAO {
   // }
 
   // public function search($term){
-  //   $sql = "SELECT * FROM `ISB_programmatie` where Name like :term limit 25";
+  //   $sql = "SELECT * FROM `ISB_programmatie` where act_id like :term limit 25";
   //   $stmt = $this->pdo->prepare($sql);
   //   $stmt->bindValue(':term','%'.$term.'%');
   //   $stmt->execute();
@@ -36,7 +36,5 @@ class ProgrammaDAO extends DAO {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
-
-
 
 }

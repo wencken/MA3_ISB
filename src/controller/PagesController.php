@@ -1,25 +1,27 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
-require_once __DIR__ . '/../dao/ProgrammaDAO.php';
+require_once __DIR__ . '/../dao/PagesDAO.php';
 
-class ProgrammaController extends Controller {
+class PagesController extends Controller {
 
   private $todoDAO;
 
   function __construct() {
-    $this->programmaDAO = new ProgrammaDAO();
+    $this->pagesDAO = new PagesDAO();
+  }
+  public function index() {
   }
 
-  public function index() {
+  public function programma() {
     // if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-    //   $acts = $this->programmaDAO->search($_GET['term']);
+    //   $acts = $this->pagesDAO->search($_GET['term']);
     //   $this->set('title', "Acts for ". $_GET['term']);
     //   $this->set('term',$_GET['term']);
     // }else{
-      $acts = $this->programmaDAO->selectAll();
+      $acts = $this->pagesDAO->selectAll();
       $this->set('title', "Alle");
-      // $this->set('term','');
+      $this->set('term','');
     // }
 
     $this->set('acts', $acts);
