@@ -48,20 +48,19 @@
 
       <section class="players">
           <h2 class="hidden">Resultaten</h2>
-        <?php echo $content;?>
+        <ul class="players__list">
+        <?php
+          foreach($acts as $act){
+            ?>
+            <li class='player'>
+                <a href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
+                <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
+                <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
+                </a>
+            </li>
+            <?php
+          }
+        ?>
+        </ul>
+
       </section>
-
-
-      <ul class="players__list">
-<?php
-  foreach($acts as $act){
-    ?>
-    <li class='player'>
-        <a href="index.php?page=detail&amp;id=<?php echo $act['id'];?>">
-        <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
-        <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
-        </a>
-    </li>
-    <?php
-  }
-?>

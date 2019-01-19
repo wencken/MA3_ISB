@@ -5,7 +5,8 @@ require_once __DIR__ . '/../dao/PagesDAO.php';
 
 class PagesController extends Controller {
 
-  private $todoDAO;
+  // private $todoDAO;
+  private $pagesDAO;
 
   function __construct() {
     $this->pagesDAO = new PagesDAO();
@@ -31,10 +32,14 @@ class PagesController extends Controller {
       exit();
     }
   }
-
-  public function detail(){
-
+  public function detail() {
+    if(empty($_GET['id']) || !$act = $this->pagesDAO->selectByActId($_GET['id'])) {
+      $_SESSION['error'] = 'Invalid Product';
+      header('Location: index.php');
+    }
+    $this->set('act', $act);
   }
+
 /*
   private function handleSearchPlayer() {
 
