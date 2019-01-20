@@ -12,21 +12,25 @@
   <div id="detail-information">
       <p><a href="https://www.facebook.com">Facebook</a></p>
   </div>
+  <div id="product-image">
+      <?php echo '<img src="./assets/'. $grootAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';?>
+  </div>
 </section>
 
-<section>
-  <header><h2>Meer beeldmateriaal</h2></header>
-  <!-- <ul>
-    <?php
-    foreach($productImages as $productImage) {
-      echo '<li>';
-      echo '<a class="product-image-link" href="index.php?page=detail&amp;id=' . $product['id'] . '&amp;image=' . $productImage['id'] . '">';
-      echo '<img src="' . $productImage['image'] . '" alt="' . $product['name'] . '" />';
-      echo '</a>';
-      echo '</li>';
-    }
-    ?>
-  </ul> -->
+  <section class="more-images clearfix">
+      <header><h2>Meer beeldmateriaal</h2></header>
+      <ul>
+          <?php
+          foreach($actAfbeeldingen as $actAfbeelding) {
+            echo '<li>';
+            echo '<a class="product-image-link" href="index.php?page=detail&amp;id=' . $act["id"] . '&amp;image=' . $actAfbeelding["id"] . '">';
+            echo '<img src="./assets/'. $actAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';
+            echo '</a>';
+            echo '</li>';
+          }
+          ?>
+      </ul>
+  </section>
 
   <nav>
       <a class="nav-link nav-link-previous" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>

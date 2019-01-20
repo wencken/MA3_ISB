@@ -13,7 +13,7 @@ class PagesDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
   // public function search($term){
-  //   $sql = "SELECT * FROM `ISB_programmatie` where act_id like :term limit 25";
+  //   $sql = "SELECT * FROM `ISB_programmatie` where `act_naam` like :term limit 25";
   //   $stmt = $this->pdo->prepare($sql);
   //   $stmt->bindValue(':term','%'.$term.'%');
   //   $stmt->execute();
@@ -28,7 +28,7 @@ class PagesDAO extends DAO {
   //   return $stmt->fetch(PDO::FETCH_ASSOC);
   // }
 
-  public function selectByActId($id) {
+  public function selectById($id) {
     $sql = "SELECT `ISB_artiest`.*, `ISB_programmatie`.*, `ISB_act`.* FROM `ISB_act`
     INNER JOIN `ISB_artiest`ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
     INNER JOIN `ISB_programmatie` ON `ISB_act`.`id` = `ISB_programmatie`.`act_id` WHERE `ISB_act`.`id`=:id";
@@ -37,9 +37,9 @@ class PagesDAO extends DAO {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
-  //combineren met AFBEELDINGEN
+  // // combineren met AFBEELDINGEN
   // public function selectById($id) {
-  //   $sql = "SELECT `products`.*, `product_images`.`image` FROM `products` RIGHT JOIN `product_images` ON `products`.`id` = `product_images`.`product_id` WHERE `products`.`id` = :id GROUP BY `products`.`id`";
+  //   $sql = "SELECT `ISB_act`.*, `ISB_afbeelding`.`afbeelding` FROM `ISB_act` RIGHT JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id` WHERE `ISB_act`.`id` = :id GROUP BY `ISB_act`.`id`";
   //   $stmt = $this->pdo->prepare($sql);
   //   $stmt->bindValue(':id', $id);
   //   $stmt->execute();
