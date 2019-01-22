@@ -1,5 +1,5 @@
 <section>
-<header><h2>Programma</h2></header>
+<header><h2 class="heading-2">Programma</h2></header>
 
   <?php
     if(!empty($_SESSION['error'])) {
@@ -11,7 +11,7 @@
   ?>
 
   <section class="filter">
-    <h2 class="filter__title">Filter</h2>
+    <h3 class="heading-3">Filter</h3>
     <form action="index.php?page=programma" method="get" class="filter__form">
     <input type="hidden" name="action" value="filter" />
       <div class="form-group">
@@ -49,7 +49,7 @@
   </section>
 
       <section class="players">
-          <h2 class="hidden">Resultaten</h2>
+          <h3 class="heading-3 hidden">Resultaten</h3>
         <ul class="players__list">
         <?php
           foreach($acts as $act){

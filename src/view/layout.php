@@ -8,11 +8,28 @@
   <meta name="description" content="Internationaal Straattheaterfestival Beveren"/>
   <meta name="keywords" content="Major Atelier, redesign, ISB"/>
   <title>ISB | 2018</title>
-    <?php echo $css;?>
+  <?php echo $css;?>
+
+  <script>
+      WebFontConfig = {
+        custom: {
+          families: ["Radikal", "Canoodle"],
+          urls: ["./assets/fonts/fonts.css"]
+        }
+      };
+
+      (function(d) {
+        var wf = d.createElement("script"),
+          s = d.scripts[0];
+        wf.src = "js/webfont.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+  </script>
   </head>
 
-  <body class = "container">
-    <div class="topbar">
+  <body>
+    <div class="topbar container">
       <ul class="social">
         <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
         <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
@@ -27,10 +44,10 @@
         </ul>
       </div>
     </div>
-    <header class="header">
-      <h1>Internationaal<br> Straattheaterfestival <br> 24 tot 26 augustus 2018</h1>
+    <header class="header container">
+      <h1 class="heading-1">Internationaal<br> Straattheaterfestival <br> 24 tot 26 augustus 2018</h1>
       <nav>
-        <h2 class="hidden">Navigatie</h2>
+        <h2 class="heading-2 hidden">Navigatie</h2>
         <ul class="navigatie">
           <li class="<?php if($currentPage == 'index') echo 'active';?>"><a class="nav" href="index.php">Home</a></li>
           <li class="<?php if($currentPage == 'programma') echo 'active';?>"><a class="nav" href="index.php?page=programma">Programma</a></li>
@@ -39,22 +56,22 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <?php echo $content;?>
-      <section>
-        <h2 class="hidden">Footer</h2>
-        <article>
-            <h3>Onze partners</h3>
-            <ul>
+      <section class="footer-content">
+        <h2 class="heading-2 hidden">Footer</h2>
+        <article class="article-sponsors">
+            <h3 class="heading-3">Onze partners</h3>
+            <ul class="sponsors">
               <li><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1.png" alt="sponsor winkeldorpen"></a></li>
               <li><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2.png" alt="sponsor beverse feesten"></a></li>
               <li><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3.png" alt="sponsor aout en eclats"></a></li>
               <li><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4.png" alt="sponsor warande shopping"></a></li>
             </ul>
         </article>
-        <div>
+        <div class="footer-wrapper">
             <article>
-                <h3>Nuttige links</h3>
+                <h3 class="heading-3">Nuttige links</h3>
                 <ul>
                   <li class="link-hover"><a class="link" href="index.php?page=programma">Programma</a></li>
                   <li class="link-hover"><a class="link" href="index.php">Bereikbaarheid</a></li>
@@ -64,7 +81,7 @@
                 </ul>
             </article>
             <article>
-                <h3>Volg ons</h3>
+                <h3 class="heading-3">Volg ons</h3>
                 <ul>
                   <li class="link-hover"><a class="link" href="https://www.facebook.com/">Facebook</a></li>
                   <li class="link-hover"><a class="link" href="https://www.instagram.com/?hl=n">Instagram</a></li>
@@ -73,7 +90,7 @@
                 </ul>
             </article>
             <article>
-                <h3>Contacteer ons</h3>
+                <h3 class="heading-3">Contacteer ons</h3>
                 <address>
                 Donkvijverstraat<br>
                 9120 Beveren
@@ -84,7 +101,7 @@
           </div>
       </section>
     </main>
-    <footer><small>&copy; Wencke Nuyt</small></footer>
+    <footer class="copyright container"><small>&copy; Wencke Nuyt</small></footer>
     <?php echo $js;?>
   </body>
 </html>

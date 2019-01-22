@@ -1,5 +1,7 @@
 @import './css/reset.css';
 @import './css/vars.css';
+@import './css/typography.css';
+@import './css/site-header.css';
 
 html {
   font-size: 62.5%;
@@ -16,10 +18,10 @@ html {
 /* stylelint-enable */
 
 body {
-  font-family: roboto, sans-serif;
-  color: var(--black);
   font-size: 1.4rem;
   line-height: 1.5;
+  background: var(--background-color);
+  color: var(--primary-color);
 }
 
 /*---------------- ALGEMEEN ----------------*/
@@ -34,6 +36,7 @@ body {
   @media (--sm) {
     max-width: 32rem;
   }
+
   @media (--md) {
     max-width: 76.8rem;
   }
@@ -51,117 +54,7 @@ body {
   display: none;
 }
 
-/*---------------- NAVIGATIE ----------------*/
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2rem;
-}
-
-.navigatie {
-  width: 40rem;
-  height: 5rem;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.nav {
-  color: #1C2745;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.nav:hover {
-  color: #E9BF4E;
-}
-
-.active {
-  border-bottom: 0.2rem  #1C2745 solid;
-}
-
-.link {
-  color: #FFFDF4;
-  text-decoration: none;
-}
-
-.link:visited {
-  color: #3E9798;
-}
-
-.link:active {
-  text-decoration: underline;
-}
-
-.link-hover {
-  transform: translateZ(0);
-  transition: color 1000ms;
-}
-
-.link-hover::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 10;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: .1rem;
-  width: 3%;
-  background: #E9BF4E;
-  transform: scaleX(0);
-  transform-origin: 0 0%;
-  will-change: transform;
-  transition: all .5s;
-}
-
-.link-hover:hover::after {
-  transform: scaleX(1);
-}
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #1C2745;
-  height: 4rem;
-  align-items: center;
-  color: #FFFDF4;
-}
-
-.topright {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social {
-  background-color: #1C2745;
-}
-
-.talen {
-  display: flex;
-  width: 7rem;
-  justify-content: space-between;
-}
-
-.taal {
-  text-decoration: none;
-  border-right: .2rem solid #FFFDF4;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.nederlands {
- text-decoration: underline;
-}
-
 /*---------------- DEREST ----------------*/
-
-.header {
-  padding: .4rem;
-  grid-area: header;
-}
 
 .header__title {
   font-size: 6vw;
@@ -325,7 +218,7 @@ input:-webkit-autofill {
  * Detail
  */
 
- .product-image {
+.product-image {
   width: 450px;
   position: relative;
   float: left;
@@ -365,8 +258,4 @@ input:-webkit-autofill {
 
 .more-images ul li img {
   max-height: 160px;
-}
-
-.footer_content{
-
 }

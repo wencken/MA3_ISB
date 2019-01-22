@@ -1,13 +1,13 @@
 <section>
-<header><h2 class="hidden"><?php echo $act["act_naam"];?></h2></header>
+<header><h2 class="heading-2 hidden"><?php echo $act["act_naam"];?></h2></header>
 
 <section>
   <div id="detail-information">
       <p><a href="index.php?page=programma"><-Terug naar overzicht</a></p>
   </div>
   <header>
-      <h2><?php echo $act["artiest_naam"]?> - <?php echo $act["artiest_id"];?> stelt voor</h2>
-      <h1 class="product-title"><?php echo $act["act_naam"];?> - <?php echo $act["id"];?></h1>
+      <h3><?php echo $act["artiest_naam"]?> - <?php echo $act["artiest_id"];?> stelt voor</h3>
+      <h4 class="heading-2 product-title"><?php echo $act["act_naam"];?> - <?php echo $act["id"];?></h4>
   </header>
   <div id="product-description"><?php echo $act["omschrijving"];?></div>
   <div id="product-description"><?php echo $act["datum"];?> | <?php echo $act["beginuur"];?></div>
