@@ -21,24 +21,17 @@ class PagesController extends Controller {
   }
 
   public function programma() {
-    if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      // var_dump('filter_vol');
-      $acts = $this->pagesDAO->filteren($_GET['dag'], $_GET['type']);
-      // $this->set('title', "Acts for ". $_GET['dag']);
-      $this->set('dag', $_GET['dag']);
-      $this->set('type', $_GET['type']);
-    }else{
-      // var_dump('filter_leeg');
-      $acts = $this->pagesDAO->filteren();
-      // $this->set('title', "Alle");
-      $this->set('dag','');
-      $this->set('type','');
-    }
-
+     $data = array(
+      'vrijdag' => (!empty($_GET['vrijdag'])) ? $_GET['vrijdag'] : '',
+      'zaterdag' => (!empty($_GET['zaterdag'])) ? $_GET['zaterdag'] : '',
+      'zondag' => (!empty($_GET['zondag'])) ? $_GET['zondag'] : '',
+      'voorstelling' => (!empty($_GET['voorstelling'])) ? $_GET['voorstelling'] : '',
+      'straatact' => (!empty($_GET['straatact'])) ? $_GET['straatact'] : '',
+      'activiteit' => (!empty($_GET['activiteit'])) ? $_GET['activiteit'] : ''
+    );
+    $acts = $this->pagesDAO->filter($data);
+    $this->set('title', $data);
     $this->set('acts', $acts);
-
-    $this->set('categorie', $this->pagesDAO->selectAllTypes());
-    $this->set('dagen', $this->pagesDAO->selectAllDays());
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
       header('Content-Type: application/json');

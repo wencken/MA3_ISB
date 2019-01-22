@@ -30,11 +30,11 @@
 
   <body>
     <div class="topbar container">
-      <ul class="social">
+      <!-- <ul class="social">
         <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
         <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
         <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
-      </ul>
+      </ul> -->
       <div class="topright">
         <p>Donkvijverstraat, 9120 Beveren</p>
         <ul class="talen">

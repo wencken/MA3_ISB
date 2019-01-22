@@ -13,59 +13,52 @@
   <section class="filter">
     <h3 class="heading-3">Filter</h3>
     <form action="index.php?page=programma" method="get" class="filter__form">
-    <input type="hidden" name="action" value="filter" />
+    <input type="hidden" name="page" value="programma" />
       <div class="form-group">
-          <label for="dag">Toon mij:
+          <label for="dag">Toon mij:</label>
           <!-- <input type="checkbox" name="alle" class="checkbox" id="alle" value="alle">
           <span>Alle</span> -->
-          <?php foreach($dagen as $day):?>
-          <input type="radio" name="dag" class="radiobutton" id="radiobutton" value="<?php echo $day['datum'];?>" <?php if($dag == $day['datum']) echo 'selected';?>>
-          <span><?php echo $day['datum'];?></span>
-          <?php endforeach;?>
-          </label>
-          <!-- <input type="radio" name="dag" class="radiobutton" id="vrijdag" value="vrijdag">
-          <span>VRIJ</span>
-          <input type="radio" name="dag" class="radiobutton" id="zaterdag" value="zaterdag">
-          <span>ZAT</span>
-          <input type="radio" name="dag" class="radiobutton" id="zondag" value="zondag">
-          <span>ZON</span> -->
+          <input type="checkbox" value="dag" name="vrijdag">
+          <span>vrijdag</span>
+          <input type="checkbox" value="dag" name="zaterdag">
+          <span>zaterdag</span>
+          <input type="checkbox" value="dag" name="zondag">
+          <span>zondag</span>
       </div>
       <div class="form-group">
-          <label for="type">Filter enkel op:
-          <?php foreach($categorie as $catego):?>
-          <input type="checkbox" name="type" class="checkbox" id="checkbox" value="<?php echo $catego['type'];?>" <?php if($type == $catego['type']) echo 'selected';?>>
-          <span><?php echo $catego['type'];?></span>
-          <?php endforeach;?>
-          </label>
-			</div>
-      <input type="submit" value="filter" class="form__submit input input--button">
-    </form>
-      <!-- <div class="form-group">
-          <label for="kids">
-            <input type="checkbox" name="kids" class="kids" id="kids" value="true">
-            <span>Kinderen</span>
-         </label>
+          <label for="type">Filter enkel op:</label>
+          <input type="checkbox"  value="type" name="voorstelling">
+          <span>voorstelling</span>
+          <input type="checkbox" value="type" name="straatact">
+          <span>straatact</span>
+          <input type="checkbox" value="type" name="activiteit">
+          <span>activiteit</span>
+      </div>
+<!-- <div class="form-group">
+          <label for="kids">Kinderen</label>
+          <input type="checkbox" value="kids" name="kinderen">
       </div> -->
+      <input type="submit" value="toepassen" name="submit" class="form__submit input input--button">
+    </form>
   </section>
 
-      <section class="players">
-          <h3 class="heading-3 hidden">Resultaten</h3>
-        <ul class="players__list">
-        <?php
-          foreach($acts as $act){
-            ?>
-            <li class='player'>
-                <a href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
-                <img src="./assets/act/<?php echo $act["afbeelding_id"];?>" alt="<?php echo $act['act_naam'];?>" />
-                <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
-                <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
-                </a>
-            </li>
-            <?php
-          }
+  <section class="players">
+    <h3 class="heading-3">Resultaten</h3>
+    <ul class="players__list">
+    <?php
+      foreach($acts as $act){
         ?>
-        </ul>
-
-      </section>
+        <li class='player'>
+            <a href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
+            <img src="./assets/img/<?php echo $act["afbeelding_id"];?>" alt="<?php echo $act['act_naam'];?>" />
+            <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
+            <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
+            </a>
+        </li>
+        <?php
+      }
+    ?>
+    </ul>
+  </section>
 
  </section>

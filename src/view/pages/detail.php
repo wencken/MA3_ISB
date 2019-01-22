@@ -16,7 +16,7 @@
       <p><a href="https://www.facebook.com">Facebook</a></p>
   </div>
   <div id="product-image">
-      <?php echo '<img src="./assets/act/'. $grootAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';?>
+      <?php echo '<img src="./assets/img/'. $grootAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';?>
   </div>
 </section>
 
@@ -27,7 +27,7 @@
           foreach($actAfbeeldingen as $actAfbeelding) {
             echo '<li>';
             echo '<a class="product-image-link" href="index.php?page=detail&amp;id=' . $act["id"] . '&amp;image=' . $actAfbeelding["id"] . '">';
-            echo '<img src="./assets/act/'. $actAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';
+            echo '<img src="./assets/img/'. $actAfbeelding["afbeelding"] . '" alt="' . $act["act_naam"] . '" />';
             echo '</a>';
             echo '</li>';
           }
