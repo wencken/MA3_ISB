@@ -13,37 +13,40 @@
 
   <section class="filter">
     <h2 class="filter__title">Filter</h2>
-    <form action="index.php" class="filter__form">
-    <div class="form-group">
-          <label for="days">Toon mij:</label>
-          <button type="button" class="filterbutton alle">Alle</button>
-          <button type="button" class="filterbutton vrijdag">Vr 24.08</button>
-          <button type="button" class="filterbutton zaterdag">Za 25.08</button>
-          <button type="button" class="filterbutton zondag">Zo 26.08</button>
-			</div>
+    <form action="index.php?page=programma" method="get" class="filter__form">
+    <input type="hidden" name="action" value="filter" />
       <div class="form-group">
-          <label for="seasons">Filter enkel op:</label>
-          <select name="seasons" id="seasons" class="seasons form-control">
-            <option value="0">----------</option>
-          </select>
-			</div>
+          <label for="dag">Toon mij:
+          <!-- <input type="checkbox" name="alle" class="checkbox" id="alle" value="alle">
+          <span>Alle</span> -->
+          <?php foreach($dagen as $day):?>
+          <input type="radio" name="dag" class="radiobutton" id="radiobutton" value="<?php echo $day['datum'];?>" <?php if($dag == $day['datum']) echo 'selected';?>>
+          <span><?php echo $day['datum'];?></span>
+          <?php endforeach;?>
+          </label>
+          <!-- <input type="radio" name="dag" class="radiobutton" id="vrijdag" value="vrijdag">
+          <span>VRIJ</span>
+          <input type="radio" name="dag" class="radiobutton" id="zaterdag" value="zaterdag">
+          <span>ZAT</span>
+          <input type="radio" name="dag" class="radiobutton" id="zondag" value="zondag">
+          <span>ZON</span> -->
+      </div>
       <div class="form-group">
+          <label for="type">Filter enkel op:
+          <?php foreach($categorie as $catego):?>
+          <input type="checkbox" name="type" class="checkbox" id="checkbox" value="<?php echo $catego['type'];?>" <?php if($type == $catego['type']) echo 'selected';?>>
+          <span><?php echo $catego['type'];?></span>
+          <?php endforeach;?>
+          </label>
+			</div>
+      <input type="submit" value="filter" class="form__submit input input--button">
+    </form>
+      <!-- <div class="form-group">
           <label for="kids">
             <input type="checkbox" name="kids" class="kids" id="kids" value="true">
             <span>Kinderen</span>
          </label>
-      </div>
-      <div class="form-group">
-          <input type="hidden" name="action" value="filter" />
-          <label for="term" class="form__label">
-            <span class="hidden">Search</span>
-            <input type="search" id="term" name="term" class="input input--filter" value="<?php echo $term;?>">
-          </label>
-      </div>
-      <div>
-         <input type="submit" value="Filter" class="form__submit input input--button">
-      </div>
-    </form>
+      </div> -->
   </section>
 
       <section class="players">

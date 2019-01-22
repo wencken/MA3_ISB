@@ -16,26 +16,36 @@ class PagesController extends Controller {
   }
 
   public function index() {
+    // var_dump('filter_vol');
   }
 
   public function programma() {
     if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $acts = $this->pagesDAO->search($_GET['term']);
-      $this->set('title', "Acts for ". $_GET['term']);
-      $this->set('term',$_GET['term']);
+      // var_dump('filter_vol');
+      $acts = $this->pagesDAO->filteren($_GET['dag'], $_GET['type']);
+      // $this->set('title', "Acts for ". $_GET['dag']);
+      $this->set('dag', $_GET['dag']);
+      $this->set('type', $_GET['type']);
     }else{
-      $acts = $this->pagesDAO->selectAll();
-      $this->set('title', "Alle");
-      $this->set('term','');
+      // var_dump('filter_leeg');
+      $acts = $this->pagesDAO->filteren();
+      // $this->set('title', "Alle");
+      $this->set('dag','');
+      $this->set('type','');
     }
 
     $this->set('acts', $acts);
+
+    $this->set('categorie', $this->pagesDAO->selectAllTypes());
+    $this->set('dagen', $this->pagesDAO->selectAllDays());
+
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
       header('Content-Type: application/json');
       echo json_encode($acts);
       exit();
     }
   }
+
   public function detail() {
     if(empty($_GET['id']) || !$act = $this->pagesDAO->selectById($_GET['id'])) {
       $_SESSION['error'] = 'Invalid Product';
@@ -60,7 +70,7 @@ class PagesController extends Controller {
     $actAfbeeldingen = $this->imageDAO->selectByActId($act['id']);
 
     $grootAfbeelding = $actAfbeeldingen[0];
-    if(!empty($_GET['afbeelding']) && $actAfbeelding = $this->imageDAO->selectById($_GET['afbeelding'])) {
+    if(!empty($_GET['image']) && $actAfbeelding = $this->imageDAO->selectById($_GET['image'])) {
       $grootAfbeelding = $actAfbeelding;
     }
 

@@ -1,21 +1,17 @@
 require('./style.css');
 {
   const $filterForm = document.querySelector(`.filter__form`),
-    $resultaten = document.querySelector(`.players__list`);
+    $players = document.querySelector(`.players__list`);
 
   const init = () => {
-    // const $buttons = document.querySelectorAll(`button`);
-    // $buttons.forEach($button => {
-    //   $button.addEventListener(`click`, handleClickButton);
-    // });
-
+    // return;
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
   };
 
-  const handleSubmitFilterForm = e => {
-    console.log();
+  const handleSubmitFilterForm = async e => {
+    console.log("submit");
     e.preventDefault();
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()
@@ -33,10 +29,28 @@ require('./style.css');
       '',
       `${window.location.href.split('?')[0]}?${qs}`
     );
+
+    // const data = new FormData($filterForm);
+    // const entries = [...data.entries()];
+
+    // const qs = new URLSearchParams(entries).toString();
+    // const url = `${form.getAttribute('action')}?${qs}`;
+
+    // const response = await fetch(url, {
+    //   headers: new Headers({
+    //     Accept: 'application/json'
+    //   })
+    // });
+    // const actData = await response.json();
+    // parsePlayerData(actData);
   };
 
+  // const parsePlayerData = data => {
+  //   console.log(data);
+  // };
+
   const createActListItem = act => {
-    // console.log(act);
+    console.log(act);
     return `<li class='player'>
     <a href="index.php?page=detail&amp;id=${act['id']}">
     <span class='player__name'>${act['type']} | ${act['artiest_naam']} (${act['land']}) | ${act['act_naam']}</span>
@@ -46,16 +60,10 @@ require('./style.css');
   };
 
   const handleLoadActs = data => {
-    console.log(data);
-    $resultaten.innerHTML = data
-      .map(act => createActListItem(act))
+    $players.innerHTML = data
+      .map(player => createActListItem(player))
       .join(``);
   };
-
-  const handleClickButton = e => {
-    const $buttons = e.currentTarget;
-    console.log($buttons);
-  }
 
   init();
 }
