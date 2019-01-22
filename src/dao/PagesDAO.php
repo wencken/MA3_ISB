@@ -21,11 +21,23 @@ class PagesDAO extends DAO {
     $sql = "SELECT * FROM `ISB_programmatie`
     INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
     INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`
-    LEFT JOIN `ISB_artiest` on `ISB_act`.`artiest_id`=`ISB_artiest`.`id`
-    RIGHT JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
+    INNER JOIN `ISB_artiest` on `ISB_act`.`artiest_id`=`ISB_artiest`.`id`
+    INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
     WHERE 1";
 
-    if (!empty($data['vrijdag'])) {
+    if (!empty($data['alle'])) {
+      $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' OR 'za%' OR 'zo%' ";
+      if (!empty($data['vrijdag'])) {
+        $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' ";
+      }
+      if (!empty($data['zaterdag'])) {
+        $sql .= " OR `ISB_programmatie`.`datum` LIKE 'za%' ";
+      }
+      if (!empty($data['zondag'])) {
+        $sql .= " OR `ISB_programmatie`.`datum` LIKE 'zo%' ";
+      }
+    }
+     if (!empty($data['vrijdag'])) {
      $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' ";
       if (!empty($data['zaterdag'])) {
         $sql .= " OR `ISB_programmatie`.`datum` LIKE 'za%' ";
@@ -58,11 +70,17 @@ class PagesDAO extends DAO {
     } else if (!empty($data['activiteit'])) {
       $sql .= " AND `ISB_act`.`type` LIKE 'activiteit%' ";
     }
+    if (!empty($data['kinderen'])) {
+      $sql .=  " AND `ISB_act`.`kinderen` = '1' ";
+    }
 
     $sql .= " ORDER BY `datum` ASC, `beginuur` ASC";
 
     $stmt = $this->pdo->prepare($sql);
 
+    if (!empty($data['alle'])){
+      $stmt->bindValue(':alle',$data['alle']);
+    }
     if (!empty($data['vrijdag'])){
       $stmt->bindValue(':vrijdag',$data['vrijdag']);
     }
@@ -80,6 +98,9 @@ class PagesDAO extends DAO {
     }
     if (!empty($data['activiteit'])){
       $stmt->bindValue(':activiteit',$data['activiteit']);
+    }
+    if (!empty($data['kinderen'])) {
+      $stmt->bindValue(':kinderen',$data['kinderen']);
     }
 
     $stmt->execute();

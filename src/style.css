@@ -59,6 +59,121 @@ img {
   height: 200px;
   object-fit: cover;
 }
+
+/*---------------- BUTTONS ----------------*/
+
+.form-title {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.toon {
+  width: 30rem;
+}
+
+.form-group {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  padding-right: 5rem;
+  overflow: hidden;
+}
+
+.form-group input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.form-group label {
+  float: left;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  width: 10rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  border: .5rem solid var(--primary-color);
+  transition: all .1s ease-in-out;
+}
+
+.form-group label:hover {
+  cursor: pointer;
+}
+
+.form-group input:checked + label {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  border: .5rem solid var(--primary-color);
+}
+
+.checkbox {
+  max-width: 30rem;
+}
+
+.checkboxtags {
+  list-style: none;
+}
+
+.checkboxtags-li {
+  display: inline;
+}
+
+.checkboxtags-title {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .9);
+  border: 2px solid rgba(139, 139, 139, .3);
+  border-radius: 25px;
+  color: #adadad;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .2s;
+  width: 12rem;
+}
+
+.checkboxtags-title::before {
+  /* content: '\f067'; */
+  content: '\f067';
+  display: inline-block;
+  position: absolute;
+  transition: transform .3s ease-in-out;
+  margin: 0 -2rem;
+}
+
+.checkboxtags-li input[type='checkbox'] {
+  position: absolute;
+  display: absolute;
+  opacity: 0;
+}
+
+.checkboxtags-li input[type='checkbox']:checked + label {
+  border: 2px solid var(--color-light);
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: all .2s;
+  /* overflow: hidden; */
+}
+
+.checkboxtags-li input[type='checkbox']:checked + label::before {
+  content: '\f00c';
+  display: inline-block;
+  position: absolute;
+  transform: rotate(-360deg);
+  transition: transform .3s ease-in-out;
+  /* overflow: hidden; */
+}
+
+.checkboxtags-li input[type='checkbox']:focus + label {
+  border: 2px solid var(--color-accent);
+  /* overflow: hidden; */
+}
+
 /*---------------- DEREST ----------------*/
 
 .header__title {

@@ -22,12 +22,14 @@ class PagesController extends Controller {
 
   public function programma() {
      $data = array(
+      'alle' => (!empty($_GET['vrijdag'])) ? $_GET['vrijdag'] : '',
       'vrijdag' => (!empty($_GET['vrijdag'])) ? $_GET['vrijdag'] : '',
       'zaterdag' => (!empty($_GET['zaterdag'])) ? $_GET['zaterdag'] : '',
       'zondag' => (!empty($_GET['zondag'])) ? $_GET['zondag'] : '',
       'voorstelling' => (!empty($_GET['voorstelling'])) ? $_GET['voorstelling'] : '',
       'straatact' => (!empty($_GET['straatact'])) ? $_GET['straatact'] : '',
-      'activiteit' => (!empty($_GET['activiteit'])) ? $_GET['activiteit'] : ''
+      'activiteit' => (!empty($_GET['activiteit'])) ? $_GET['activiteit'] : '',
+      'kinderen' => (!empty($_GET['kinderen'])) ? $_GET['kinderen'] : ''
     );
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
