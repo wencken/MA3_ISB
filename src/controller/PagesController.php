@@ -17,6 +17,7 @@ class PagesController extends Controller {
 
   public function index() {
     // var_dump('filter_vol');
+    $this->set('currentPage', 'index');
   }
 
   public function programma() {
@@ -44,6 +45,7 @@ class PagesController extends Controller {
       echo json_encode($acts);
       exit();
     }
+    $this->set('currentPage', 'programma');
   }
 
   public function detail() {
@@ -79,6 +81,7 @@ class PagesController extends Controller {
     $this->set('previous', $ids[$previous]);
     $this->set('actAfbeeldingen', $actAfbeeldingen);
     $this->set('grootAfbeelding', $grootAfbeelding);
+    $this->set('currentPage', 'programma');
   }
 
 
