@@ -11,7 +11,7 @@
   </header>
   <div id="product-description"><?php echo $act["omschrijving"];?></div>
   <div id="product-description"><?php echo $act["datum"];?> | <?php echo $act["beginuur"];?></div>
-  <div id="product-description">Locatie: <?php echo $act["locatie_id"];?></div>
+  <div id="product-description">Locatie: <?php echo $act["locatie_naam"];?></div>
   <div id="detail-information">
       <p><a href="https://www.facebook.com">Facebook</a></p>
   </div>

@@ -50,7 +50,7 @@
         ?>
         <li class='player'>
             <a href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
-            <img src="./assets/img/act/<?php echo $act["afbeelding_id"];?>" alt="<?php echo $act['act_naam'];?>" />
+            <img src="./assets/img/<?php echo $act["afbeelding"];?>" alt="<?php echo $act['act_naam'];?>" />
             <span class='player__name'><?php echo $act["type"];?> | <?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>) | <?php echo $act["act_naam"];?></span>
             <span class='player__stat'><?php echo $act["datum"];?> | <?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></span>
             </a>

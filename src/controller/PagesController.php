@@ -29,15 +29,14 @@ class PagesController extends Controller {
       'straatact' => (!empty($_GET['straatact'])) ? $_GET['straatact'] : '',
       'activiteit' => (!empty($_GET['activiteit'])) ? $_GET['activiteit'] : ''
     );
-    $acts = $this->pagesDAO->filter($data);
-    $this->set('title', $data);
-    $this->set('acts', $acts);
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
       header('Content-Type: application/json');
       echo json_encode($acts);
       exit();
     }
+    $acts = $this->pagesDAO->filter($data);
+    $this->set('acts', $acts);
     $this->set('currentPage', 'programma');
   }
 

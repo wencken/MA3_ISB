@@ -87,9 +87,10 @@ class PagesDAO extends DAO {
   }
 
   public function selectById($id) {
-    $sql = "SELECT `ISB_artiest`.*, `ISB_programmatie`.*, `ISB_act`.* FROM `ISB_act`
+    $sql = "SELECT `ISB_artiest`.*, `ISB_programmatie`.*, `ISB_act`.* , `ISB_locatie`.* FROM `ISB_act`
     INNER JOIN `ISB_artiest`ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
     INNER JOIN `ISB_programmatie` ON `ISB_act`.`id` = `ISB_programmatie`.`act_id`
+    INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
     WHERE `ISB_act`.`id`=:id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
