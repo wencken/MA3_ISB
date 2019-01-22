@@ -1,3 +1,4 @@
-<header class="header">
-  <h1 class="header__title"><spans class="header__title--variant">Home</span></h1>
-</header>
+<section>
+<header><h2 class="hidden">Home</h2></header>
+
+</section>

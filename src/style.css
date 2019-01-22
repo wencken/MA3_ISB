@@ -53,14 +53,19 @@ body {
 
 /*---------------- NAVIGATIE ----------------*/
 
-.navigatie {
-  width: 40rem;
-  height: 3rem;
-  list-style-type: none;
-  padding-top: 5.5rem;
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 2rem;
+}
+
+.navigatie {
+  width: 40rem;
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .nav {
@@ -114,6 +119,41 @@ body {
 
 .link-hover:hover::after {
   transform: scaleX(1);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1C2745;
+  height: 4rem;
+  align-items: center;
+  color: #FFFDF4;
+}
+
+.topright {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  background-color: #1C2745;
+}
+
+.talen {
+  display: flex;
+  width: 7rem;
+  justify-content: space-between;
+}
+
+.taal {
+  text-decoration: none;
+  border-right: .2rem solid #FFFDF4;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nederlands {
+ text-decoration: underline;
 }
 
 /*---------------- DEREST ----------------*/

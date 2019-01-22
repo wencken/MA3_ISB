@@ -1,4 +1,7 @@
 <section>
+<header><h2 class="hidden"><?php echo $act["act_naam"];?></h2></header>
+
+<section>
   <div id="detail-information">
       <p><a href="index.php?page=programma"><-Terug naar overzicht</a></p>
   </div>
@@ -36,4 +39,6 @@
       <a class="nav-link nav-link-previous" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>
       <a class="nav-link nav-link-next" href="index.php?page=detail&amp;id=<?php echo $next ?>">next -></a>
   </nav>
+</section>
+
 </section>

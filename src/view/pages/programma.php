@@ -1,6 +1,5 @@
-    <header class="header">
-      <h1 class="header__title"><spans class="header__title--variant">Programma</span></h1>
-    </header>
+<section>
+<header><h2>Programma</h2></header>
 
   <?php
     if(!empty($_SESSION['error'])) {
@@ -68,3 +67,5 @@
         </ul>
 
       </section>
+
+ </section>
