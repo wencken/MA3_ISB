@@ -44,16 +44,21 @@ class PagesController extends Controller {
 
   public function detail() {
     if(empty($_GET['id']) || !$act = $this->pagesDAO->selectById($_GET['id'])) {
-      $_SESSION['error'] = 'Invalid Product';
+      $_SESSION['error'] = 'Deze act bestaat niet.';
       header('Location: index.php');
     }
+    $this->set('act', $act);
+
+    $days = $this->pagesDAO->selectByDay($act['datum']);
+    $this->set('days', $days);
+
 
     $knoppen = $this->pagesDAO->selectAll();
     $ids = array();
     foreach($knoppen as $knop){
       $ids[] = $knop["id"];
     }
-    $current = array_search($act["id"], $ids);
+    $current = array_search($act["act_id"], $ids);
     $next = $current + 1;
     $previous = $current - 1;
     if($next == count($ids)){
@@ -63,53 +68,18 @@ class PagesController extends Controller {
       $previous = count($ids)-1;
     }
 
-    $actAfbeeldingen = $this->imageDAO->selectByActId($act['id']);
+    $actAfbeeldingen = $this->imageDAO->selectByActId($act['act_id']);
 
     $grootAfbeelding = $actAfbeeldingen[0];
     if(!empty($_GET['image']) && $actAfbeelding = $this->imageDAO->selectById($_GET['image'])) {
       $grootAfbeelding = $actAfbeelding;
     }
 
-    $this->set('act', $act);
     $this->set('next', $ids[$next]);
     $this->set('previous', $ids[$previous]);
     $this->set('actAfbeeldingen', $actAfbeeldingen);
     $this->set('grootAfbeelding', $grootAfbeelding);
     $this->set('currentPage', 'programma');
   }
-
-
-  // private function handleSearchPlayer() {
-
-  //   if (!$searchActsResult) {
-  //     $errors = "No acts found";
-  //     $this->set('errors', $errors);
-  //     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-  //       header('Content-Type: application/json');
-  //       echo json_encode(array(
-  //         'result' => 'error',
-  //         'errors' => $errors
-  //       ));
-  //       exit();
-  //     }else{
-  //       return $errors;
-  //     }
-  //     $_SESSION['error'] = $errors;
-  //   } else {
-  //     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-  //       header('Content-Type: application/json');
-  //       echo json_encode(array(
-  //         'result' => 'ok',
-  //         'todo' => $searchActsResult
-  //       ));
-  //       exit();
-  //     }else{
-  //       return searchActsResult;
-  //     }
-  //     $_SESSION['info'] = count($searchActsResult). " acts found";
-  //     header('Location: index.php');
-  //     exit();
-  //   }
-  // }
 
 }

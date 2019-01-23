@@ -105,6 +105,33 @@
 
 /*---------------- FOOTER ----------------*/
 
+.totop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
+
+.totop__link {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  padding-top: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  background-color: var(--background-color);
+  cursor: pointer;
+  box-shadow: .1rem .5rem 1.4rem -.1rem rgba(214, 211, 214, .9);
+}
+
+.totop__link::before {
+  content: '\2191';
+  display: inline-block;
+  height: 2rem;
+}
+
 .article-sponsors {
   text-align: center;
 }

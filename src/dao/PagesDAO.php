@@ -4,13 +4,7 @@ require_once( __DIR__ . '/DAO.php');
 
 class PagesDAO extends DAO {
    public function selectAll() {
-    $sql = "SELECT * FROM `ISB_programmatie`
-    INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
-    INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`
-    LEFT JOIN `ISB_artiest` on `ISB_act`.`artiest_id`=`ISB_artiest`.`id`
-    RIGHT JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
-    WHERE `ISB_programmatie`.`id`= `ISB_programmatie`.`id`
-    ORDER BY `datum` ASC, `beginuur` ASC";
+    $sql = "SELECT `id` FROM `ISB_programmatie`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,12 +12,12 @@ class PagesDAO extends DAO {
 
   public function filter($data){
     // print_r($data);
-    $sql = "SELECT * FROM `ISB_programmatie`
-    INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
+    $sql = "SELECT * FROM ((((`ISB_programmatie`
+    INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`)
     INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`
     INNER JOIN `ISB_artiest` on `ISB_act`.`artiest_id`=`ISB_artiest`.`id`
-    INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
-    WHERE 1";
+    INNER JOIN `ISB_afbeelding` on `ISB_act`.`id`=`ISB_afbeelding`.`act_id`)))
+    WHERE `afbeelding` LIKE '%1'";
 
     if (!empty($data['alle'])) {
       $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' OR 'za%' OR 'zo%' ";
@@ -112,18 +106,26 @@ class PagesDAO extends DAO {
     INNER JOIN `ISB_artiest`ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
     INNER JOIN `ISB_programmatie` ON `ISB_act`.`id` = `ISB_programmatie`.`act_id`
     INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`
-    WHERE `ISB_act`.`id`=:id";
+    WHERE `ISB_act`.`id`= :id GROUP BY `ISB_act`.`id`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
-  // // combineren met AFBEELDINGEN
-  // public function selectById($id) {
-  //   $sql = "SELECT `ISB_act`.*, `ISB_afbeelding`.`afbeelding` FROM `ISB_act` RIGHT JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id` WHERE `ISB_act`.`id` = :id GROUP BY `ISB_act`.`id`";
-  //   $stmt = $this->pdo->prepare($sql);
-  //   $stmt->bindValue(':id', $id);
-  //   $stmt->execute();
-  //   return $stmt->fetch(PDO::FETCH_ASSOC);
-  // }
+
+  public function selectByDay($id){
+    // $sql = "SELECT `ISB_artiest`.*, `ISB_programmatie`.*, `ISB_act`.* , `ISB_afbeelding`.* FROM `ISB_act`
+    // INNER JOIN `ISB_artiest`ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
+    // INNER JOIN `ISB_programmatie` ON `ISB_act`.`id` = `ISB_programmatie`.`act_id`
+    // INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
+    // WHERE `ISB_afbeelding`.`afbeelding` LIKE '%1%' LIMIT 3";
+    $sql = "SELECT `ISB_programmatie`.`datum`, `ISB_artiest`.*, `ISB_act`.* FROM `ISB_programmatie`
+    INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`
+    INNER JOIN `ISB_artiest` ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
+    WHERE `datum`= :id LIMIT 3";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 }

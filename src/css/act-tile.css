@@ -1,3 +1,69 @@
+/* .load-more-container {
+  min-height: 100px;
+
+  ul {
+    list-style-type: none;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    li {
+      width: calc(25% - 10px);
+
+      &:nth-child(1n + 5) {
+        max-height: 0;
+        opacity: 0;
+        transition: .1s ease-in;
+      }
+    }
+  }
+
+  .load-more-btn {
+    width: 150px;
+    line-height: 40px;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    background-color: #219150;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .load-more-btn:hover {
+    background-color: red;
+  }
+
+  .loaded {
+    display: none;
+  }
+
+  .load-more {
+    display: none;
+
+    &:checked ~ ul li:nth-child(1n + 5) {
+      max-height: 999px;
+      opacity: 1;
+      transition: .2s ease-in;
+    }
+
+    &:checked ~ .load-more-btn {
+
+      .loaded {
+        display: block;
+      }
+
+      .unloaded {
+        display: none;
+      }
+    }
+  }
+} */
+
 @media (width < 321px) {
 
   .header__title {
@@ -33,7 +99,7 @@
   grid-area: content;
 }
 
-.act__ul {
+.act__section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 4rem;
@@ -45,38 +111,33 @@
   }
 }
 
-.act__li {
-  width: 32rem;
+.act__article {
+  width: 31rem;
   height: 32rem;
-  /* overflow: hidden; */
 }
 
 .act_link {
   text-decoration: none;
 }
 
-.act-div__img {
-  position: absolute;
-  width: 32rem;
-  height: 32rem;
-  /* object-fit: cover; */
-}
-
 .act__image {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 31rem;
+  height: 20rem;
   overflow: hidden;
   border-radius: .5rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -1;
 }
 
 .act-div__grid {
   display: grid;
   position: relative;
-  grid-template-columns: 20rem 15rem;
+  grid-template-columns: 60% 1fr;
   grid-template-rows: 50% 8% 42%;
   grid-template-areas:
-    '. type'
+    '. .'
     '. datum'
     'info .';
   border-radius: .5rem;
@@ -92,15 +153,16 @@
 }
 
 .act__type {
-  grid-area: type;
+  /* grid-area: type; */
   height: 5rem;
   width: 13rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -.8rem; /*translateX/Y??*/
-  margin-top: -.8rem;
   background-color: var(--color-accent);
+  margin-top: -.8rem;
+  margin-left: 18.6rem; /*translateX/Y??*/
+  position: absolute;
 }
 
 .act__datum {
@@ -114,16 +176,18 @@
 
 .act__info {
   display: grid;
+  align-items: center;
   grid-area: info;
   width: 32rem;
-  height: 25rem;
+  height: 28rem;
   grid-template-columns: 30rem;
-  grid-template-rows: repeat(3, 4.5rem);
+  grid-template-rows: repeat(3, 3.6rem);
   grid-template-areas:
     'naam'
     'titel'
     'locatie';
   padding-left: 1rem;
+  padding-top: 1rem;
   overflow: hidden;
 }
 

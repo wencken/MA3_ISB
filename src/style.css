@@ -169,6 +169,8 @@ body {
   /* overflow: hidden; */
 }
 
+/*---------------- PROGRAMMA ----------------*/
+
 /*---------------- DEREST ----------------*/
 
 .header__title {
@@ -227,47 +229,14 @@ input:-webkit-autofill {
   margin-left: .5rem;
 }
 
-/* @media (width > 800px) {
+/*--------------DETAIL--------------*/
 
-  .header__title {
-    font-size: 4rem;
-  }
-
-  body {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 10rem 1fr;
-    grid-template-areas:
-      '. header'
-      'filter content';
-  }
-
-  .filter {
-    padding: 1rem;
-    justify-self: end;
-  }
-
-  .filter__form {
-    flex-direction: column;
-    max-width: 30rem;
-  }
-
-  .input--button {
-    margin: 1rem 0;
-  }
-} */
-
-/**
- * Detail
- */
-
-.product-image {
-  width: 450px;
-  position: relative;
-  float: left;
+.detail__omschrijving {
+  margin: 0 0 36px;
+  font-size: 13px;
 }
 
-.product-title {
+.detail_titel {
   color: #6c6c6c;
   font-family: Quicksand, Helvetica, Arial, sans-serif;
   line-height: 2;
@@ -275,17 +244,12 @@ input:-webkit-autofill {
   text-transform: uppercase;
 }
 
-.product-description {
-  margin: 0 0 36px;
-  font-size: 13px;
-}
-
-.more-images {
+.beeldmateriaal {
   border-top: 1px solid #ccc;
   overflow: auto;
 }
 
-.more-images h1 {
+.beeld__titel {
   margin: 18px 0;
   color: #666;
   font-family: Quicksand, Helvetica, Arial, sans-serif;
@@ -294,11 +258,17 @@ input:-webkit-autofill {
   text-transform: uppercase;
 }
 
-.more-images ul li {
-  float: left;
-  margin: 0 10px 0 0;
+.beeld__img {
+  max-height: 160px;
 }
 
-.more-images ul li img {
-  max-height: 160px;
+.beeld__image {
+  width: 450px;
+  position: relative;
+  float: left;
+}
+
+.beeld__li {
+  float: left;
+  margin: 0 10px 0 0;
 }

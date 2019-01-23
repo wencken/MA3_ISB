@@ -58,46 +58,49 @@
     </header>
     <main class="container">
       <?php echo $content;?>
-      <section class="footer-content">
+      <section class="footer">
         <h2 class="heading-2 hidden">Footer</h2>
-        <article class="article-sponsors">
-            <h3 class="heading-3">Onze partners</h3>
-            <ul class="sponsors">
-              <li><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1.png" alt="sponsor winkeldorpen"></a></li>
-              <li><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2.png" alt="sponsor beverse feesten"></a></li>
-              <li><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3.png" alt="sponsor aout en eclats"></a></li>
-              <li><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4.png" alt="sponsor warande shopping"></a></li>
-            </ul>
-        </article>
-        <div class="footer-wrapper">
-            <article>
-                <h3 class="heading-3">Nuttige links</h3>
-                <ul>
-                  <li class="link-hover"><a class="link" href="index.php?page=programma">Programma</a></li>
-                  <li class="link-hover"><a class="link" href="index.php">Bereikbaarheid</a></li>
-                  <li class="link-hover"><a class="link" href="index.php">Voor het hele gezin</a></li>
-                  <li class="link-hover"><a class="link" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
-                  <li class="link-hover"><a class="link" href="index.php">Veelgestelde vragen</a></li>
-                </ul>
-            </article>
-            <article>
-                <h3 class="heading-3">Volg ons</h3>
-                <ul>
-                  <li class="link-hover"><a class="link" href="https://www.facebook.com/">Facebook</a></li>
-                  <li class="link-hover"><a class="link" href="https://www.instagram.com/?hl=n">Instagram</a></li>
-                  <li class="link-hover"><a class="link" href="https://twitter.com/?lang=nl">Twitter</a></li>
-                  <li class="link-hover"><a class="link" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
-                </ul>
-            </article>
-            <article>
-                <h3 class="heading-3">Contacteer ons</h3>
-                <address>
-                Donkvijverstraat<br>
-                9120 Beveren
-                </address>
-                <p>T <span><a class="link" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
-                <p>E <span><a class="link" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
-            </article>
+        <p class="totop"><a href="#top" class='totop__link'><span class='hidden'>Back to top</span></a></p>
+        <div class="footer-content">
+          <article class="article-sponsors">
+              <h3 class="heading-3">Onze partners</h3>
+              <ul class="sponsors">
+                <li><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1.png" alt="sponsor winkeldorpen"></a></li>
+                <li><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2.png" alt="sponsor beverse feesten"></a></li>
+                <li><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3.png" alt="sponsor aout en eclats"></a></li>
+                <li><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4.png" alt="sponsor warande shopping"></a></li>
+              </ul>
+          </article>
+          <div class="footer-wrapper">
+              <article>
+                  <h3 class="heading-3">Nuttige links</h3>
+                  <ul>
+                    <li class="link-hover"><a class="link" href="index.php?page=programma">Programma</a></li>
+                    <li class="link-hover"><a class="link" href="index.php">Bereikbaarheid</a></li>
+                    <li class="link-hover"><a class="link" href="index.php">Voor het hele gezin</a></li>
+                    <li class="link-hover"><a class="link" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
+                    <li class="link-hover"><a class="link" href="index.php">Veelgestelde vragen</a></li>
+                  </ul>
+              </article>
+              <article>
+                  <h3 class="heading-3">Volg ons</h3>
+                  <ul>
+                    <li class="link-hover"><a class="link" href="https://www.facebook.com/">Facebook</a></li>
+                    <li class="link-hover"><a class="link" href="https://www.instagram.com/?hl=n">Instagram</a></li>
+                    <li class="link-hover"><a class="link" href="https://twitter.com/?lang=nl">Twitter</a></li>
+                    <li class="link-hover"><a class="link" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
+                  </ul>
+              </article>
+              <article>
+                  <h3 class="heading-3">Contacteer ons</h3>
+                  <address>
+                  Donkvijverstraat<br>
+                  9120 Beveren
+                  </address>
+                  <p>T <span><a class="link" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
+                  <p>E <span><a class="link" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
+              </article>
+            </div>
           </div>
       </section>
     </main>
