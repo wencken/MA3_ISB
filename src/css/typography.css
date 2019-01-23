@@ -10,3 +10,39 @@
   font-style: normal;
   font-weight: light;
 }
+
+/*--------PROGRAMMA----------*/
+
+.act__type {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  color: var(--background-color);
+}
+
+.act__datum {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.act__naam {
+  font-family: Canoodle, 'Arial Black', sans-serif;
+  font-size: 3rem;
+  color: var(--color-light);
+}
+
+.act__titel {
+  font-family: Canoodle, 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  color: var(--background-color);
+}
+
+.act__locatie,
+.act__kinderen {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: var(--background-color);
+}

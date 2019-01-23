@@ -1,7 +1,7 @@
 require('./style.css');
 {
   const $filterForm = document.querySelector(`.filter__form`),
-    $players = document.querySelector(`.players__list`);
+    $acts = document.querySelector(`.acts__list`);
 
   const init = () => {
     if ($filterForm) {
@@ -32,16 +32,20 @@ require('./style.css');
 
   const createActListItem = act => {
     console.log(act);
-    return `<li class='player'>
+    return `<li class='act'>
     <a href="index.php?page=detail&amp;id=${act['id']}">
-    <span class='player__name'>${act['type']} | ${act['artiest_naam']} (${act['land']}) | ${act['act_naam']}</span>
-    <span class='player__stat'>${act['datum']} | ${act['locatie_naam']} | ${act['beginuur']}</span>
+    <span class='act__name'>${act['type']} | ${act['artiest_naam']} (${
+  act['land']
+}) | ${act['act_naam']}</span>
+    <span class='act__stat'>${act['datum']} | ${act['locatie_naam']} | ${
+  act['beginuur']
+}</span>
     </a>
     </li>`;
   };
 
   const handleLoadActs = data => {
-    $players.innerHTML = data.map(player => createActListItem(player)).join(``);
+    $acts.innerHTML = data.map(act => createActListItem(act)).join(``);
   };
 
   init();

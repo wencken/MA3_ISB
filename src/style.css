@@ -2,6 +2,7 @@
 @import './css/vars.css';
 @import './css/typography.css';
 @import './css/site-header.css';
+@import './css/act-tile.css';
 
 html {
   font-size: 62.5%;
@@ -52,12 +53,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
 }
 
 /*---------------- BUTTONS ----------------*/
@@ -230,78 +225,6 @@ input:-webkit-autofill {
   color: white;
   font-weight: 800;
   margin-left: .5rem;
-}
-
-.players {
-  grid-area: content;
-}
-
-.players__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 2rem;
-  padding: .5rem;
-}
-
-.player {
-  border-radius: .5rem;
-  display: grid;
-  grid-template-columns: 13rem 1fr 5rem;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    'pic name name'
-    'pic stat .'
-    'pic info .'
-    'pic . more';
-  grid-gap: .5rem;
-  box-shadow: .5rem .5rem 2.5rem -.3rem rgba(214, 211, 214, .36);
-}
-
-.player__pic {
-  grid-area: pic;
-  border-radius: 50%;
-  place-self: center;
-  background-color: var(--lightest-grey);
-
-  background-size: 12rem;
-  width: 12rem;
-  height: 12rem;
-  position: relative;
-}
-
-.player__pic::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 12rem;
-  height: 12rem;
-  background-color: white;
-  background-image: url(https://cdn.sofifa.org/players/10/notfound_0.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.player__name {
-  grid-area: name;
-  font-size: 2rem;
-}
-
-.player__stat {
-  grid-area: stat;
-  color: var(--primary-color);
-}
-
-.player__info {
-  grid-area: info;
-  color: var(--dark-grey);
-}
-
-.player__more {
-  grid-area: more;
-  color: var(--light-grey);
-  text-transform: uppercase;
 }
 
 /* @media (width > 800px) {

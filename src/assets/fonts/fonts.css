@@ -1,8 +1,8 @@
 @font-face {
   font-family: Radikal;
   src:
-    url(./radikal/Radikal-Black.woff2) format('woff2'),
-    url(./radikal/Radikal-Black.woff) format('woff');
+    url(./radikal/Radikal-Medium.woff2) format('woff2'),
+    url(./radikal/Radikal-Medium.woff) format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
   src:
     url(./radikal/Radikal.woff2) format('woff2'),
     url(./radikal/Radikal.woff) format('woff');
-  font-weight: 900;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -21,7 +21,7 @@
   src:
     url(./radikal/Radikal-Light.woff2) format('woff2'),
     url(./radikal/Radikal-Light.woff) format('woff');
-  font-weight: light;
+  font-weight: lighter;
   font-style: normal;
 }
 

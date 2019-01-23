@@ -1,0 +1,144 @@
+@media (width < 321px) {
+
+  .header__title {
+    font-size: 4rem;
+  }
+
+  .programma {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'header'
+      'filter'
+      'content';
+  }
+
+  .filter {
+    justify-self: end;
+  }
+
+  .filter__form {
+    flex-direction: column;
+    max-width: 30rem;
+  }
+
+  .input--button {
+    margin: 1rem 0;
+    flex-direction: row;
+  }
+}
+
+.acts {
+  grid-area: content;
+}
+
+.act__ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 4rem;
+  justify-self: space-between;
+
+  @media (--xl) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 4rem;
+  }
+}
+
+.act__li {
+  width: 32rem;
+  height: 32rem;
+  /* overflow: hidden; */
+}
+
+.act_link {
+  text-decoration: none;
+}
+
+.act-div__img {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  /* object-fit: cover; */
+}
+
+.act__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+.act-div__grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: 20rem 15rem;
+  grid-template-rows: 50% 8% 42%;
+  grid-template-areas:
+    '. type'
+    '. datum'
+    'info .';
+  border-radius: .5rem;
+  box-shadow: .5rem .5rem 2.5rem -.3rem rgba(214, 211, 214, .36);
+  background:
+    linear-gradient(
+      191deg,
+      rgba(214, 211, 214, 0),
+      rgba(214, 211, 214, 0) 40%,
+      rgba(255, 255, 255, 0) 50%,
+      #1c2745 50%
+    );
+}
+
+.act__type {
+  grid-area: type;
+  height: 5rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -.8rem; /*translateX/Y??*/
+  margin-top: -.8rem;
+  background-color: var(--color-accent);
+}
+
+.act__datum {
+  grid-area: datum;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.act__info {
+  display: grid;
+  grid-area: info;
+  width: 32rem;
+  height: 25rem;
+  grid-template-columns: 30rem;
+  grid-template-rows: repeat(3, 4.5rem);
+  grid-template-areas:
+    'naam'
+    'titel'
+    'locatie';
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.act__naam {
+  grid-area: naam;
+}
+
+.act__titel {
+  grid-area: titel;
+}
+
+.act__locatie {
+  grid-area: locatie;
+}
+
+.act__kinderen {
+  grid-area: kinderen;
+}
