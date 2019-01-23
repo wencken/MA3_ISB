@@ -34,12 +34,8 @@ require('./style.css');
     console.log(act);
     return `<li class='player'>
     <a href="index.php?page=detail&amp;id=${act['id']}">
-    <span class='player__name'>${act['type']} | ${act['artiest_naam']} (${
-  act['land']
-}) | ${act['act_naam']}</span>
-    <span class='player__stat'>${act['datum']} | ${act['locatie_naam']} | ${
-  act['beginuur']
-}</span>
+    <span class='player__name'>${act['type']} | ${act['artiest_naam']} (${act['land']}) | ${act['act_naam']}</span>
+    <span class='player__stat'>${act['datum']} | ${act['locatie_naam']} | ${act['beginuur']}</span>
     </a>
     </li>`;
   };
