@@ -82,7 +82,37 @@
 
 /*---------------- FOOTER ----------------*/
 
+.footer {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 20%) 1fr;
+  grid-template-rows: 1fr 20rem 1fr;
+
+  grid-template-areas:
+    '. sponsor sponsor sponsor totop'
+    '. sponsor sponsor sponsor .'
+    '. link volg contact .';
+}
+
+.footer__sponsors {
+  grid-area: sponsor;
+  grid-column: 2/ 5;
+  grid-row: span 3;
+}
+
+.footer__link {
+  grid-area: link;
+}
+
+.footer__volg {
+  grid-area: volg;
+}
+
+.footer__contact {
+  grid-area: contact;
+}
+
 .totop {
+  grid-area: totop;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

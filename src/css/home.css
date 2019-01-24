@@ -37,28 +37,88 @@
 /*-------SPEKTAKEL--------*/
 
 .spektakel {
-  height: 70rem;
+  height: 60rem;
+}
+
+.spektakel__groep {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.spektakel__lijn {
+  border-left: .2rem solid var(--color-accent);
+  padding-left: 1rem;
+  width: 40rem;
 }
 /*-------FAMILIEDAG--------*/
 
 .familiedag {
-  height: 70rem;
+  height: 60rem;
   background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.home__familiedag {
+  display: grid;
+  grid-template-columns: 1fr 40rem;
+  grid-template-rows: 1fr 20rem 1fr;
+
+  grid-template-areas:
+    'titel .'
+    'tekst image'
+    'cta .';
+}
+
+.familiedag__tekst {
+  grid-area: tekst;
+  width: 40rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.familiedag__cta {
+  grid-area: cta;
+}
+
+.familiedag__lijn {
+  grid-area: titel;
+  color: var(--background-color);
+  background-image: linear-gradient(0deg, #e9bf4e 50%, #e9bf4e 50%);
+  background-repeat: no-repeat;
+  background-size: 47% .4rem;
+  background-position: 0 101%;
+  width: 20rem;
+  height: 4rem;
+}
+
+.familiedag__ul {
+  grid-area: image;
 }
 /*-------PRAKTISCH--------*/
 
 .praktisch {
-  height: 70rem;
+  height: 60rem;
 }
 
 /*-------NIEUWSBRIEF--------*/
 
 .nieuwsbrief {
-  height: 70rem;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
 }
 
 .nieuwsbrief__article {
   display: flex;
+  flex-flow: column;
+  width: 30rem;
+  height: 25rem;
+  justify-content: space-between;
 }
 
 .email {

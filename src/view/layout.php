@@ -62,17 +62,17 @@
         <h2 class="heading-2 hidden">Footer</h2>
         <p class="totop"><a href="#top" class='totop__link'><span class='hidden'>Back to top</span></a></p>
         <div class="footer-content container">
-          <article class="article-sponsors">
-              <h3 class="heading-5">Onze partners</h3>
+          <article class="footer__sponsors">
+              <h3 class="heading-5 sponsors__titel">Onze partners</h3>
               <ul class="sponsors">
-                <li><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1_50.png" alt="sponsor winkeldorpen"></a></li>
-                <li><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2_50.png" alt="sponsor beverse feesten"></a></li>
-                <li><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3_50.png" alt="sponsor aout en eclats"></a></li>
-                <li><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4_50.png" alt="sponsor warande shopping"></a></li>
+                <li class="sponsor__link"><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1_50.png" alt="sponsor winkeldorpen"></a></li>
+                <li class="sponsor__link"><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2_50.png" alt="sponsor beverse feesten"></a></li>
+                <li class="sponsor__link"><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3_50.png" alt="sponsor aout en eclats"></a></li>
+                <li class="sponsor__link"><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4_50.png" alt="sponsor warande shopping"></a></li>
               </ul>
           </article>
           <div class="footer-wrapper">
-              <article>
+              <article class="footer__link">
                   <h3 class="heading-5">Nuttige links</h3>
                   <ul>
                     <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
@@ -82,7 +82,7 @@
                     <li><a class="link body-klein" href="index.php">Veelgestelde vragen</a></li>
                   </ul>
               </article>
-              <article>
+              <article class="footer__volg">
                   <h3 class="heading-5">Volg ons</h3>
                   <ul>
                    <li><a class="link body-klein" href="https://www.facebook.com/">Facebook</a></li>
@@ -91,7 +91,7 @@
                    <li><a class="link body-klein" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
                   </ul>
               </article>
-              <article>
+              <article class="footer__contact">
                   <h3 class="heading-5">Contacteer ons</h3>
                   <address class="body-klein">
                   Donkvijverstraat<br>

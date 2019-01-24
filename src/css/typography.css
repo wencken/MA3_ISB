@@ -72,6 +72,14 @@
   line-height: 1.6;
   text-transform: uppercase;
 }
+
+.familiedag__tekst {
+  color: var(--background-color);
+  line-height: 2.8rem;
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+}
 /*--------PROGRAMMA----------*/
 
 .filter__titel {
