@@ -1,7 +1,7 @@
 <section class='programma'>
-<header class="header__prog">
+<header>
   <h2 class="heading-1 header__programma">Programma</h2>
-  <!-- <img src="./assets/img/bg/1_100.png" alt="achtergrond" class="header__image"> -->
+  <span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
 </header>
 
   <section class="filter_section">
@@ -10,21 +10,17 @@
     <input type="hidden" name="page" value="programma"/>
       <div class="filter__group">
           <legend for="dag" class="filter__titel">Toon mij:</legend>
-          <ul class="radiobutton">
+          <ul class="checkbox">
             <li class= "filter__li">
-              <input type="radio" value="dag" id="alle" name="alle" class="filter__input"/>
-              <label for="alle" class="filter__label">Alle</label>
-            </li>
-            <li class= "filter__li">
-              <input type="radio" value="dag" id="vrijdag" name="vrijdag" class="filter__input"/>
+              <input type="checkbox" value="dag" id="vrijdag" name="vrijdag" class="filter__input"/>
               <label for="vrijdag" class="filter__label">Vrijdag</label>
             </li>
             <li class= "filter__li">
-              <input type="radio" value="dag" id="zaterdag" name="zaterdag" class="filter__input"/>
+              <input type="checkbox" value="dag" id="zaterdag" name="zaterdag" class="filter__input"/>
               <label for="zaterdag" class="filter__label">Zaterdag</label>
             </li>
             <li class= "filter__li">
-              <input type="radio" value="dag" id="zondag" name="zondag" class="filter__input"/>
+              <input type="checkbox" value="dag" id="zondag" name="zondag" class="filter__input"/>
               <label for="zondag" class="filter__label">Zondag</label>
             </li>
           </ul>

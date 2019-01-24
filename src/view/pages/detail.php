@@ -1,19 +1,18 @@
-<section class="detail container">
+<section class="detail">
 <h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
 
-<article class="detail__header">
+<article class="detail__header container">
   <h3 class="heading-2 hidden">In de kijker</h3>
-  <p class="detail__link"><a href="index.php?page=programma"><-Terug naar overzicht</a></p>
+  <p class="detail__terug"><a class="detail__link terug" href="index.php?page=programma">Terug naar overzicht</a></p>
 
   <section class="detail__informatie">
+    <div class="beeld__tekst">
       <h4 class=""><?php echo $act["artiest_naam"]?> - <?php echo $act["artiest_id"];?> stelt voor</h4>
       <p class="heading-2"><?php echo $act["act_naam"];?> - <?php echo $act["act_id"];?></p>
       <p class="detail__omschrijving"><?php echo $act["omschrijving"];?></p>
-      <p class="detail__link"><a href="https://www.facebook.com">Facebook</a></p>
-  </section>
+      <p><a class="detail__link" href="https://www.facebook.com">Ik ben aanwezig</a></p>
+    </div>
 
-  <section>
-    <h4 class='heading-3 detail__titel hidden'><?php echo $act["act_naam"];?> in beeld</h4>
     <div class="beeld__groot">
     <picture class="beeld__img">
             <source
@@ -63,36 +62,38 @@
   </section>
 
   <nav>
-      <h4 class="detail__titel hidden">Bekijk meer acts</h4>
+      <h4 class="hidden">Bekijk meer acts</h4>
       <a class="detail__link" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>
       <a class="detail__link" href="index.php?page=detail&amp;id=<?php echo $next ?>">next -></a>
   </nav>
 </article>
 
 <article class='detail__praktisch'>
-  <h3 class="heading-2">Praktische informatie</h3>
+  <div class="container">
+  <h3 class="heading-2 detail__titel">Praktische informatie</h3>
   <div class='praktisch__wrapper'>
   <article class="praktisch__datum">
-    <h4>Datum</h4>
-    <p><?php echo $act["datum"];?></p>
+    <h4 class="praktisch__subtitel">Datum</h4>
+    <p class="praktisch__tekst"><?php echo $act["datum"];?></p>
   </article>
 
   <article class="praktisch__tijdstip">
-    <h4>Tijdstip</h4>
-    <p><?php echo $act["beginuur"];?></p>
-    <p><?php echo $act["duur"];?></p>
+    <h4 class="praktisch__subtitel">Tijdstip</h4>
+    <p class="praktisch__tekst"><?php echo $act["beginuur"];?></p>
+    <p class="praktisch__tekst"><?php echo $act["duur"];?></p>
   </article>
 
   <article class="praktisch__locatie">
-    <h4>Locatie <?php echo $act["locatie_id"];?></h4>
-    <p><?php echo $act["locatie_naam"];?></p>
-    <p>9120 Beveren</p>
-    <p>Belgium</p>
+    <h4 class="praktisch__subtitel">Locatie <?php echo $act["locatie_id"];?></h4>
+    <p class="praktisch__tekst"><?php echo $act["locatie_naam"];?></p>
+    <p class="praktisch__tekst">9120 Beveren</p>
+    <p class="praktisch__tekst">Belgium</p>
   </article>
+  </div>
   </div>
 </article>
 
-<article class="beeldmateriaal">
+<article class="beeldmateriaal container">
     <h3 class="heading-2">Meer beeldmateriaal</h3>
     <picture class="beeld__img">
             <source
@@ -198,16 +199,18 @@
 </article>
 
 <article class='social'>
-  <h3 class="heading-2">Ontdek meer op:</h3>
+  <div class="container">
+  <h3 class="heading-2 detail__titel">Ontdek meer op:</h3>
   <p><?php echo $act["website"];?></p>
   <ul>
     <li><a class="detail__link" href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
     <li><a class="detail__link" href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
     <li><a class="detail__link" href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
   </ul>
+  </div>
 </article>
 
-<article>
+<article class="container">
   <h3 class="heading-2">Ook op <?php echo $act["datum"];?></h3>
   <div class='act__section'>
   <?php
@@ -271,7 +274,7 @@
     }
   ?>
   </div>
-  <p class="detail__link"><a href="index.php?page=programma">Ontdek meer</a></p>
+  <p><a class="detail__link" href="index.php?page=programma">Ontdek meer</a></p>
 </article>
 
 </section>

@@ -1,38 +1,47 @@
-.detail__omschrijving {
-  margin: 0 0 36px;
-  font-size: 13px;
+.detail__praktisch {
+  background-color: var(--primary-color);
 }
 
-.beeldmateriaal {
-  border-top: 1px solid #ccc;
-  overflow: auto;
+.terug {
+  color: var(--background-color);
 }
 
-.beeld__titel {
-  margin: 18px 0;
-  color: #666;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
+.terug::before {
+  content: '\2190';
+  margin-right: 3rem;
 }
 
-.beeld__img {
-  max-height: 160px;
+.detail__terug {
+  background-color: var(--color-accent);
+  width: 20rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__informatie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70rem;
+}
+
+.beeld__tekst {
+  width: 40%;
 }
 
 .beeld__groot {
+  width: 60%;
+  padding-left: 10rem;
 }
 
-.beeld__image {
-  width: 450px;
-  position: relative;
-  float: left;
-}
-
-.beeld__li {
-  float: left;
-  margin: 0 10px 0 0;
+.beeld__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .praktisch__wrapper {
@@ -46,6 +55,7 @@
   background-size: 30%;
   width: 10rem;
   height: 5rem;
+  background-color: var(--background-color);
   background-repeat-x: no-repeat;
   background-repeat-y: no-repeat;
   display: inline-block;
@@ -62,4 +72,20 @@
 
 .praktisch__locatie::before {
   background-image: url(./../assets/img/icons/locatie.svg);
+}
+
+.beeldmateriaal {
+  border-top: 1px solid #ccc;
+  overflow: auto;
+}
+
+.beeld__image {
+  width: 450px;
+  position: relative;
+  float: left;
+}
+
+.beeld__li {
+  float: left;
+  margin: 0 10px 0 0;
 }

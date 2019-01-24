@@ -65,22 +65,39 @@
 } */
 
 .header__prog {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
   width: 100%;
-  height: 10rem;
-  /* background-repeat: no-repeat;
-  background-image: url(assets/img/bg/4_100.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (--sm) {
+    height: 30rem;
+    background-image: url(./../assets/img/bg/4_100.webp);
+  }
 
   @media (--md) {
-    background: url(assets/img/bg/3_100.webp) no-repeat;
+    height: 30rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/bg/3_100.webp);
+    background-position: -2rem 2rem;
   }
 
   @media (--lg) {
-    background: url(assets/img/bg/2_100.webp) no-repeat;
+    height: 60rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/bg/2_100.webp);
+    background-position: -4rem -1rem;
   }
 
   @media (--xl) {
-    background: url(assets/img/bg/1_100.webp) no-repeat;
-  } */
+    height: 160rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/bg/1_100.webp);
+    background-position: -5rem -3rem;
+  }
 }
 
 .header__programma {
@@ -167,8 +184,7 @@
   overflow: hidden;
 }
 
-.filter__input[type='checkbox']:checked + label,
-.filter__input[type='radio']:checked + label {
+.filter__input[type='checkbox']:checked + label {
   background-color: var(--primary-color);
   color: var(--background-color);
   border: .2rem solid var(--color-light);
@@ -176,14 +192,12 @@
   /* overflow: hidden; */
 }
 
-.filter__input[type='checkbox']:focus + label,
-.filter__input[type='radio']:focus + label {
+.filter__input[type='checkbox']:focus + label {
   border: .2rem solid var(--color-accent);
   /* overflow: hidden; */
 }
 
-.filter__input[type='checkbox']:checked + label::before,
-.filter__input[type='radio']:checked + label::before {
+.filter__input[type='checkbox']:checked + label::before {
   content: '\f00c';
   display: block;
   position: absolute;
@@ -296,8 +310,8 @@
   background:
     linear-gradient(
       191deg,
-      rgba(214, 211, 214, 0),
-      rgba(214, 211, 214, 0) 40%,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 40%,
       rgba(255, 255, 255, 0) 50%,
       #1c2745 50%
     );

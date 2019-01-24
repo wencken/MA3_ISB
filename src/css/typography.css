@@ -84,3 +84,21 @@
 }
 
 /*--------DETAIL----------*/
+
+.detail__titel {
+  color: var(--background-color);
+}
+
+.detail__link {
+  text-decoration: none;
+}
+
+.praktisch__subtitel {
+  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.praktisch__tekst {
+  color: var(--background-color);
+}
