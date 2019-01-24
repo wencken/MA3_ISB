@@ -15,7 +15,50 @@
   <section>
     <h4 class='detail__titel hidden'><?php echo $act["act_naam"];?> in beeld</h4>
     <div class="beeld__groot">
-        <img src="./assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg" alt="<?php echo $act["act_naam"];?>" />
+    <picture class="beeld__img">
+            <source
+            type="image/webp"
+            srcset="
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 155w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 310w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 517w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 776w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 1034w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 1164w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp 1319w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1552w
+            "
+            sizes="(min-width: 1440px) 59rem,
+            (min-width: 1024px) 47rem,
+            (min-width: 768px) 36rem,
+            (min-width: 320px) 54rem,
+            (min-width: 0) 100vw
+            "
+            />
+            <source
+            type="image/jpg"
+            srcset="
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.jpg 155w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.jpg 310w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.jpg 517w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.jpg 776w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.jpg 1034w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.jpg 1164w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.jpg 1319w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg 1552w
+            "
+            sizes="(min-width: 1440px) 59rem,
+            (min-width: 1024px) 47rem,
+            (min-width: 768px) 36rem,
+            (min-width: 320px) 54rem,
+            (min-width: 0) 100vw
+            "
+            />
+            <img
+            class="beeld__img"
+            src="./assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg"
+            alt="<?php echo $act["act_naam"];?>" />
+        </picture>
     </div>
   </section>
 
@@ -28,27 +71,74 @@
 
 <article class='detail__praktisch'>
   <h3 class="detail__titel">Praktische informatie</h3>
-  <div class="praktisch__omschrijving">
-    <p>Datum</p>
+  <div class='praktisch__wrapper'>
+  <article class="praktisch__datum">
+    <h4>Datum</h4>
     <p><?php echo $act["datum"];?></p>
-  </div>
-  <div class="praktisch__omschrijving">
-    <p>Tijdstip</p>
-    <p><?php echo $act["beginuur"];?>(<?php echo $act["duur"];?>)</p>
-  </div>
-  <div class="praktisch__omschrijving">
-    <p>Locatie</p>
+  </article>
+
+  <article class="praktisch__tijdstip">
+    <h4>Tijdstip</h4>
+    <p><?php echo $act["beginuur"];?></p>
+    <p><?php echo $act["duur"];?></p>
+  </article>
+
+  <article class="praktisch__locatie">
+    <h4>Locatie <?php echo $act["locatie_id"];?></h4>
     <p><?php echo $act["locatie_naam"];?></p>
     <p>9120 Beveren</p>
     <p>Belgium</p>
+  </article>
   </div>
 </article>
 
 <article class="beeldmateriaal">
     <h3 class="heading-3 detail__titel">Meer beeldmateriaal</h3>
-    <div id="beeld__groot">
-        <?php echo '<img src="./assets/img/'.$grootAfbeelding["afbeelding"].'_100.jpg" alt="' . $act["act_naam"] . '" />';?>
-    </div>
+    <picture class="beeld__img">
+            <source
+            type="image/webp"
+            srcset="
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 155w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 310w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 517w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 776w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 1034w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 1164w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp 1319w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1552w
+            "
+            sizes="(min-width: 1440px) 59rem,
+            (min-width: 1024px) 47rem,
+            (min-width: 768px) 36rem,
+            (min-width: 320px) 54rem,
+            (min-width: 0) 100vw
+            "
+            />
+            <source
+            type="image/jpg"
+            srcset="
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.jpg 155w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.jpg 310w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.jpg 517w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.jpg 776w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.jpg 1034w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.jpg 1164w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.jpg 1319w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg 1552w
+            "
+            sizes="(min-width: 1440px) 59rem,
+            (min-width: 1024px) 47rem,
+            (min-width: 768px) 36rem,
+            (min-width: 320px) 54rem,
+            (min-width: 0) 100vw
+            "
+            />
+            <img
+            class="beeld__img"
+            src="./assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg"
+            alt="<?php echo $act["act_naam"];?>" />
+    </picture>
+
     <ul class="beeld__ul">
         <?php
         foreach($actAfbeeldingen as $actAfbeelding) {
@@ -76,6 +166,7 @@
             "
             />
             <source
+            type="image/jpg"
             srcset="
             assets/img/<?php echo $actAfbeelding["afbeelding"];?>_10.jpg 155w,
             assets/img/<?php echo $actAfbeelding["afbeelding"];?>_20.jpg 310w,
@@ -144,6 +235,7 @@
           "
           />
           <source
+          type="image/jpg"
           srcset="
           assets/img/<?php echo $actAfbeeldingen["afbeelding"];?>_10.jpg 155w,
           assets/img/<?php echo $actAfbeeldingen["afbeelding"];?>_20.jpg 310w,

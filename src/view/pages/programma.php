@@ -76,6 +76,7 @@
               "
               />
               <source
+              type="image/jpg"
               srcset="
               assets/img/<?php echo $act["afbeelding"];?>_10.jpg 155w,
               assets/img/<?php echo $act["afbeelding"];?>_20.jpg 310w,

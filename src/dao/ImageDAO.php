@@ -16,6 +16,14 @@ class ImageDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectImage() {
+    $sql = "SELECT * FROM `ISB_afbeelding` WHERE `afbeelding` LIKE '%1' AND `id` < 10";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectById($id) {
     $sql = "SELECT *FROM `ISB_afbeelding` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);

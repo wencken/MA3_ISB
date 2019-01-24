@@ -1,0 +1,68 @@
+/*-------INTRO--------*/
+/*-------SPEKTAKEL--------*/
+
+/*-------CARROUSEL--------*/
+
+/* .carouselbox {
+  position: relative;
+  margin: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+  overflow: hidden;
+  height: 30rem;
+  width: 30rem;
+}
+
+.act__image {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+  object-position: 100% 50%;
+ object-position: 50% 50%;
+}
+
+.actief {
+}
+
+.actief li {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.actief li.current {
+  opacity: 1;
+}
+
+.actief .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30rem;
+  position: relative;
+  z-index: 10;
+}
+
+.carouselbox button {
+  border: none;
+  background: rgba(255, 255, 255, .1);
+  font-size: 1.6rem;
+  width: 3rem;
+  height: 6rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.offscreen {
+  display: none;
+} */
+
+/*-------FAMILIEDAG--------*/
+
+/*-------PRAKTISCH--------*/
+
+/*-------NIEUWSBRIEF--------*/
+
+.nieuwsbrief__article {
+  display: flex;
+}

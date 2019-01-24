@@ -2,7 +2,9 @@
 @import './css/vars.css';
 @import './css/typography.css';
 @import './css/site-header.css';
-@import './css/act-tile.css';
+@import './css/home.css';
+@import './css/programma.css';
+@import './css/detail.css';
 
 html {
   font-size: 62.5%;
@@ -25,7 +27,7 @@ body {
   color: var(--primary-color);
 }
 
-/*---------------- ALGEMEEN ----------------*/
+/*---------------- MEDIAQUERIES ----------------*/
 
 .container {
   padding-left: 1rem;
@@ -55,6 +57,9 @@ body {
   display: none;
 }
 
+.show {
+  display: visible;
+}
 /*---------------- BUTTONS ----------------*/
 
 .form-title {
@@ -169,9 +174,7 @@ body {
   /* overflow: hidden; */
 }
 
-/*---------------- PROGRAMMA ----------------*/
-
-/*---------------- DEREST ----------------*/
+/*---------------- FILTER ----------------*/
 
 .header__title {
   font-size: 6vw;
@@ -227,48 +230,4 @@ input:-webkit-autofill {
   color: white;
   font-weight: 800;
   margin-left: .5rem;
-}
-
-/*--------------DETAIL--------------*/
-
-.detail__omschrijving {
-  margin: 0 0 36px;
-  font-size: 13px;
-}
-
-.detail_titel {
-  color: #6c6c6c;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
-  line-height: 2;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.beeldmateriaal {
-  border-top: 1px solid #ccc;
-  overflow: auto;
-}
-
-.beeld__titel {
-  margin: 18px 0;
-  color: #666;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.beeld__img {
-  max-height: 160px;
-}
-
-.beeld__image {
-  width: 450px;
-  position: relative;
-  float: left;
-}
-
-.beeld__li {
-  float: left;
-  margin: 0 10px 0 0;
 }

@@ -1,0 +1,73 @@
+.detail__omschrijving {
+  margin: 0 0 36px;
+  font-size: 13px;
+}
+
+.detail_titel {
+  color: #6c6c6c;
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  line-height: 2;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.beeldmateriaal {
+  border-top: 1px solid #ccc;
+  overflow: auto;
+}
+
+.beeld__titel {
+  margin: 18px 0;
+  color: #666;
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.beeld__img {
+  max-height: 160px;
+}
+
+.beeld__groot {
+}
+
+.beeld__image {
+  width: 450px;
+  position: relative;
+  float: left;
+}
+
+.beeld__li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.praktisch__wrapper {
+  display: flex;
+}
+
+.praktisch__datum::before,
+.praktisch__tijdstip::before,
+.praktisch__locatie::before {
+  content: '';
+  background-size: 30%;
+  width: 10rem;
+  height: 5rem;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  display: inline-block;
+  justify-content: center;
+}
+
+.praktisch__datum::before {
+  background-image: url(./../assets/img/icons/calender.svg);
+}
+
+.praktisch__tijdstip::before {
+  background-image: url(./../assets/img/icons/time.svg);
+}
+
+.praktisch__locatie::before {
+  background-image: url(./../assets/img/icons/locatie.svg);
+}
