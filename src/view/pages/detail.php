@@ -1,5 +1,7 @@
 <section class="detail">
 <h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
+<span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
+
 
 <article class="detail__header container">
   <h3 class="heading-2 hidden">In de kijker</h3>
@@ -7,8 +9,8 @@
 
   <section class="detail__informatie">
     <div class="beeld__tekst">
-      <h4 class=""><?php echo $act["artiest_naam"]?>stelt voor</h4>
-      <p class="heading-2"><?php echo $act["act_naam"];?></p>
+      <h4 class="beeld__titel"><?php echo $act["artiest_naam"]?> stelt voor</h4>
+      <p class="heading-1"><?php echo $act["act_naam"];?></p>
       <p class="detail__omschrijving"><?php echo $act["omschrijving"];?></p>
       <p><a class="detail__link" href="https://www.facebook.com">Ik ben aanwezig</a></p>
     </div>
@@ -61,7 +63,7 @@
     </div>
   </section>
 
-  <nav>
+  <nav class="detail__bekijkmeer">
       <h4 class="hidden">Bekijk meer acts</h4>
       <a class="detail__link" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>
       <a class="detail__link" href="index.php?page=detail&amp;id=<?php echo $next ?>">next -></a>
@@ -69,8 +71,8 @@
 </article>
 
 <article class='detail__praktisch'>
-  <div class="container">
-  <h3 class="heading-2 detail__titel">Praktische informatie</h3>
+  <div class="container praktisch">
+  <h3 class="heading-2 detail__titel detail__lijn">Praktische informatie</h3>
   <div class='praktisch__wrapper'>
   <article class="praktisch__datum">
     <h4 class="praktisch__subtitel">Datum</h4>
@@ -90,11 +92,13 @@
     <p class="praktisch__tekst">Belgium</p>
   </article>
   </div>
+  <img src="./assets/img/plattegrond/algemeen_50.png" alt="kaart van ISB" class="praktisch__img">
+
   </div>
 </article>
 
 <article class="beeldmateriaal container">
-    <h3 class="heading-2">Meer beeldmateriaal</h3>
+    <h3 class="heading-2 detail__lijn">Meer beeldmateriaal</h3>
     <picture class="beeld__img">
             <source
             type="image/webp"
@@ -198,20 +202,20 @@
     </ul>
 </article>
 
-<article class='social'>
-  <div class="container">
-  <h3 class="heading-2 detail__titel">Ontdek meer op:</h3>
+<article class='socials'>
+  <div class="container detail__socials">
+  <h3 class="heading-2">Ontdek meer op:</h3>
   <p><?php echo $act["website"];?></p>
-  <ul>
-    <li><a class="detail__link" href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
-    <li><a class="detail__link" href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
-    <li><a class="detail__link" href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
+  <ul class="socials__media">
+    <li><a class="social__link" href="https://www.facebook.com"><img src="./assets/img/social/facebook_85.png" alt="Facebook"></a></li>
+    <li><a class="social__link" href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.png" alt="Instagram"></a></li>
+    <li><a class="social__link" href="https://twitter.com"><img src="./assets/img/social/twitter_75.png" alt="Twitter"></a></li>
   </ul>
   </div>
 </article>
 
 <article class="ookop container">
-  <h3 class="heading-2">Ook op <?php echo $act["datum"];?></h3>
+  <h3 class="heading-2 detail__lijn">Ook op <?php echo $act["datum"];?></h3>
   <div class='act__section'>
   <?php
   foreach($days as $day){
@@ -274,7 +278,7 @@
     }
   ?>
   </div>
-  <p class="cta"><a class="detail__link" href="index.php?page=programma">Ontdek meer</a></p>
+  <p class="cta"><a class="underline--magical cta__link" href="index.php?page=programma">Ontdek meer</a></p>
 </article>
 
 </section>

@@ -12,16 +12,16 @@
           <legend for="dag" class="filter__titel">Toon mij:</legend>
           <ul class="checkbox">
             <li class= "filter__li">
-              <input type="checkbox" value="dag" id="vrijdag" name="vrijdag" class="filter__input"/>
-              <label for="vrijdag" class="filter__label">Vrijdag</label>
+              <input type="checkbox" value="dag" id="vrijdag" name="vrijdag" class="filter__input">
+              <label for="vrijdag" class="filter__label <?php if (isset($_GET['vrijdag'])){echo 'checked';}?>">Vrijdag</label>
             </li>
             <li class= "filter__li">
-              <input type="checkbox" value="dag" id="zaterdag" name="zaterdag" class="filter__input"/>
-              <label for="zaterdag" class="filter__label">Zaterdag</label>
+              <input type="checkbox" value="dag" id="zaterdag" name="zaterdag" class="filter__input">
+              <label for="zaterdag" class="filter__label <?php if (isset($_GET['zaterdag'])){echo 'checked';}?>">Zaterdag</label>
             </li>
             <li class= "filter__li">
-              <input type="checkbox" value="dag" id="zondag" name="zondag" class="filter__input"/>
-              <label for="zondag" class="filter__label">Zondag</label>
+              <input type="checkbox" value="dag" id="zondag" name="zondag" class="filter__input">
+              <label for="zondag" class="filter__label <?php if (isset($_GET['zondag'])){echo 'checked';}?>">Zondag</label>
             </li>
           </ul>
       </div>
@@ -29,20 +29,20 @@
           <legend for="type" class="filter__titel">Filter enkel op:</legend>
           <ul class="checkbox">
             <li class= "filter__li">
-              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling" class="filter__input">
-              <label for="voorstelling" class="filter__label">voorstelling</label>
+              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling" class="filter__input <?php if (isset($_GET['voorstelling'])){echo 'actie';}?>">
+              <label for="voorstelling" class="filter__label <?php if (isset($_GET['voorstelling'])){echo 'checked';}?>">voorstelling</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="type" id="straatact" name="straatact" class="filter__input">
-              <label for="straatact" class="filter__label">straatact</label>
+              <label for="straatact" class="filter__label <?php if (isset($_GET['straatact'])){echo 'checked';}?>">straatact</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="type" id="activiteit" name="activiteit" class="filter__input">
-              <label for="activiteit" class="filter__label">activiteit</label>
+              <label for="activiteit" class="filter__label <?php if (isset($_GET['activiteit'])){echo 'checked';}?>">activiteit</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="true" id="kinderen" name="kinderen" class="filter__input">
-              <label for="kinderen" class="filter__label">Kinderen</label>
+              <label for="kinderen" class="filter__label <?php if (isset($_GET['kinderen'])){echo 'checked';}?>">Kinderen</label>
             </li>
           </ul>
       </div>

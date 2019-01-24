@@ -1,11 +1,61 @@
-/*-------INTRO--------*/
+/*-------HEADER--------*/
+
+.home__header {
+  overflow: hidden;
+  width: 100%;
+  height: 80rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (--sm) {
+    height: 30rem;
+    background-image: url(./../assets/img/header/header4.png);
+  }
+
+  @media (--md) {
+    height: 70rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/header/header3.png);
+    background-position: -2rem 2rem;
+  }
+
+  @media (--lg) {
+    height: 70rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/header/header2.png);
+    background-position: -4rem -1rem;
+  }
+
+  @media (--xl) {
+    height: 85rem;
+    background-size: 104%;
+    background-image: url(./../assets/img/header/header1.png);
+    background-position: -2rem -14rem;
+  }
+}
+
 /*-------SPEKTAKEL--------*/
 
+.spektakel {
+  height: 70rem;
+}
 /*-------FAMILIEDAG--------*/
 
+.familiedag {
+  height: 70rem;
+  background-color: var(--primary-color);
+}
 /*-------PRAKTISCH--------*/
 
+.praktisch {
+  height: 70rem;
+}
+
 /*-------NIEUWSBRIEF--------*/
+
+.nieuwsbrief {
+  height: 70rem;
+}
 
 .nieuwsbrief__article {
   display: flex;

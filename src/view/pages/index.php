@@ -1,16 +1,7 @@
-<section class="home container">
-<h2 class="heading-1 hidden">Home</h2>
+<section class="home">
+<h2 class="heading-1 home__header"><span class="hidden">Home</span></h2>
 
-<article class="intro">
-  <div>
-    <h3 class="heading-2">"Een weekend vol verwondering en bewondering"</h3>
-    <p>Het laatste weekend van augustus wordt een knaller voor jong en oud.  Een arsenaal aan gekke wezens of vriendelijke gastheren staan te popelen om u te ontmoeten!</p>
-    <p class="cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
-  </div>
-  <img src="" alt="">
-</article>
-
-<article class="spektakel">
+<article class="spektakel container">
   <div>
     <h3 class="heading-2">Een onvergetelijk spektakel</h3>
     <p>Humor, acrobatie, stuntwerk van de bovenste plank uit ruim 15 verschillende landen! Bovenal geniet u van dit festival volledig GRATIS.</p>
@@ -21,26 +12,35 @@
   </ul>
 </article>
 
+<article class="intro container">
+  <div>
+    <h3 class="heading-2">"Een weekend vol verwondering en bewondering"</h3>
+    <p>Het laatste weekend van augustus wordt een knaller voor jong en oud.  Een arsenaal aan gekke wezens of vriendelijke gastheren staan te popelen om u te ontmoeten!</p>
+    <p class="cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
+  </div>
+  <img src="" alt="">
+</article>
+
 <article class="familiedag">
-  <div class="familiedag__wrapper">
+  <div class="container">
     <h3 class="heading-2">Familiedag</h3>
     <p>Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien kinderkoptelefoons en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
     <p class="cta"><a class=" underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
-  </div>
   <ul class="familiedag__ul">
     <li><img src="./assets/img/familie/1_20.jpg" alt="sfeerfoto 1 familiedag" width="150" height="150"></li>
     <li><img src="./assets/img/familie/2_20.jpg" alt="sfeerfoto 2 familiedag" width="150" height="150"></li>
     <li><img src="./assets/img/familie/3_20.jpg" alt="sfeerfoto 3 familiedag" width="150" height="150"></li>
     <li><img src="./assets/img/familie/4_20.jpg" alt="sfeerfoto 4 familiedag" width="150" height="150"></li>
   </ul>
+  </div>
 </article>
 
-<article class="praktisch">
+<article class="praktisch container">
   <h3 class="heading-2 hidden">Praktisch</h3>
  <img src="./assets/img/plattegrond/algemeen_50.png" alt="kaart van ISB">
 </article>
 
-<article class="nieuwsbrief">
+<article class="nieuwsbrief container">
   <h3 class="heading-1 hidden">Nieuwsbrief</h3>
   <article class="nieuwsbrief__article">
     <h4 class="heading-2">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>

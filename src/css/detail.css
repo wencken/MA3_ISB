@@ -22,12 +22,41 @@
   align-items: center;
 }
 
+.detail__lijn {
+  background-image: linear-gradient(0deg, #3e9798 50%, #3e9798 50%);
+  background-repeat: no-repeat;
+  background-size: 47% .4rem;
+  background-position: 0 101%;
+  width: 20rem;
+  height: 4rem;
+}
+/*--------------INTRO-----------------*/
+
 .detail__informatie {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 70rem;
+  height: 60rem;
+}
+
+.detail__omschrijving {
+  width: 27rem;
+  line-height: 2.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.beeld__titel {
+  color: var(--color-light);
+}
+
+.beeld__titel::before {
+  content: '\2015';
+  width: 4rem;
+  height: 2rem;
+  color: var(--color-light);
+  margin-right: 1rem;
 }
 
 .beeld__tekst {
@@ -44,15 +73,33 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+  margin-right: 5rem;
+  margin-top: 5rem;
+}
+
+.detail__bekijkmeer {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
 }
 /*--------------PRAKTISCH-----------------*/
 
-.detail__praktisch {
-  height: 70rem;
+.praktisch {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .praktisch__wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 40rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.detail__praktisch {
+  height: 70rem;
 }
 
 .praktisch__datum::before,
@@ -67,6 +114,14 @@
   background-repeat-y: no-repeat;
   display: inline-block;
   justify-content: center;
+}
+
+.praktisch__img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  /* clip- ath: polygon(0 0, 100% 0, 100% 65%, 0 65%); */
 }
 
 .praktisch__datum::before {
@@ -101,9 +156,31 @@
 }
 /*--------------SOCIAL-----------------*/
 
-.social {
+.socials {
   height: 40rem;
 }
+
+.detail__socials {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  height: 18rem;
+}
+
+.socials__media {
+  display: flex;
+  justify-content: space-between;
+  background-size: 50%;
+  width: 20rem;
+  background-color: var(--primary-color);
+}
+
+.social__link {
+  color: var(--primary-color);
+}
+
 /*--------------OOKOP-----------------*/
 
 .ookop {

@@ -169,7 +169,7 @@
 
 .filter__label::before {
   /* content: '\f067'; */
-  content: '\f067';
+  content: '\002B';
   display: block;
   position: absolute;
   transition: transform .3s ease-in-out;
@@ -197,8 +197,12 @@
   /* overflow: hidden; */
 }
 
+.checked {
+  border: .2rem solid var(--color-light);
+}
+
 .filter__input[type='checkbox']:checked + label::before {
-  content: '\f00c';
+  content: '\2212';
   display: block;
   position: absolute;
   transform: rotate(-360deg);
