@@ -1,9 +1,9 @@
-<section class="home">
-<h2 class="heading-2 hidden">Home</h2>
+<section class="home container">
+<h2 class="heading-1 hidden">Home</h2>
 
 <article class="intro">
   <div>
-    <h3 class="heading-3">"Een weekend vol verwondering en bewondering"</h3>
+    <h3 class="heading-2">"Een weekend vol verwondering en bewondering"</h3>
     <p>Het laatste weekend van augustus wordt een knaller voor jong en oud.  Een arsenaal aan gekke wezens of vriendelijke gastheren staan te popelen om u te ontmoeten!</p>
     <a class="cta" href="index.php?page=programma">Programma</a>
   </div>
@@ -12,7 +12,7 @@
 
 <article class="spektakel">
   <div>
-    <h3 class="heading-3">Een onvergetelijk spektakel</h3>
+    <h3 class="heading-2">Een onvergetelijk spektakel</h3>
     <p>Humor, acrobatie, stuntwerk van de bovenste plank uit ruim 15 verschillende landen! Bovenal geniet u van dit festival volledig GRATIS.</p>
     <a class="cta" href="index.php?page=programma">Programma</a>
   </div>
@@ -23,7 +23,7 @@
 
 <article class="familiedag">
   <div class="familiedag__wrapper">
-    <h3 class="heading-3">Familiedag</h3>
+    <h3 class="heading-2">Familiedag</h3>
     <p>Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien kinderkoptelefoons en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
     <a class="cta" href="index.php?page=programma">Programma</a>
   </div>
@@ -36,14 +36,14 @@
 </article>
 
 <article class="praktisch">
-  <h3 class="heading-3 hidden">Praktisch</h3>
+  <h3 class="heading-2 hidden">Praktisch</h3>
  <img src="./assets/img/plattegrond/algemeen_50.png" alt="kaart van ISB">
 </article>
 
 <article class="nieuwsbrief">
-  <h3 class="heading-3 hidden">Nieuwsbrief</h3>
+  <h3 class="heading-1 hidden">Nieuwsbrief</h3>
   <article class="nieuwsbrief__article">
-    <h4 class="heading-4">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
+    <h4 class="heading-2">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
     <p class='nieuwsbrief__tekst'>Schrijf je dan in op onze nieuwsbrief.</p>
     <form action="" class='nieuwsbrief__form'>
       <input type="hidden" action="" value="">

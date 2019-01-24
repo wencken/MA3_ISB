@@ -19,8 +19,8 @@
 @font-face {
   font-family: Radikal;
   src:
-    url(./radikal/Radikal-Light.woff2) format('woff2'),
-    url(./radikal/Radikal-Light.woff) format('woff');
+    url(./radikal/Radikal-Thin.woff2) format('woff2'),
+    url(./radikal/Radikal-Thin.woff) format('woff');
   font-weight: lighter;
   font-style: normal;
 }

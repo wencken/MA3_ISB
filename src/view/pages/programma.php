@@ -1,53 +1,62 @@
 <section class='programma'>
-<header><h2 class="heading-2">Programma</h2></header>
+<header class="header__prog">
+  <h2 class="heading-1 header__programma">Programma</h2>
+  <!-- <img src="./assets/img/bg/1_100.png" alt="achtergrond" class="header__image"> -->
+</header>
 
-  <section class="filter">
-    <h3 class="heading-3">Filter</h3>
-    <form action="index.php?page=programma" method="get" class="filter__form">
-    <input type="hidden" name="page" value="programma" />
-      <div class="form-group toon">
-          <div for="dag">Toon mij:</div>
-
-          <input type="radio" value="dag" id="alle" name="alle"/>
-          <label for="alle" class="form-title">Alle</label>
-
-          <input type="radio" value="dag" id="vrijdag" name="vrijdag"/>
-          <label for="vrijdag" class="form-title">Vrijdag</label>
-
-          <input type="radio" value="dag" id="zaterdag" name="zaterdag"/>
-          <label for="zaterdag" class="form-title">Zaterdag</label>
-
-          <input type="radio" value="dag" id="zondag" name="zondag"/>
-          <label for="zondag" class="form-title">Zondag</label>
-      </div>
-      <div class="checkbox">
-          <div for="type">Filter enkel op:</div>
-          <ul class="checkboxtags">
-            <li class= "checkboxtags-li">
-              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling">
-              <label for="voorstelling" class="checkboxtags-title form-title">voorstelling</label>
+  <section class="filter_section">
+    <h3 class="heading-2">Filter</h3>
+    <form action="index.php?page=programma" method="get" class="filter container">
+    <input type="hidden" name="page" value="programma"/>
+      <div class="filter__group">
+          <legend for="dag" class="filter__titel">Toon mij:</legend>
+          <ul class="radiobutton">
+            <li class= "filter__li">
+              <input type="radio" value="dag" id="alle" name="alle" class="filter__input"/>
+              <label for="alle" class="filter__label">Alle</label>
             </li>
-            <li class= "checkboxtags-li">
-              <input type="checkbox" value="type" id="straatact" name="straatact">
-              <label for="straatact" class="checkboxtags-title form-title">straatact</label>
+            <li class= "filter__li">
+              <input type="radio" value="dag" id="vrijdag" name="vrijdag" class="filter__input"/>
+              <label for="vrijdag" class="filter__label">Vrijdag</label>
             </li>
-            <li class= "checkboxtags-li">
-              <input type="checkbox" value="type" id="activiteit" name="activiteit">
-              <label for="activiteit" class="checkboxtags-title form-title">activiteit</label>
+            <li class= "filter__li">
+              <input type="radio" value="dag" id="zaterdag" name="zaterdag" class="filter__input"/>
+              <label for="zaterdag" class="filter__label">Zaterdag</label>
+            </li>
+            <li class= "filter__li">
+              <input type="radio" value="dag" id="zondag" name="zondag" class="filter__input"/>
+              <label for="zondag" class="filter__label">Zondag</label>
             </li>
           </ul>
       </div>
-      <div class="form-group">
-          <input type="checkbox" value="kids" name="kinderen">
-          <label for="kinderen" class="form-title">Kinderen</label>
+      <div class="filter__group">
+          <legend for="type" class="filter__titel">Filter enkel op:</legend>
+          <ul class="checkbox">
+            <li class= "filter__li">
+              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling" class="filter__input">
+              <label for="voorstelling" class="filter__label">voorstelling</label>
+            </li>
+            <li class= "filter__li">
+              <input type="checkbox" value="type" id="straatact" name="straatact" class="filter__input">
+              <label for="straatact" class="filter__label">straatact</label>
+            </li>
+            <li class= "filter__li">
+              <input type="checkbox" value="type" id="activiteit" name="activiteit" class="filter__input">
+              <label for="activiteit" class="filter__label">activiteit</label>
+            </li>
+            <li class= "filter__li">
+              <input type="checkbox" value="true" id="kinderen" name="kinderen" class="filter__input">
+              <label for="kinderen" class="filter__label">Kinderen</label>
+            </li>
+          </ul>
       </div>
-      <input type="submit" value="toepassen" name="submit" class="form__submit input input--button">
+      <input type="submit" value="toepassen" name="submit" class="body-groot filter__submit input">
     </form>
   </section>
 
-  <section class='act__section'>
-    <h3 class="heading-3">Resultaten</h3>
-    <!-- <div class="load-more-container"> -->
+  <section class="container">
+    <h3 class="heading-2">Resultaten</h3>
+    <div class='act__section'>
     <!-- <input type="checkbox" class="load-more"/> -->
       <?php
         foreach($acts as $act){
@@ -99,11 +108,11 @@
               alt="<?php echo $act['act_naam'];?>" />
             </picture>
             <div class='act-div__grid'>
-            <p class='act__datum'><?php echo $act["datum"];?></p>
+            <p class='body-groot strong act__datum'><?php echo $act["datum"];?></p>
             <div class='act__info'>
-                <h4 class='act__naam'><?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>)</h4>
-                <h5 class='act__titel'><?php echo $act["act_naam"];?></h5>
-                <p class='act__locatie'><?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?> | <?php echo $act["kinderen"];?></p>
+                <h4 class='heading-2 act__naam'><?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>)</h4>
+                <h5 class='heading-3 act__titel'><?php echo $act["act_naam"];?></h5>
+                <p class='body-klein act__locatie'><?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?> | <?php echo $act["kinderen"];?></p>
             </div>
             </div>
           </a>
@@ -115,8 +124,8 @@
       <!-- <label class="load-more-btn" for="load-more">
         <span class="unloaded">LOAD MORE</span>
         <span class="loaded">VIEW LESS</span>
-       </label>
-      </div> -->
+       </label> -->
+      </div>
   </section>
 
  </section>

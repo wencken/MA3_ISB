@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .navigatie {
@@ -16,91 +18,66 @@
 }
 
 .nav {
-  color: #1c2745;
+  color: var(--primary-color);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .nav:hover {
-  color: #e9bf4e;
+  color: var(--color-accent);
 }
 
 .active {
-  border-bottom: .2rem #1c2745 solid;
+  border-bottom: .2rem var(--primary-color) solid;
 }
 
 .link {
-  color: #fefdfb;
+  color: var(--background-color);
   text-decoration: none;
 }
 
 .link:visited {
-  color: #3e9798;
+  color: var(--color-light);
 }
 
 .link:active {
   text-decoration: underline;
 }
 
-.link-hover {
-  transform: translateZ(0);
-  transition: color 1000ms;
-}
-
-.link-hover::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 10;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: .1rem;
-  width: 3%;
-  background: #e9bf4e;
-  transform: scaleX(0);
-  transform-origin: 0 0%;
-  will-change: transform;
-  transition: all .5s;
-}
-
-.link-hover:hover::after {
-  transform: scaleX(1);
+.link:hover {
+  color: var(--color-accent);
 }
 
 .topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fefdfb;
-  background-color: #1c2745;
-  height: 4rem;
+  background: var(--primary-color);
 }
 
 .topright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  color: var(--background-color);
+  background: var(--primary-color);
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .social {
-  background-color: #1c2745;
+  background: var(--primary-color);
 }
 
 .talen {
   display: flex;
-  width: 7rem;
+  /* width: 7rem; */
   justify-content: space-between;
 }
 
 .taal {
   text-decoration: none;
-  border-right: .2rem solid #fefdfb;
+  border-right: .2rem solid var(--background-color);
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.nederlands {
-  text-decoration: underline;
 }
 
 /*---------------- FOOTER ----------------*/
@@ -118,12 +95,12 @@
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
+  border: .2rem solid var(--primary-color);
   padding-top: 1.5rem;
   color: var(--primary-color);
   text-align: center;
   background-color: var(--background-color);
   cursor: pointer;
-  box-shadow: .1rem .5rem 1.4rem -.1rem rgba(214, 211, 214, .9);
 }
 
 .totop__link::before {
@@ -138,17 +115,26 @@
 
 .sponsors {
   display: flex;
+  justify-content: center;
 }
 
 .copyright {
   text-align: center;
+  font-size: 1.3rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.footer {
+  background: var(--primary-color);
 }
 
 .footer-content {
-  background: var(--primary-color);
   color: var(--background-color);
   padding-top: 5rem;
   padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-wrapper {

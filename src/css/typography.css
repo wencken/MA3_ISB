@@ -1,50 +1,85 @@
 .wf-canoodle-n4-active .heading-1,
 .wf-canoodle-n4-active .heading-2,
 .wf-canoodle-n4-active .heading-3,
-.wf-canoodle-n4-active .heading-4 {
+.wf-canoodle-n4-active .heading-4,
+.wf-canoodle-n4-active .heading-5 {
   font-family: Canoodle, 'Arial Black', sans-serif;
-  letter-spacing: 0;
+}
+
+.heading-1 {
+  font-size: 2.8rem;
+}
+
+.heading-2 {
+  font-size: 2.6rem;
+}
+
+.heading-3 {
+  font-size: 2.4rem;
+}
+
+.heading-4 {
+  font-size: 2.2rem;
+}
+
+.heading-5 {
+  font-size: 2rem;
 }
 
 .wf-radikal-n4-active body {
   font-family: Radikal, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: light;
+  font-weight: lighter;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.body-groot {
+  font-size: 1.8rem;
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.body-klein {
+  font-size: 1.3rem;
+  color: var(--background-color);
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.strong {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }
 
 /*--------PROGRAMMA----------*/
 
+.filter__titel {
+  font-family: Canoodle, 'Arial Black', sans-serif;
+  color: var(--background-color);
+  font-size: 2.4rem;
+}
+
+.filter__submit {
+  color: var(--background-color);
+}
+
 .act__type {
-  font-family: Radikal, Helvetica, sans-serif;
-  font-size: 1.8rem;
-  font-weight: lighter;
   color: var(--background-color);
 }
 
 .act__datum {
-  font-family: Radikal, Helvetica, sans-serif;
-  font-size: 1.8rem;
-  font-weight: bold;
   color: var(--primary-color);
 }
 
 .act__naam {
-  font-family: Canoodle, 'Arial Black', sans-serif;
-  font-size: 3rem;
   color: var(--color-light);
 }
 
 .act__titel {
-  font-family: Canoodle, 'Arial Black', sans-serif;
-  font-size: 2.5rem;
-  color: var(--background-color);
-}
-
-.act__locatie,
-.act__kinderen {
-  font-family: Radikal, Helvetica, sans-serif;
-  font-size: 1.3rem;
-  font-weight: lighter;
   color: var(--background-color);
 }
 

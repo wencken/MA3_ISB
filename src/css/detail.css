@@ -3,14 +3,6 @@
   font-size: 13px;
 }
 
-.detail_titel {
-  color: #6c6c6c;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
-  line-height: 2;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 .beeldmateriaal {
   border-top: 1px solid #ccc;
   overflow: auto;
