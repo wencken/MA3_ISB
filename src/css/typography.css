@@ -55,6 +55,23 @@
   font-weight: bold;
 }
 
+/*--------HOME----------*/
+
+.cta__link {
+  color: var(--background-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nieuwsbrief__submit {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--background-color);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
 /*--------PROGRAMMA----------*/
 
 .filter__titel {

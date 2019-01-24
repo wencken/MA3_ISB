@@ -47,5 +47,6 @@ require('./style.css');
   const handleLoadActs = data => {
     $acts.innerHTML = data.map(act => createActListItem(act)).join(``);
   };
+
   init();
 }

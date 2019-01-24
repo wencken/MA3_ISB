@@ -7,8 +7,8 @@
 
   <section class="detail__informatie">
     <div class="beeld__tekst">
-      <h4 class=""><?php echo $act["artiest_naam"]?> - <?php echo $act["artiest_id"];?> stelt voor</h4>
-      <p class="heading-2"><?php echo $act["act_naam"];?> - <?php echo $act["act_id"];?></p>
+      <h4 class=""><?php echo $act["artiest_naam"]?>stelt voor</h4>
+      <p class="heading-2"><?php echo $act["act_naam"];?></p>
       <p class="detail__omschrijving"><?php echo $act["omschrijving"];?></p>
       <p><a class="detail__link" href="https://www.facebook.com">Ik ben aanwezig</a></p>
     </div>
@@ -210,7 +210,7 @@
   </div>
 </article>
 
-<article class="container">
+<article class="ookop container">
   <h3 class="heading-2">Ook op <?php echo $act["datum"];?></h3>
   <div class='act__section'>
   <?php
@@ -274,7 +274,7 @@
     }
   ?>
   </div>
-  <p><a class="detail__link" href="index.php?page=programma">Ontdek meer</a></p>
+  <p class="cta"><a class="detail__link" href="index.php?page=programma">Ontdek meer</a></p>
 </article>
 
 </section>

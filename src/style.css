@@ -65,4 +65,32 @@ body {
 .accent {
   color: var(--color-accent);
 }
+
+.cta {
+  width: 14rem;
+  height: 4rem;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #fefdfb 0%, #fefdfb 100%);
+  background-repeat: no-repeat;
+  background-size: 101% .02em;
+  background-position: 0 101%;
+  transition: background-size .25s ease-in-out;
+  width: 14rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline--magical:hover {
+  background-size: 100% 101%;
+  color: var(--color-accent);
+  border-bottom: .2rem solid var(--color-accent);
+}
 /*---------------- BUTTONS ----------------*/

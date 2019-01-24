@@ -5,7 +5,7 @@
   <div>
     <h3 class="heading-2">"Een weekend vol verwondering en bewondering"</h3>
     <p>Het laatste weekend van augustus wordt een knaller voor jong en oud.  Een arsenaal aan gekke wezens of vriendelijke gastheren staan te popelen om u te ontmoeten!</p>
-    <a class="cta" href="index.php?page=programma">Programma</a>
+    <p class="cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
   </div>
   <img src="" alt="">
 </article>
@@ -14,7 +14,7 @@
   <div>
     <h3 class="heading-2">Een onvergetelijk spektakel</h3>
     <p>Humor, acrobatie, stuntwerk van de bovenste plank uit ruim 15 verschillende landen! Bovenal geniet u van dit festival volledig GRATIS.</p>
-    <a class="cta" href="index.php?page=programma">Programma</a>
+    <p class="cta"><a class=" underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
   </div>
   <ul class="content">
     <li class="content__li"><img src="./assets/img/<?php echo $acts['afbeelding'];?>_50.jpg" alt="<?php echo $acts["afbeelding"];?>"/></li>
@@ -25,7 +25,7 @@
   <div class="familiedag__wrapper">
     <h3 class="heading-2">Familiedag</h3>
     <p>Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien kinderkoptelefoons en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
-    <a class="cta" href="index.php?page=programma">Programma</a>
+    <p class="cta"><a class=" underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
   </div>
   <ul class="familiedag__ul">
     <li><img src="./assets/img/familie/1_20.jpg" alt="sfeerfoto 1 familiedag" width="150" height="150"></li>
@@ -47,9 +47,9 @@
     <p class='nieuwsbrief__tekst'>Schrijf je dan in op onze nieuwsbrief.</p>
     <form action="" class='nieuwsbrief__form'>
       <input type="hidden" action="" value="">
-      <label for="email">e-mailadres</label>
-      <input type="text" name="email" value="wencke.nuyt@student.howest.be">
-      <input type="submit" name="submit" value="houd me op de hoogte">
+      <label for="email" class="email__label">e-mailadres</label>
+      <input type="text" name="email" class="email" style="border:none">
+      <input type="submit" value="Houd me op de hoogte!" name="submit" class="nieuwsbrief__submit">
     </form>
   </article>
 </article>

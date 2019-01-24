@@ -10,3 +10,45 @@
 .nieuwsbrief__article {
   display: flex;
 }
+
+.email {
+  width: 20rem;
+  height: 3.5rem;
+  border-bottom: .2rem solid var(--color-accent);
+  background-color: var(--background-color);
+}
+
+.email:focus {
+  outline: none;
+}
+
+.nieuwsbrief__submit {
+  outline: none;
+  cursor: pointer;
+  color: var(--background-color);
+  border-bottom: .2rem solid var(--color-light);
+  background-color: var(--color-accent);
+  background-image: linear-gradient(120deg, #3e9798 0%, #3e9798 100%);
+  background-repeat: no-repeat;
+  background-size: 101% .2rem;
+  background-position: 0 101%;
+  transition: background-size .25s ease-in;
+  width: 25rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nieuwsbrief__submit:hover {
+  color: var(--color-accent);
+  background-color: var(--color-light);
+  background-size: 101% 101%;
+  border-bottom: .2rem solid var(--color-accent);
+}
+
+.email__label,
+.submit {
+  border: none;
+  outline: none;
+}

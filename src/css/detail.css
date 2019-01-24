@@ -1,3 +1,5 @@
+/*--------------ALGEMEEN-----------------*/
+
 .detail__praktisch {
   background-color: var(--primary-color);
 }
@@ -43,6 +45,11 @@
   object-fit: cover;
   object-position: 50% 50%;
 }
+/*--------------PRAKTISCH-----------------*/
+
+.detail__praktisch {
+  height: 70rem;
+}
 
 .praktisch__wrapper {
   display: flex;
@@ -74,9 +81,12 @@
   background-image: url(./../assets/img/icons/locatie.svg);
 }
 
+/*--------------BEELDMATERIAAL-----------------*/
+
 .beeldmateriaal {
   border-top: 1px solid #ccc;
   overflow: auto;
+  height: 70rem;
 }
 
 .beeld__image {
@@ -88,4 +98,14 @@
 .beeld__li {
   float: left;
   margin: 0 10px 0 0;
+}
+/*--------------SOCIAL-----------------*/
+
+.social {
+  height: 40rem;
+}
+/*--------------OOKOP-----------------*/
+
+.ookop {
+  height: 80rem;
 }
