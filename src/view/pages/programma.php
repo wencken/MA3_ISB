@@ -1,5 +1,5 @@
 <section class='programma'>
-<header>
+<header class="header__program">
   <h2 class="heading-1 header__programma">Programma</h2>
   <span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
 </header>
@@ -29,12 +29,12 @@
           <legend for="type" class="filter__titel">Filter enkel op:</legend>
           <ul class="checkbox">
             <li class= "filter__li">
-              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling" class="filter__input <?php if (isset($_GET['voorstelling'])){echo 'actie';}?>">
+              <input type="checkbox"  value="type" id="voorstelling" name="voorstelling" class="filter__input">
               <label for="voorstelling" class="filter__label <?php if (isset($_GET['voorstelling'])){echo 'checked';}?>">voorstelling</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="type" id="straatact" name="straatact" class="filter__input">
-              <label for="straatact" class="filter__label <?php if (isset($_GET['straatact'])){echo 'checked';}?>">straatact</label>
+              <label for="straatact" class="filter__label">straatact</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="type" id="activiteit" name="activiteit" class="filter__input">
@@ -46,7 +46,8 @@
             </li>
           </ul>
       </div>
-      <input type="submit" value="toepassen" name="submit" class="body-groot filter__submit input">
+      <input type="reset" value="Wis alle filters">
+      <input type="submit" value="Bekijk resultaten" name="submit" class="body-groot filter__submit input">
     </form>
   </section>
 
