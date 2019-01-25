@@ -19,18 +19,7 @@ class PagesDAO extends DAO {
     INNER JOIN `ISB_afbeelding` on `ISB_act`.`id`=`ISB_afbeelding`.`act_id`)))
     WHERE `afbeelding` LIKE '%1'";
 
-    if (!empty($data['alle'])) {
-      $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' OR 'za%' OR 'zo%' ";
-      if (!empty($data['vrijdag'])) {
-        $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' ";
-      }
-      if (!empty($data['zaterdag'])) {
-        $sql .= " OR `ISB_programmatie`.`datum` LIKE 'za%' ";
-      }
-      if (!empty($data['zondag'])) {
-        $sql .= " OR `ISB_programmatie`.`datum` LIKE 'zo%' ";
-      }
-    }
+
      if (!empty($data['vrijdag'])) {
      $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' ";
       if (!empty($data['zaterdag'])) {
@@ -47,8 +36,7 @@ class PagesDAO extends DAO {
     } else if (!empty($data['zondag'])) {
       $sql .=  " AND `ISB_programmatie`.`datum` LIKE 'zo%' ";
     }
-
-    if (!empty($data['voorstelling'])) {
+     if (!empty($data['voorstelling'])) {
       $sql .= " AND `ISB_act`.`type` LIKE 'voorstelling%' ";
       if (!empty($data['straatact'])) {
         $sql .= " OR `ISB_act`.`type` LIKE 'straatact%' ";
@@ -72,9 +60,6 @@ class PagesDAO extends DAO {
 
     $stmt = $this->pdo->prepare($sql);
 
-    if (!empty($data['alle'])){
-      $stmt->bindValue(':alle',$data['alle']);
-    }
     if (!empty($data['vrijdag'])){
       $stmt->bindValue(':vrijdag',$data['vrijdag']);
     }

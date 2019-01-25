@@ -5,7 +5,7 @@
   background: var(--primary-color);
 
   @media (--lg) {
-    display: unset;
+    display: block;
   }
 }
 
@@ -20,21 +20,30 @@
   padding-right: 1rem;
 }
 
+.header__bg {
+  background-color: var(--background-color);
+  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, .05);
+
+  @media (--lg) {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0);
+  }
+}
+
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.burger__menu {
   background-color: var(--background-color);
 
   @media (--lg) {
     background-color: rgba(255, 255, 255, 0);
   }
-}
-
-.burger__menu {
-  background-color: var(--background-color);
 }
 
 .navigatie {
@@ -76,6 +85,28 @@
   color: var(--primary-color);
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (--sm) {
+    font-size: 3.5rem;
+  }
+
+  @media (--md) {
+    font-size: 2.7rem;
+  }
+
+  @media (--lg) {
+    font-size: 2.8rem;
+  }
+
+  @media (--xl) {
+    font-size: 3.5rem;
+  }
+}
+
+.navi {
+  color: var(--primary-color);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .nav:hover {
@@ -105,6 +136,10 @@
 
 .social {
   background: var(--primary-color);
+  display: flex;
+  width: 10rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .talen {
@@ -115,21 +150,17 @@
 
 .taal {
   text-decoration: none;
-  border-right: .2rem solid var(--background-color);
+  border-right: .1rem solid var(--background-color);
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/*---------------- HAMBURGER ----------------*/
-/*
-.burger {
-  background-color: var(--background-color);
-  visibility: visible;
+.taal:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
 
-  @media (--md) {
-    display: none;
-  }
-} */
+/*---------------- HAMBURGER ----------------*/
 
 .burger__header {
   display: flex;
@@ -156,6 +187,10 @@
 
 .noklik {
   display: none;
+
+  @media (--lg) {
+    display: block;
+  }
 }
 
 .klik {
@@ -373,6 +408,7 @@
 
   grid-column: 1 / span 2;
   grid-row: 2 / 3;
+  /* background-color: var(--background-color); */
 
   @media (--md) {
     grid-template-columns: repeat(4, 25%);

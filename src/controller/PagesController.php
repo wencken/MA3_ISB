@@ -24,7 +24,6 @@ class PagesController extends Controller {
 
   public function programma() {
      $data = array(
-      'alle' => (!empty($_GET['vrijdag'])) ? $_GET['vrijdag'] : '',
       'vrijdag' => (!empty($_GET['vrijdag'])) ? $_GET['vrijdag'] : '',
       'zaterdag' => (!empty($_GET['zaterdag'])) ? $_GET['zaterdag'] : '',
       'zondag' => (!empty($_GET['zondag'])) ? $_GET['zondag'] : '',

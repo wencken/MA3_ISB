@@ -32,9 +32,9 @@
     <div class="topbar">
       <div class="topright container">
           <ul class="social">
-              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
-              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
+              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.png" alt="Facebook"></a></li>
+              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.png" alt="Instagram"></a></li>
+              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter_50.png" alt="Twitter"></a></li>
           </ul>
           <p class="body-klein">Donkvijverstraat, 9120 Beveren</p>
           <ul class="talen">
@@ -45,9 +45,10 @@
       </div>
     </div>
 
-    <header class="header__top container">
+    <header class="header__bg">
+      <div class=" header__top container">
         <div class="burger__titel">
-          <h1 class="burger__h1 heading-0"><a href="index.php">ISB </a></h1>
+          <h1 class="burger__h1 heading-0"><a class="navi" href="index.php">ISB </a></h1>
           <h2 class="burger__h2 body-0">
             <span>24.08</span>
             <span>25.08</span>
@@ -65,7 +66,7 @@
               <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
             </ul>
           </nav>
-          <ul class="burger__talen">
+          <!-- <ul class="burger__talen">
               <li class="body-klein taal underline">NL</li>
               <li class="body-klein taal">FR</li>
               <li class="body-klein taal">EN</li>
@@ -74,7 +75,7 @@
               <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
               <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
               <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="menu-icon">
@@ -82,7 +83,16 @@
           <span class="line line--second"></span>
           <span class="line line--third"></span>
         </div>
-    </header>
+        </div>
+        <!-- <nav>
+          <ul class="navigatie">
+              <li class="<?php if($currentPage == 'index') echo 'active';?>"><a class="heading-5 nav" href="index.php">Home</a></li>
+              <li class="<?php if($currentPage == 'programma') echo 'active';?>"><a class="heading-5 nav" href="index.php?page=programma">Programma</a></li>
+              <li><a class="heading-5 nav" href="index.php">Plan</a></li>
+              <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
+          </ul>
+        </nav> -->
+      </header>
 
     <main class="main">
       <?php echo $content;?>

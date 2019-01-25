@@ -4,6 +4,7 @@
   --color-light: #3e9798;
   --color-accent: #e9bf4e;
   --background-color: #fefdfb;
+  --color-red: #c92b29;
 }
 
 @custom-media --xs screen and (min-width: 0);

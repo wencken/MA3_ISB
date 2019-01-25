@@ -7,12 +7,16 @@ require('./style.css');
   const nav = document.querySelector('.burger__menu');
   let forward = true;
 
+  const filter = document.querySelector(`.filter__heading`);
+  let filteren = true;
+
   const init = () => {
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
     nav.classList.add('noklik');
     menu.addEventListener('click', handleShowMenu);
+    filter.addEventListener('click', handleShowFilter);
   };
 
   const handleShowMenu = () => {
@@ -29,6 +33,18 @@ require('./style.css');
     }
 
     forward = !forward;
+  };
+
+  const handleShowFilter = () => {
+    if (filteren) {
+      $filterForm.classList.add('nodropdown');
+      $filterForm.classList.remove('dropdown');
+    } else {
+      $filterForm.classList.add('dropdown');
+      $filterForm.classList.remove('nodropdown');
+    }
+
+    filteren = !filteren;
   };
 
   const handleLoadActs = data => {
@@ -61,7 +77,7 @@ require('./style.css');
   const createactListItem = act => {
     return `  <article class='act__article'>
     <a class='act_link' href="index.php?page=detail&amp;id=${act['act_id']}">
-    <p class='act__type'>${act['type']}</p>
+    <p class='act__type ${act['type']}_color'>${act['type']}</p>
     <picture class="act__image">
         <source
         type="image/webp"

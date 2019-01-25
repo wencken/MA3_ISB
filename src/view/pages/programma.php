@@ -5,10 +5,10 @@
 </header>
 
   <section class="filter_section">
-    <h3 class="heading-2">Filter</h3>
+    <h3 class="heading-2 filter__heading container">Filter  <span>&#10095;</span></h3>
     <form action="index.php" method="get" class="filter container">
     <input type="hidden" name="page" value="programma"/>
-      <div class="filter__group">
+      <div class="filter__group toon">
           <legend for="dag" class="filter__titel">Toon mij:</legend>
           <ul class="checkbox">
             <li class= "filter__li">
@@ -25,7 +25,7 @@
             </li>
           </ul>
       </div>
-      <div class="filter__group">
+      <div class="filter__group enkel">
           <legend for="type" class="filter__titel">Filter enkel op:</legend>
           <ul class="checkbox">
             <li class= "filter__li">
@@ -46,8 +46,10 @@
             </li>
           </ul>
       </div>
-      <input type="reset" value="Wis alle filters">
-      <input type="submit" value="Bekijk resultaten" name="submit" class="body-groot filter__submit input">
+      <div class="filter__buttons">
+        <input type="reset" value="Wis alle filters" class="body-groot filter__reset">
+        <input type="submit" value="Bekijk resultaten" name="submit" class="body-groot filter__submit input">
+      </div>
     </form>
   </section>
 
@@ -60,7 +62,7 @@
           ?>
           <article class='act__article'>
           <a class='act_link' href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
-          <p class='act__type'><?php echo $act["type"];?></p>
+          <p class='<?php echo $act["type"];?>_color act__type'><?php echo $act["type"];?></p>
           <picture class="act__image">
               <source
               type="image/webp"
