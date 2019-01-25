@@ -80,6 +80,103 @@
   padding-right: 1rem;
 }
 
+/*---------------- HAMBURGER ----------------*/
+
+.burger {
+  background-color: var(--background-color);
+}
+
+.burger__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger__titel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.burger__h2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  border-left: .2rem solid var(--color-accent);
+  padding-left: 1rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  height: 5rem;
+}
+
+.noklik {
+  display: none;
+}
+
+.klik {
+  position: absolute;
+  visibility: visible;
+  top: 10rem;
+}
+
+.menu-icon {
+  position: relative;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  transform-origin: 50% 50%;
+  animation-fill-mode: both;
+  animation-duration: .1s;
+}
+
+.line--second {
+  top: calc(50% - (8px) / 2);
+}
+
+.line--third {
+  top: calc(100% - (8px));
+}
+
+.menu-icon:hover .line {
+  background-color: var(--color-light);
+}
+
+.menu-icon.forward .line {
+  animation-name: forward-one;
+}
+
+.menu-icon.forward .line--second {
+  animation-name: forward-two;
+}
+
+.menu-icon.forward .line--third {
+  animation-name: forward-three;
+}
+
+.menu-icon.backward .line {
+  animation-name: backward-one;
+  animation-direction: reverse;
+}
+
+.menu-icon.backward .line--second {
+  animation-name: backward-two;
+}
+
+.menu-icon.backward .line--third {
+  animation-name: backward-three;
+}
+
 /*---------------- FOOTER ----------------*/
 
 .footer {

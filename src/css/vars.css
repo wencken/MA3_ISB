@@ -13,3 +13,105 @@
 @custom-media --lg screen and (min-width: 64em); /* 1024px */
 /* @custom-media --xl screen and (min-width: 70em); 1120px */
 @custom-media --xl screen and (min-width: 90em); /* 1440px */
+
+@keyframes forward-one {
+
+  0% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  33% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes forward-two {
+
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes forward-three {
+
+  0% {
+    top: calc(100% - (6px));
+    transform: rotate(0deg);
+  }
+
+  33% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes backward-one {
+
+  0% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  33% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes backward-two {
+
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes backward-three {
+
+  0% {
+    top: calc(100% - (6px));
+    transform: rotate(0deg);
+  }
+
+  33% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: calc(50% - (6px) / 2);
+    transform: rotate(135deg);
+  }
+}

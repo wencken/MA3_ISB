@@ -2,11 +2,30 @@ require('./style.css');
 {
   const $filterForm = document.querySelector(`.filter`),
     $acts = document.querySelector(`.act__section`);
+  const menu = document.querySelector('.menu-icon');
+  const nav = document.querySelector('.burger__menu');
+  let forward = true;
 
   const init = () => {
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
     }
+    nav.classList.add('noklik');
+    menu.addEventListener('click', () => {
+      if (forward) {
+        menu.classList.add('forward');
+        menu.classList.remove('backward');
+        nav.classList.add('klik');
+        nav.classList.remove('noklik');
+      } else {
+        menu.classList.remove('forward');
+        menu.classList.add('backward');
+        nav.classList.add('noklik');
+        nav.classList.remove('klik');
+      }
+
+      forward = !forward;
+    });
   };
 
   const handleLoadActs = data => {

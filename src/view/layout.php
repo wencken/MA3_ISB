@@ -29,13 +29,58 @@
   </head>
 
   <body >
+   <header class = "burger">
+    <div class="burger__header container">
+
+        <div class="burger__titel">
+          <h1 class="burger__h1 heading-0">ISB</h1>
+          <h2 class="burger__h2 body-0">
+            <span>24.08</span>
+            <span>25.08</span>
+            <span>26.08</span>
+          </h2>
+        </div>
+
+        <div class="menu-icon">
+          <span class="line"></span>
+          <span class="line line--second"></span>
+          <span class="line line--third"></span>
+        </div>
+
+
+        <div class="burger__menu">
+          <nav class="burger__nav">
+              <h3 class="hidden">Navigatie</h3>
+              <ul class="navigatie">
+                <li class="<?php if($currentPage == 'index') echo 'active';?>"><a class="heading-5 nav" href="index.php">Home</a></li>
+                <li class="<?php if($currentPage == 'programma') echo 'active';?>"><a class="heading-5 nav" href="index.php?page=programma">Programma</a></li>
+                <li><a class="heading-5 nav" href="index.php">Plan</a></li>
+                <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
+              </ul>
+          </nav>
+          <ul class="burger__talen">
+              <li class="body-klein taal underline">NL</li>
+              <li class="body-klein taal">FR</li>
+              <li class="body-klein taal">EN</li>
+          </ul>
+          <ul class="burger__social">
+            <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
+          </ul>
+      </div>
+
+    </div>
+    </header>
+
+   <!--
     <div class="topbar">
     <div class="topright container">
-      <!-- <ul class="social">
+    <ul class="social">
         <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
         <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
         <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
-      </ul> -->
+      </ul>
         <p class="body-klein">Donkvijverstraat, 9120 Beveren</p>
         <ul class="talen">
           <li class="body-klein taal underline">NL</li>
@@ -44,6 +89,7 @@
         </ul>
       </div>
     </div>
+
     <header class="header container">
       <h1 class="heading-5">Internationaal<br> Straattheaterfestival <br> 24 tot 26 augustus 2018</h1>
       <nav>
@@ -55,7 +101,7 @@
           <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <main class="main">
       <?php echo $content;?>
       <section class="footer">

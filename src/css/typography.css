@@ -1,9 +1,14 @@
+.wf-canoodle-n4-active .heading-0,
 .wf-canoodle-n4-active .heading-1,
 .wf-canoodle-n4-active .heading-2,
 .wf-canoodle-n4-active .heading-3,
 .wf-canoodle-n4-active .heading-4,
 .wf-canoodle-n4-active .heading-5 {
   font-family: Canoodle, 'Arial Black', sans-serif;
+}
+
+.heading-0 {
+  font-size: 6rem;
 }
 
 .heading-1 {
@@ -33,6 +38,14 @@
   color: var(--primary-color);
   font-size: 1.5rem;
   line-height: 1.6;
+}
+
+.body-0 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .body-groot {
