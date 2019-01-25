@@ -33,15 +33,16 @@ class PagesController extends Controller {
       'activiteit' => (!empty($_GET['activiteit'])) ? $_GET['activiteit'] : '',
       'kinderen' => (!empty($_GET['kinderen'])) ? $_GET['kinderen'] : ''
     );
+    $acts = $this->pagesDAO->filter($data);
+    $this->set('acts', $acts);
+    $this->set('currentPage', 'programma');
+
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
       header('Content-Type: application/json');
       echo json_encode($acts);
       exit();
     }
-    $acts = $this->pagesDAO->filter($data);
-    $this->set('acts', $acts);
-    $this->set('currentPage', 'programma');
   }
 
   public function detail() {
@@ -86,4 +87,35 @@ class PagesController extends Controller {
     $this->set('currentPage', 'programma');
   }
 
+private function handleFilterActs() {
+  if (!$filterActsResult) {
+    $errors = "No acts found";
+    $this->set('errors', $errors);
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode(array(
+        'result' => 'error',
+        'errors' => $errors
+      ));
+      exit();
+    }else{
+      return $errors;
+    }
+    $_SESSION['error'] = $errors;
+  } else {
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode(array(
+        'result' => 'ok',
+        'todo' => $filterActsResult
+      ));
+      exit();
+    }else{
+      return filterActsResult;
+    }
+    $_SESSION['info'] = count($filterActsResult). " acts found";
+    header('Location: index.php');
+    exit();
+  }
+}
 }

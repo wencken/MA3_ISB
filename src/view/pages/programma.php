@@ -6,7 +6,7 @@
 
   <section class="filter_section">
     <h3 class="heading-2">Filter</h3>
-    <form action="index.php?page=programma" method="get" class="filter container">
+    <form action="index.php" method="get" class="filter container">
     <input type="hidden" name="page" value="programma"/>
       <div class="filter__group">
           <legend for="dag" class="filter__titel">Toon mij:</legend>
