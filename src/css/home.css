@@ -381,6 +381,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
+  text-align: left;
 
   @media (--md) {
     flex-flow: row;
@@ -436,7 +437,7 @@
   }
 }
 
-.aftermovie__beeld {
+/* .aftermovie__beeld {
   width: 95vw;
   height: 16rem;
 
@@ -454,7 +455,7 @@
     width: 50vw;
     height: 41rem;
   }
-}
+} */
 
 .nieuwsbrief__article {
   display: flex;
@@ -462,25 +463,53 @@
   width: 29rem;
   height: 41rem;
   justify-content: space-between;
+  align-items: center;
+
+  @media (--md) {
+    padding-bottom: 70vw;
+  }
 
   @media (--lg) {
     margin-right: 5rem;
+    padding-bottom: 57vw;
   }
 
   @media (--xl) {
     margin-right: 10rem;
+    padding-bottom: 52vw;
   }
 }
 
 .email {
-  width: 20rem;
-  height: 3.5rem;
+  width: 25rem;
+  height: 5.5rem;
   border-bottom: .2rem solid var(--color-accent);
   background-color: var(--background-color);
+  margin-bottom: 1rem;
+
+  @media (--md) {
+    height: 5.5rem;
+    width: 34rem;
+  }
+
+  @media (--lg) {
+    height: 5.5rem;
+    width: 42rem;
+  }
+
+  @media (--xl) {
+    height: 5.5rem;
+    width: 51rem;
+  }
 }
 
 .email:focus {
   outline: none;
+}
+
+.email__label {
+  display: flex;
+  flex-flow: column;
 }
 
 .nieuwsbrief__submit {
@@ -499,6 +528,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (--md) {
+    width: 34rem;
+  }
+
+  @media (--lg) {
+    width: 42rem;
+  }
+
+  @media (--xl) {
+    width: 51rem;
+  }
 }
 
 .nieuwsbrief__submit:hover {
@@ -514,6 +555,21 @@
   outline: none;
 }
 
+.nieuwsbrief__form {
+  width: 34rem;
+
+  @media (--md) {
+    width: 34rem;
+  }
+
+  @media (--lg) {
+    width: 42rem;
+  }
+
+  @media (--xl) {
+    width: 51rem;
+  }
+}
 /*-------PRAKTISCH--------*/
 
 .bereikbaarheid {

@@ -116,19 +116,15 @@
 
 <article class="nieuwsbrief ">
   <h3 class="heading-1 nieuwsbrief__titel"><span class="hidden">Nieuwsbrief</span></h3>
-  <!-- <article class="aftermovie">
-    <h4 class="hidden">Dit was 2017</h4>
-    <iframe class = "aftermovie__beeld"
-    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstraattheaterfestivalbeveren%2Fvideos%2F1949847618626827%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-  </article> -->
   <article class="nieuwsbrief__article container">
     <h4 class="heading-2 titel__home">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
     <p class='nieuwsbrief__tekst body__home'>Schrijf je dan in op onze nieuwsbrief.</p>
     <form action="" class='nieuwsbrief__form'>
       <input type="hidden" action="" value="">
-      <label for="email" class="email__label">e-mailadres</label>
-      <input type="text" name="email" class="email" style="border:none">
-      <input type="submit" value="Houd me op de hoogte!" name="submit" class="nieuwsbrief__submit">
+      <label for="email" class="body__home email__label">e-mailadres
+      <input type="text" name="email" class=" body__home email" style="border:none">
+      </label>
+      <input type="submit" value="Houd me op de hoogte!" name="submit" class=" body__home nieuwsbrief__submit">
     </form>
   </article>
 </article>
