@@ -17,11 +17,13 @@ class ImageDAO extends DAO {
   }
 
   public function selectImage() {
-    $sql = "SELECT * FROM `ISB_afbeelding` WHERE `afbeelding` LIKE '%1' AND `id` < 10";
+    $sql = "SELECT * FROM `ISB_afbeelding`
+    INNER JOIN `ISB_act` ON `ISB_afbeelding`.`act_id` = `ISB_act`.`id`
+    WHERE `afbeelding` LIKE '%1' ORDER BY rand() LIMIT 3";
     $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
+    // $stmt->bindValue(':id', $id);
     $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function selectById($id) {

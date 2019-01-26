@@ -3,41 +3,111 @@
 .home__header {
   overflow: hidden;
   width: 100%;
-  height: 80rem;
   background-repeat: no-repeat;
   background-size: 100%;
-
-  @media (--sm) {
-    height: 30rem;
-    background-image: url(./../assets/img/header/header4.png);
-  }
+  display: flex;
+  justify-content: center;
+  height: 130vw;
+  align-items: flex-end;
+  background-image: url(./../assets/img/header/header4.png);
+  background-position-y: -4rem;
 
   @media (--md) {
-    height: 70rem;
+    height: 78vw;
+    align-items: flex-end;
     background-size: 104%;
     background-image: url(./../assets/img/header/header3.png);
-    background-position: -2rem 2rem;
+    background-position: -2rem 0;
+    padding-bottom: 6rem;
   }
 
   @media (--lg) {
-    height: 70rem;
-    background-size: 104%;
+    height: 70vw;
+    background-size: 108%;
     background-image: url(./../assets/img/header/header2.png);
-    background-position: -4rem -1rem;
+    background-position: -4rem -11rem;
   }
 
   @media (--xl) {
-    height: 85rem;
-    background-size: 104%;
+    height: 55vw;
+    background-size: 103%;
     background-image: url(./../assets/img/header/header1.png);
-    background-position: -2rem -14rem;
+    background-position: -3rem -9rem;
   }
 }
 
-/*-------SPEKTAKEL--------*/
+.header__cta__mobile {
+  text-decoration: none;
+}
+
+.header__mobile {
+  color: var(--background-color);
+  width: 100vw;
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-accent);
+
+  @media (--md) {
+    width: 26rem;
+    font-size: 1.7rem;
+  }
+}
+
+.header__mobile::after {
+  content: '\2192';
+  color: var(--background-color);
+}
+
+.header__cta {
+  display: none;
+}
+
+@media (--lg) {
+
+  .header__hidden {
+    display: none;
+  }
+
+  .header__cta__mobile {
+    display: none;
+  }
+
+  .header__cta {
+    display: block;
+    color: var(--primary-color);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header__cta::before {
+    content: '\2197';
+    display: inline-block;
+    font-size: 6vw;
+    font-weight: bold;
+    transform: rotate(135deg);
+  }
+}
+/*-------------------SPEKTAKEL--------------------*/
+
+.spektakel__naam {
+  font-size: 4rem;
+}
 
 .spektakel {
-  height: 60rem;
+  display: flex;
+  flex-flow: column;
+  height: 70rem;
+
+  @media (--md) {
+    height: 60rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .spektakel__groep {
@@ -54,39 +124,115 @@
   padding-left: 1rem;
   width: 40rem;
 }
-/*-------FAMILIEDAG--------*/
+
+.spektakel__content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  @media (--md) {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+
+.spektakel__article {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  margin: .5rem;
+
+  @media (--md) {
+    width: 36.3rem;
+    height: 20rem;
+    margin: 1rem;
+  }
+
+  @media (--lg) {
+    width: 32rem;
+  }
+
+  @media (--xl) {
+    width: 46rem;
+    height: 30rem;
+    margin: 1rem;
+  }
+}
+
+.spektakel__article:nth-last-of-type(3) {
+  display: none;
+
+  @media (--lg) {
+    display: block;
+  }
+}
+
+.spektakel__image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+  @media (--md) {
+    height: 20rem;
+  }
+
+  @media (--xl) {
+    height: 30rem;
+  }
+}
+
+.spektakel__article:hover .spektakel__image {
+  opacity: .3;
+}
+
+.spektakel__link {
+  text-decoration: none;
+}
+
+.spektakel__link:hover {
+  color: var(--color-accent);
+}
+
+.spektakel__hover {
+  /* transition: .5s ease; */
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.spektakel__article:hover .spektakel__hover {
+  opacity: 1;
+}
+
+/*-------------------FAMILIEDAG--------------------*/
 
 .familiedag {
-  height: 60rem;
+  height: 32vh;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
+
+  @media (--md) {
+  }
 }
 
 .home__familiedag {
-  display: grid;
-  grid-template-columns: 1fr 40rem;
-  grid-template-rows: 1fr 20rem 1fr;
-
-  grid-template-areas:
-    'titel .'
-    'tekst image'
-    'cta .';
-}
-
-.familiedag__tekst {
-  grid-area: tekst;
-  width: 40rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.familiedag__cta {
-  grid-area: cta;
+  display: flex;
+  justify-content: space-between;
+  height: 40rem;
 }
 
 .familiedag__lijn {
-  grid-area: titel;
   color: var(--background-color);
   background-image: linear-gradient(0deg, #e9bf4e 50%, #e9bf4e 50%);
   background-repeat: no-repeat;
@@ -96,9 +242,101 @@
   height: 4rem;
 }
 
-.familiedag__ul {
-  grid-area: image;
+.familiedag__info {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
 }
+
+.familiedag__img {
+  overflow: hidden;
+
+  @media (--xl) {
+    width: 40vw;
+  }
+}
+
+.familiedag__image {
+  width: 40vw;
+  display: none;
+  overflow: hidden;
+  object-fit: cover;
+
+  @media (--md) {
+    display: block;
+    height: 100%;
+  }
+
+  @media (--xl) {
+    width: 40vw;
+    height: 38vh;
+  }
+}
+
+.familiedag__tekst {
+  width: 30rem;
+
+  @media (--lg) {
+    width: 36rem;
+  }
+}
+/*-------CAROUSEL--------*/
+
+.familiedag__carousel {
+  width: 30%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.actief {
+  height: 130px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.next,
+.prev {
+  background-color: rgba(255, 255, 255, .1);
+  cursor: pointer;
+  outline: none;
+  border-color: rgba(255, 255, 255, 0);
+  height: 3rem;
+  align-self: center;
+}
+
+.familiedag__ul {
+  width: 100%;
+  height: 30rem;
+}
+
+.familiedag__li {
+  width: 100%;
+  height: 100%;
+}
+
+.actief.familiedag__li {
+  position: absolute;
+  top: 130px;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s;
+}
+
+.actief.familiedag__li.current {
+  top: 30px;
+
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+}
+
 /*-------PRAKTISCH--------*/
 
 .praktisch {

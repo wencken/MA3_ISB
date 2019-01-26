@@ -16,7 +16,6 @@ class PagesController extends Controller {
   }
 
   public function index() {
-    // var_dump('filter_vol');
     $acts = $this->imageDAO->selectImage();
     $this->set('acts', $acts);
     $this->set('currentPage', 'index');

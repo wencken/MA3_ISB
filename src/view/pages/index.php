@@ -1,7 +1,11 @@
 <section class="home">
-<h2 class="heading-1 home__header"><span class="hidden">Home</span></h2>
+<header class="home__header">
+  <h2 class="heading-1 hidden">Home</h2>
+  <a class="header__cta" href="#spektakel"><span class="header__hidden">Ontdek</span></a>
+  <a class="header__cta__mobile" href="index.php?page=programma"><span class="header__mobile">Ontdek het programma</span></a>
+</header>
 
-<article class="spektakel container">
+<article class="spektakel container" id="spektakel">
   <div class="spektakel__groep">
     <div>
       <h3 class="heading-2">Een onvergetelijk spektakel</h3>
@@ -9,9 +13,35 @@
     </div>
     <p class="spektakel__lijn">Humor, acrobatie, stuntwerk van de bovenste plank uit ruim <span class="strong">15 verschillende </span>landen! Bovenal geniet u van dit festival volledig <span class="strong">GRATIS</span>.</p>
   </div>
-  <ul class="content">
-    <li class="content__li"><img src="./assets/img/<?php echo $acts['afbeelding'];?>_50.jpg" alt="<?php echo $acts["afbeelding"];?>"/></li>
-  </ul>
+  <div class="spektakel__content">
+    <?php
+      foreach($acts as $act){
+      ?>
+    <article class="spektakel__article">
+      <a class='spektakel__link' href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
+      <div class="spektakel__hover">
+        <h4 class='heading-2 spektakel__naam'><?php echo $act["act_naam"];?></h4>
+      </div>
+      <img class='spektakel__image' src="./assets/img/<?php echo $act['afbeelding'];?>_50.jpg" alt="<?php echo $act["act_naam"];?>"/>
+      </a>
+    </article>
+    <?php
+    }
+    ?>
+  </div>
+</article>
+
+<article class="familiedag">
+  <div class="container home__familiedag">
+  <div class="familiedag__info">
+    <h3 class="heading-2 familiedag__lijn">Familiedag</h3>
+    <p class="familiedag__tekst">Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien kinderkoptelefoons en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
+    <p class="cta familiedag__cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
+  </div>
+  <div class="familiedag__img">
+    <img class="familiedag__image" src="./assets/img/familie/1_50.jpg" alt="sfeerfoto 1 familiedag">
+  </div>
+  </div>
 </article>
 
 <!-- <article class="intro container">
@@ -22,20 +52,6 @@
   </div>
   <img src="" alt="">
 </article> -->
-
-<article class="familiedag">
-  <div class="container home__familiedag">
-    <h3 class="heading-2 familiedag__lijn">Familiedag</h3>
-    <p class="familiedag__tekst">Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien kinderkoptelefoons en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
-    <p class="cta familiedag__cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
-  <ul class="familiedag__ul">
-    <li><img src="./assets/img/familie/1_20.jpg" alt="sfeerfoto 1 familiedag" width="150" height="150"></li>
-    <!-- <li><img src="./assets/img/familie/2_20.jpg" alt="sfeerfoto 2 familiedag" width="150" height="150"></li>
-    <li><img src="./assets/img/familie/3_20.jpg" alt="sfeerfoto 3 familiedag" width="150" height="150"></li>
-    <li><img src="./assets/img/familie/4_20.jpg" alt="sfeerfoto 4 familiedag" width="150" height="150"></li> -->
-  </ul>
-  </div>
-</article>
 
 <article class="praktisch container">
   <h3 class="heading-2 hidden">Praktisch</h3>
