@@ -67,12 +67,22 @@ body {
 }
 
 .cta {
-  width: 14rem;
-  height: 4rem;
+  width: 20rem;
+  height: 6rem;
   background-color: var(--color-accent);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (--lg) {
+    width: 24rem;
+    height: 8rem;
+  }
+
+  @media (--xl) {
+    width: 24rem;
+    height: 10rem;
+  }
 }
 
 .underline--magical {

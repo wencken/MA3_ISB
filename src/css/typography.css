@@ -70,10 +70,48 @@
 
 /*--------HOME----------*/
 
+.titel__home {
+  font-size: 4.6rem;
+  line-height: 1.2;
+
+  @media (--md) {
+    width: 34rem;
+  }
+
+  @media (--lg) {
+    font-size: 4.6rem;
+    width: 42rem;
+  }
+
+  @media (--xl) {
+    font-size: 5.6rem;
+    width: 51rem;
+  }
+}
+
+.body__home {
+  font-size: 2.1rem;
+  line-height: 1.8;
+
+  @media (--md) {
+    font-size: 2rem;
+    line-height: 1.8;
+  }
+
+  @media (--lg) {
+    font-size: 2.3rem;
+    line-height: 1.9;
+  }
+
+  @media (--xl) {
+    font-size: 2.8rem;
+    line-height: 2.1;
+  }
+}
+
 .cta__link {
   color: var(--background-color);
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .nieuwsbrief__submit {
@@ -88,7 +126,6 @@
 
 .familiedag__tekst {
   color: var(--background-color);
-  line-height: 2.8rem;
   font-family: Radikal, Helvetica, sans-serif;
   font-style: normal;
   font-weight: lighter;
