@@ -63,49 +63,51 @@
           <article class='act__article'>
           <a class='act_link' href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
           <p class='<?php echo $act["type"];?>_color act__type'><?php echo $act["type"];?></p>
+          <div class="act__img">
           <picture class="act__image">
               <source
               type="image/webp"
               srcset="
-              assets/img/<?php echo $act["afbeelding"];?>_10.webp 155w,
-              assets/img/<?php echo $act["afbeelding"];?>_20.webp 310w,
-              assets/img/<?php echo $act["afbeelding"];?>_33.webp 517w,
-              assets/img/<?php echo $act["afbeelding"];?>_50.webp 776w,
-              assets/img/<?php echo $act["afbeelding"];?>_67.webp 1034w,
-              assets/img/<?php echo $act["afbeelding"];?>_75.webp 1164w,
-              assets/img/<?php echo $act["afbeelding"];?>_85.webp 1319w,
-              assets/img/<?php echo $act["afbeelding"];?>_100.webp 1552w
+              assets/img/<?php echo $act["afbeelding"];?>_10.webp 100w,
+              assets/img/<?php echo $act["afbeelding"];?>_20.webp 195w,
+              assets/img/<?php echo $act["afbeelding"];?>_33.webp 480w,
+              assets/img/<?php echo $act["afbeelding"];?>_50.webp 640w,
+              assets/img/<?php echo $act["afbeelding"];?>_67.webp 720w,
+              assets/img/<?php echo $act["afbeelding"];?>_75.webp 816w,
+              assets/img/<?php echo $act["afbeelding"];?>_85.webp  960w
+              assets/img/<?php echo $act["afbeelding"];?>_100.webp 1200w
               "
-              sizes="(min-width: 1440px) 59rem,
-              (min-width: 1024px) 47rem,
-              (min-width: 768px) 36rem,
-              (min-width: 320px) 54rem,
-              (min-width: 0) 100vw
+              sizes="(min-width: 1440px)  30rem,
+              (min-width: 1024px)  30rem,
+              (min-width: 768px)  30rem,
+              (min-width: 320px) 3Orem,
+              (min-width: 0)  30rem
               "
               />
               <source
               type="image/jpg"
               srcset="
-              assets/img/<?php echo $act["afbeelding"];?>_10.jpg 155w,
-              assets/img/<?php echo $act["afbeelding"];?>_20.jpg 310w,
-              assets/img/<?php echo $act["afbeelding"];?>_33.jpg 517w,
-              assets/img/<?php echo $act["afbeelding"];?>_50.jpg 776w,
-              assets/img/<?php echo $act["afbeelding"];?>_67.jpg 1034w,
-              assets/img/<?php echo $act["afbeelding"];?>_75.jpg 1164w,
-              assets/img/<?php echo $act["afbeelding"];?>_85.jpg 1319w,
-              assets/img/<?php echo $act["afbeelding"];?>_100.jpg 1552w
+              assets/img/<?php echo $act["afbeelding"];?>_10.jpg 100w,
+              assets/img/<?php echo $act["afbeelding"];?>_20.jpg 195w,
+              assets/img/<?php echo $act["afbeelding"];?>_33.jpg 480w,
+              assets/img/<?php echo $act["afbeelding"];?>_50.jpg 640w,
+              assets/img/<?php echo $act["afbeelding"];?>_67.jpg 720w,
+              assets/img/<?php echo $act["afbeelding"];?>_75.jpg 816w,
+              assets/img/<?php echo $act["afbeelding"];?>_85.jpg  960w
+              assets/img/<?php echo $act["afbeelding"];?>_100.jpg 1200w
               "
-              sizes="(min-width: 1440px) 59rem,
-              (min-width: 1024px) 47rem,
-              (min-width: 768px) 36rem,
-              (min-width: 320px) 54rem,
-              (min-width: 0) 100vw
+              sizes="(min-width: 1440px)  30rem,
+              (min-width: 1024px)  30rem,
+              (min-width: 768px)  30rem,
+              (min-width: 320px) 3Orem,
+              (min-width: 0)  30rem
               "
               />
               <img
               src="./assets/img/<?php echo $act["afbeelding"];?>_100.jpg"
               alt="<?php echo $act['act_naam'];?>" />
             </picture>
+            </div>
             <div class='act-div__grid'>
             <p class='body-groot strong act__datum'><?php echo $act["datum"];?></p>
             <div class='act__info'>

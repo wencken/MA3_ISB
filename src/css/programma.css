@@ -464,6 +464,19 @@
   text-decoration: none;
 }
 
+/* .act__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 31rem;
+  height: 30rem;
+}
+
+.act__image {
+  display: block;
+} */
+
 .act__image {
   position: absolute;
   width: 31rem;
@@ -471,7 +484,7 @@
   overflow: hidden;
   border-radius: .5rem;
   object-fit: cover;
-  object-position: 50% 50%;
+  text-align: center;
   z-index: -1;
 }
 

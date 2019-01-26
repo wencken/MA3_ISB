@@ -217,7 +217,7 @@
 /*-------------------FAMILIEDAG--------------------*/
 
 .familiedag {
-  height: 32vh;
+  height: 46vh;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
