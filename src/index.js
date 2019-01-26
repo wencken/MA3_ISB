@@ -10,10 +10,6 @@ require('./style.css');
   const filter = document.querySelector(`.filter__heading`);
   let filteren = true;
 
-  // const $carousel = document.querySelector(`.familiedag__carousel`);
-  // const next = $carousel.querySelector('.next');
-  // const prev = $carousel.querySelector('.prev');
-
   const init = () => {
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, handleSubmitFilterForm);
@@ -21,7 +17,6 @@ require('./style.css');
     nav.classList.add('noklik');
     menu.addEventListener('click', handleShowMenu);
     filter.addEventListener('click', handleShowFilter);
-    // $carousel.addEventListener('click', handleClickCarousel);
   };
 
   const handleShowMenu = () => {

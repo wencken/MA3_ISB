@@ -1,10 +1,10 @@
-.wf-canoodle-n4-active .heading-0,
-.wf-canoodle-n4-active .heading-1,
-.wf-canoodle-n4-active .heading-2,
-.wf-canoodle-n4-active .heading-3,
-.wf-canoodle-n4-active .heading-4,
-.wf-canoodle-n4-active .heading-5 {
-  font-family: Canoodle, 'Arial Black', sans-serif;
+.wf-radikal-n4-active body {
+  font-family: Radikal, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
 .heading-0 {
@@ -31,13 +31,13 @@
   font-size: 2rem;
 }
 
-.wf-radikal-n4-active body {
-  font-family: Radikal, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: lighter;
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  line-height: 1.6;
+.wf-canoodle-n4-active .heading-0,
+.wf-canoodle-n4-active .heading-1,
+.wf-canoodle-n4-active .heading-2,
+.wf-canoodle-n4-active .heading-3,
+.wf-canoodle-n4-active .heading-4,
+.wf-canoodle-n4-active .heading-5 {
+  font-family: Canoodle, 'Arial Black', sans-serif;
 }
 
 .body-0 {

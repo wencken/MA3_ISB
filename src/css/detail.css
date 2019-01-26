@@ -92,7 +92,7 @@
 .praktisch__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   width: 40rem;
   padding-top: 4rem;
   padding-bottom: 4rem;

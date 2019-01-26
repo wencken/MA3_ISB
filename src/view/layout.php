@@ -10,6 +10,7 @@
   <title>ISB | 2018</title>
   <?php echo $css;?>
 
+  <link rel="preload" href="style.css" as="style">
   <script>
       WebFontConfig = {
         custom: {
@@ -32,9 +33,9 @@
     <div class="topbar">
       <div class="topright container">
           <ul class="social">
-              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.png" alt="Facebook"></a></li>
-              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.png" alt="Instagram"></a></li>
-              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter_50.png" alt="Twitter"></a></li>
+              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.webp" alt="Facebook"></a></li>
+              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.webp" alt="Instagram"></a></li>
+              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter_50.webp" alt="Twitter"></a></li>
           </ul>
           <p class="body-klein">Donkvijverstraat, 9120 Beveren</p>
           <ul class="talen">
@@ -66,16 +67,6 @@
               <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
             </ul>
           </nav>
-          <!-- <ul class="burger__talen">
-              <li class="body-klein taal underline">NL</li>
-              <li class="body-klein taal">FR</li>
-              <li class="body-klein taal">EN</li>
-          </ul>
-          <ul class="burger__social">
-              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram.png" alt="Instagram"></a></li>
-              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter.png" alt="Twitter"></a></li>
-          </ul> -->
         </div>
 
         <div class="menu-icon">
@@ -83,15 +74,6 @@
           <span class="line line--second"></span>
           <span class="line line--third"></span>
         </div>
-        </div>
-        <!-- <nav>
-          <ul class="navigatie">
-              <li class="<?php if($currentPage == 'index') echo 'active';?>"><a class="heading-5 nav" href="index.php">Home</a></li>
-              <li class="<?php if($currentPage == 'programma') echo 'active';?>"><a class="heading-5 nav" href="index.php?page=programma">Programma</a></li>
-              <li><a class="heading-5 nav" href="index.php">Plan</a></li>
-              <li><a class="heading-5 nav" href="index.php">Praktisch</a></li>
-          </ul>
-        </nav> -->
       </header>
 
     <main class="main">
@@ -103,10 +85,10 @@
           <article class="footer__sponsors">
               <h3 class="heading-5 sponsors__titel">Onze partners</h3>
               <ul class="sponsors">
-                <li class="sponsor__link een"><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1_50.png" alt="sponsor winkeldorpen"></a></li>
-                <li class="sponsor__link twee"><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2_50.png" alt="sponsor beverse feesten"></a></li>
-                <li class="sponsor__link drie"><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3_50.png" alt="sponsor aout en eclats"></a></li>
-                <li class="sponsor__link vier"><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4_50.png" alt="sponsor warande shopping"></a></li>
+                <li class="sponsor__link een"><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1_50.webp" alt="sponsor winkeldorpen"></a></li>
+                <li class="sponsor__link twee"><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2_50.webp" alt="sponsor beverse feesten"></a></li>
+                <li class="sponsor__link drie"><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3_50.webp" alt="sponsor aout en eclats"></a></li>
+                <li class="sponsor__link vier"><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4_50.webp" alt="sponsor warande shopping"></a></li>
               </ul>
           </article>
           <article class="footer__link">

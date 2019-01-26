@@ -9,14 +9,14 @@
   justify-content: center;
   height: 130vw;
   align-items: flex-end;
-  background-image: url(./../assets/img/header/header4.png);
+  background-image: url(./../assets/img/header/header4_100.webp);
   background-position-y: -4rem;
 
   @media (--md) {
     height: 78vw;
     align-items: flex-end;
     background-size: 104%;
-    background-image: url(./../assets/img/header/header3.png);
+    background-image: url(./../assets/img/header/header3_100.webp);
     background-position: -2rem 0;
     padding-bottom: 6rem;
   }
@@ -24,14 +24,14 @@
   @media (--lg) {
     height: 70vw;
     background-size: 108%;
-    background-image: url(./../assets/img/header/header2.png);
+    background-image: url(./../assets/img/header/header2_100.webp);
     background-position: -4rem -11rem;
   }
 
   @media (--xl) {
     height: 55vw;
     background-size: 103%;
-    background-image: url(./../assets/img/header/header1.png);
+    background-image: url(./../assets/img/header/header1_100.webp);
     background-position: -3rem -9rem;
   }
 }
@@ -87,6 +87,7 @@
     display: inline-block;
     font-size: 6vw;
     font-weight: bold;
+    will-change: transform;
     transform: rotate(135deg);
   }
 }
@@ -206,6 +207,7 @@
   top: 50%;
   left: 50%;
   width: 20rem;
+  will-change: transform;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -221,9 +223,6 @@
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
-
-  @media (--md) {
-  }
 }
 
 .home__familiedag {
@@ -280,75 +279,41 @@
     width: 36rem;
   }
 }
-/*-------CAROUSEL--------*/
-
-.familiedag__carousel {
-  width: 30%;
-  position: absolute;
-  overflow: hidden;
-}
-
-.actief {
-  height: 130px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.next,
-.prev {
-  background-color: rgba(255, 255, 255, .1);
-  cursor: pointer;
-  outline: none;
-  border-color: rgba(255, 255, 255, 0);
-  height: 3rem;
-  align-self: center;
-}
-
-.familiedag__ul {
-  width: 100%;
-  height: 30rem;
-}
-
-.familiedag__li {
-  width: 100%;
-  height: 100%;
-}
-
-.actief.familiedag__li {
-  position: absolute;
-  top: 130px;
-
-  opacity: 0;
-  transform: scale(0);
-  transition: 1s;
-}
-
-.actief.familiedag__li.current {
-  top: 30px;
-
-  opacity: 1;
-  transform: scale(1);
-  transition: 1s;
-}
-
-/*-------PRAKTISCH--------*/
-
-.praktisch {
-  height: 60rem;
-}
 
 /*-------NIEUWSBRIEF--------*/
 
 .nieuwsbrief {
-  height: 50rem;
+  height: 46vh;
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media (--lg) {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+
+.aftermovie__beeld {
+  width: 95vw;
+  height: 16rem;
+
+  @media (--md) {
+    width: 90vw;
+    height: 39rem;
+  }
+
+  @media (--lg) {
+    width: 50vw;
+    height: 29rem;
+  }
+
+  @media (--xl) {
+    width: 50vw;
+    height: 41rem;
+  }
 }
 
 .nieuwsbrief__article {
@@ -357,6 +322,14 @@
   width: 30rem;
   height: 25rem;
   justify-content: space-between;
+
+  @media (--lg) {
+    margin-right: 5rem;
+  }
+
+  @media (--xl) {
+    margin-right: 10rem;
+  }
 }
 
 .email {
@@ -399,4 +372,46 @@
 .submit {
   border: none;
   outline: none;
+}
+
+/*-------PRAKTISCH--------*/
+
+.bereikbaarheid {
+  height: 30rem;
+  width: 100vw;
+  overflow: hidden;
+
+  @media (--md) {
+    height: 34rem;
+  }
+
+  @media (--lg) {
+    height: 44rem;
+  }
+
+  @media (--xl) {
+    height: 50rem;
+  }
+}
+
+.bereikbaarheid__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (--md) {
+    width: 100%;
+    height: 34rem;
+  }
+
+  @media (--lg) {
+    width: 100%;
+
+    height: 44rem;
+  }
+
+  @media (--xl) {
+    width: 100%;
+    height: 50rem;
+  }
 }

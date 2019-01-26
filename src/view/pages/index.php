@@ -114,18 +114,28 @@
   </div>
 </article>
 
-<!-- <article class="intro container">
-  <div>
-    <h3 class="heading-2">"Een weekend vol verwondering en bewondering"</h3>
-    <p>Het laatste weekend van augustus wordt een knaller voor jong en oud.  Een arsenaal aan gekke wezens of vriendelijke gastheren staan te popelen om u te ontmoeten!</p>
-    <p class="cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
-  </div>
-  <img src="" alt="">
-</article> -->
+<article class="nieuwsbrief container">
+  <h3 class="heading-1 hidden">Nieuwsbrief</h3>
+  <!-- <article class="aftermovie">
+    <h4 class="hidden">Dit was 2017</h4>
+    <iframe class = "aftermovie__beeld"
+    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstraattheaterfestivalbeveren%2Fvideos%2F1949847618626827%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+  </article> -->
+  <article class="nieuwsbrief__article">
+    <h4 class="heading-2">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
+    <p class='nieuwsbrief__tekst'>Schrijf je dan in op onze nieuwsbrief.</p>
+    <form action="" class='nieuwsbrief__form'>
+      <input type="hidden" action="" value="">
+      <label for="email" class="email__label">e-mailadres</label>
+      <input type="text" name="email" class="email" style="border:none">
+      <input type="submit" value="Houd me op de hoogte!" name="submit" class="nieuwsbrief__submit">
+    </form>
+  </article>
+</article>
 
-<article class="praktisch">
+<article class="bereikbaarheid">
   <h3 class="heading-2 hidden">Praktisch</h3>
-    <picture class="praktisch__img">
+    <picture class="bereikbaarheid__img">
       <source
       type="image/webp"
       srcset="
@@ -136,11 +146,11 @@
       assets/img/plattegrond/algemeen_85.webp 1193w,
       assets/img/plattegrond/algemeen_100.webp 1403w
       "
-      sizes="(min-width: 1440px) 95vw,
-      (min-width: 1024px) 95vw,
-      (min-width: 768px) 95vw,
-      (min-width: 320px) 90vw,
-      (min-width: 0) 90vw
+      sizes="(min-width: 1440px) 105vw,
+      (min-width: 1024px) 105vw,
+      (min-width: 768px) 105vw,
+      (min-width: 320px) 105vw,
+      (min-width: 0) 100vw
       "
       />
       <source
@@ -153,31 +163,17 @@
       assets/img/plattegrond/algemeen_85.png 1193w,
       assets/img/plattegrond/algemeen_100.png 1403w
       "
-      sizes="(min-width: 1440px) 95vw,
-      (min-width: 1024px) 95vw,
-      (min-width: 768px) 95vw,
-      (min-width: 320px) 90vw,
-      (min-width: 0) 90vw
+      sizes="(min-width: 1440px) 105vw,
+      (min-width: 1024px) 105vw,
+      (min-width: 768px) 105vw,
+      (min-width: 320px) 105vw,
+      (min-width: 0) 100vw
       "
       />
-      <img class="praktisch__image"
+      <img class="bereikbaarheid__image"
       src="./assets/img/plattegrond/algemeen_85.png"
       alt="kaart van ISB">
     </picture>
-</article>
-
-<article class="nieuwsbrief container">
-  <h3 class="heading-1 hidden">Nieuwsbrief</h3>
-  <article class="nieuwsbrief__article">
-    <h4 class="heading-2">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
-    <p class='nieuwsbrief__tekst'>Schrijf je dan in op onze nieuwsbrief.</p>
-    <form action="" class='nieuwsbrief__form'>
-      <input type="hidden" action="" value="">
-      <label for="email" class="email__label">e-mailadres</label>
-      <input type="text" name="email" class="email" style="border:none">
-      <input type="submit" value="Houd me op de hoogte!" name="submit" class="nieuwsbrief__submit">
-    </form>
-  </article>
 </article>
 
 </section>

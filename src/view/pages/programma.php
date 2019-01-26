@@ -1,7 +1,7 @@
 <section class='programma'>
 <header class="header__program">
   <h2 class="heading-1 header__programma">Programma</h2>
-  <span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
+  <span class="header__prog"><img src="./assets/img/bg/1_100.webp" alt="achtergrond" class="hidden"></span>
 </header>
 
   <section class="filter_section">
@@ -56,7 +56,6 @@
   <section class="container">
     <h3 class="heading-2">Resultaten</h3>
     <div class='act__section'>
-    <!-- <input type="checkbox" class="load-more"/> -->
       <?php
         foreach($acts as $act){
           ?>
@@ -74,7 +73,7 @@
               assets/img/<?php echo $act["afbeelding"];?>_50.webp 640w,
               assets/img/<?php echo $act["afbeelding"];?>_67.webp 720w,
               assets/img/<?php echo $act["afbeelding"];?>_75.webp 816w,
-              assets/img/<?php echo $act["afbeelding"];?>_85.webp  960w
+              assets/img/<?php echo $act["afbeelding"];?>_85.webp  960w,
               assets/img/<?php echo $act["afbeelding"];?>_100.webp 1200w
               "
               sizes="(min-width: 1440px)  30rem,
@@ -93,7 +92,7 @@
               assets/img/<?php echo $act["afbeelding"];?>_50.jpg 640w,
               assets/img/<?php echo $act["afbeelding"];?>_67.jpg 720w,
               assets/img/<?php echo $act["afbeelding"];?>_75.jpg 816w,
-              assets/img/<?php echo $act["afbeelding"];?>_85.jpg  960w
+              assets/img/<?php echo $act["afbeelding"];?>_85.jpg  960w,
               assets/img/<?php echo $act["afbeelding"];?>_100.jpg 1200w
               "
               sizes="(min-width: 1440px)  30rem,
@@ -121,11 +120,6 @@
         <?php
         }
       ?>
-
-      <!-- <label class="load-more-btn" for="load-more">
-        <span class="unloaded">LOAD MORE</span>
-        <span class="loaded">VIEW LESS</span>
-       </label> -->
       </div>
   </section>
 
