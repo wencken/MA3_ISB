@@ -99,15 +99,12 @@ class PagesDAO extends DAO {
   }
 
   public function selectByDay($id){
-    // $sql = "SELECT `ISB_artiest`.*, `ISB_programmatie`.*, `ISB_act`.* , `ISB_afbeelding`.* FROM `ISB_act`
-    // INNER JOIN `ISB_artiest`ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
-    // INNER JOIN `ISB_programmatie` ON `ISB_act`.`id` = `ISB_programmatie`.`act_id`
-    // INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
-    // WHERE `ISB_afbeelding`.`afbeelding` LIKE '%1%' LIMIT 3";
-    $sql = "SELECT `ISB_programmatie`.`datum`, `ISB_artiest`.*, `ISB_act`.* FROM `ISB_programmatie`
+    $sql = "SELECT `ISB_programmatie`.*, `ISB_artiest`.*, `ISB_act`.*, `ISB_afbeelding`.* FROM `ISB_programmatie`
     INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`
     INNER JOIN `ISB_artiest` ON `ISB_act`.`artiest_id` = `ISB_artiest`.`id`
-    WHERE `datum`= :id LIMIT 3";
+    INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
+    WHERE `ISB_afbeelding`.`afbeelding` LIKE '%1'
+    AND `ISB_programmatie`.`datum` = :id ORDER BY rand() LIMIT 4";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();

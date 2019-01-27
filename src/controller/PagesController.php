@@ -52,8 +52,6 @@ class PagesController extends Controller {
 
     $days = $this->pagesDAO->selectByDay($act['datum']);
     $this->set('days', $days);
-    // $afbeelding = $this->imageDAO->selectByActId($act['act_id']);
-    // $this->set('afbeelding', $afbeelding);
 
 
     $knoppen = $this->pagesDAO->selectAll();

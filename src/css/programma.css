@@ -163,6 +163,11 @@
   background-color: var(--primary-color);
 }
 
+.filter__submit:hover {
+  /* background-color: rgba(62, 151, 152, .5); */
+  background-color: var(--color-accent);
+}
+
 .filter__reset {
   grid-area: reset;
   grid-column: 2;
@@ -187,6 +192,10 @@
 .filter__reset:active {
   background-color: rgba(255, 253, 244, 1);
   outline: none;
+}
+
+.filter__reset:hover {
+  background-color: rgba(255, 253, 244, .2);
 }
 
 .filter__buttons {
@@ -240,6 +249,22 @@
   }
 }
 
+.pijltje {
+  content: '\276F';
+  will-change: transform;
+  transform: rotate(90deg);
+}
+
+.down {
+  will-change: transform;
+  transform: rotate(90deg);
+}
+
+.up {
+  will-change: transform;
+  transform: rotate(270deg);
+}
+
 .filter__heading:hover {
   color: var(--color-accent);
   cursor: pointer;
@@ -257,7 +282,7 @@
 }
 
 .filter_section {
-  margin-top: 5rem;
+  margin-top: 6rem;
   margin-bottom: 5rem;
   background-color: var(--primary-color);
 }
@@ -397,6 +422,12 @@
   @media (--md) {
     justify-self: center;
     grid-gap: 6rem 0;
+
+    padding-left: 5rem;
+  }
+
+  @media (--lg) {
+    padding-left: 0;
   }
 
   @media (--xl) {
@@ -405,31 +436,13 @@
   }
 }
 
-.act__article {
-  width: 31rem;
-  height: 32rem;
-}
-
 .act_link {
   text-decoration: none;
 }
 
-/* .act__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 31rem;
-  height: 30rem;
-}
-
-.act__image {
-  display: block;
-} */
-
 .act__image {
   position: absolute;
-  width: 31rem;
+  width: 30rem;
   height: 20rem;
   overflow: hidden;
   border-radius: .5rem;
@@ -462,11 +475,11 @@
 .act__type {
   /* grid-area: type; */
   height: 5rem;
-  width: 13rem;
+  width: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -.8rem;
+  margin-top: -.9rem;
   /* background-color: var(--color-accent); */
   margin-left: 18.6rem; /*translateX/Y??*/
   position: absolute;
@@ -525,3 +538,31 @@
 .act__kinderen {
   grid-area: kinderen;
 }
+
+.act__article {
+  /* display: block; */
+  width: 30rem;
+  height: 32rem;
+  background-color: rgba(255, 253, 244, 0);
+}
+
+.act__article:hover {
+  background-color: rgba(255, 253, 244, .5);
+}
+
+.resultaten {
+  margin-top: 2.5rem;
+  margin-bottom: 7.5rem;
+}
+/*
+.laadmeer__button {
+  margin: 5rem auto 10rem;
+  text-align: center;
+  width: 20rem;
+}
+
+.laadmeer {
+  height: 112rem;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+} */

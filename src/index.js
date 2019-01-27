@@ -5,10 +5,12 @@ require('./style.css');
 
   const menu = document.querySelector('.menu-icon');
   const nav = document.querySelector('.burger__menu');
+  const pijltje = document.querySelector(`.pijltje`);
+
   let forward = true;
 
   const filter = document.querySelector(`.filter__heading`);
-  let filteren = true;
+  let filteren = false;
 
   const init = () => {
     if ($filterForm) {
@@ -39,9 +41,13 @@ require('./style.css');
     if (filteren) {
       $filterForm.classList.add('nodropdown');
       $filterForm.classList.remove('dropdown');
+      pijltje.classList.add('down');
+      pijltje.classList.remove('up');
     } else {
       $filterForm.classList.add('dropdown');
       $filterForm.classList.remove('nodropdown');
+      pijltje.classList.add('up');
+      pijltje.classList.remove('down');
     }
 
     filteren = !filteren;

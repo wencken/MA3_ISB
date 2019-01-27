@@ -82,6 +82,7 @@
         <h2 class="heading-2 hidden">Footer</h2>
         <div class="footer-content container">
         <p class="totop"><a href="#top" class='totop__link'><span class='hidden'>Back to top</span></a></p>
+        <div class="wrapper1">
           <article class="footer__sponsors">
               <h3 class="heading-5 sponsors__titel titel__footer">Onze partners</h3>
               <ul class="sponsors">
@@ -275,34 +276,38 @@
                 </li>
               </ul>
           </article>
-          <article class="footer__link">
-              <h3 class="heading-5 titel__footer">Nuttige links</h3>
-              <ul>
-                <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
-                <li><a class="link body-klein" href="index.php">Bereikbaarheid</a></li>
-                <li><a class="link body-klein" href="index.php">Voor het hele gezin</a></li>
-                <li><a class="link body-klein" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
-                <li><a class="link body-klein" href="index.php">Veelgestelde vragen</a></li>
-              </ul>
-          </article>
-          <article class="footer__volg">
-              <h3 class="heading-5 titel__footer">Volg ons</h3>
-              <ul>
-                <li><a class="link body-klein" href="https://www.facebook.com/">Facebook</a></li>
-                <li><a class="link body-klein" href="https://www.instagram.com/?hl=n">Instagram</a></li>
-                <li><a class="link body-klein" href="https://twitter.com/?lang=nl">Twitter</a></li>
-                <li><a class="link body-klein" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
-              </ul>
-          </article>
-          <article class="footer__contact">
-              <h3 class="heading-5 titel__footer">Contacteer ons</h3>
-              <address class="body-klein">
-              Donkvijverstraat<br>
-              9120 Beveren
-              </address>
-              <p class="body-klein accent strong">T <span><a class="link body-klein" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
-              <p class="body-klein accent strong">E <span><a class="link body-klein" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
-          </article>
+         </div>
+
+          <div class="wrapper2">
+            <article class="footer__link">
+                <h3 class="heading-5 titel__footer">Nuttige links</h3>
+                <ul>
+                  <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
+                  <li><a class="link body-klein" href="index.php">Bereikbaarheid</a></li>
+                  <li><a class="link body-klein" href="index.php">Voor het hele gezin</a></li>
+                  <li><a class="link body-klein" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
+                  <li><a class="link body-klein" href="index.php">Veelgestelde vragen</a></li>
+                </ul>
+            </article>
+            <article class="footer__volg">
+                <h3 class="heading-5 titel__footer">Volg ons</h3>
+                <ul>
+                  <li><a class="link body-klein" href="https://www.facebook.com/">Facebook</a></li>
+                  <li><a class="link body-klein" href="https://www.instagram.com/?hl=n">Instagram</a></li>
+                  <li><a class="link body-klein" href="https://twitter.com/?lang=nl">Twitter</a></li>
+                  <li><a class="link body-klein" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
+                </ul>
+            </article>
+            <article class="footer__contact">
+                <h3 class="heading-5 titel__footer">Contacteer ons</h3>
+                <address class="body-klein">
+                Donkvijverstraat<br>
+                9120 Beveren
+                </address>
+                <p class="body-klein accent strong">T <span><a class="link body-klein" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
+                <p class="body-klein accent strong">E <span><a class="link body-klein" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
+            </article>
+          </div>
         </div>
       </section>
     </main>

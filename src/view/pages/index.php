@@ -134,20 +134,30 @@
   </div>
 </article>
 
-<article class="nieuwsbrief ">
+<article class="nieuwsbrief">
   <h3 class="heading-1 nieuwsbrief__titel"><span class="hidden">Nieuwsbrief</span></h3>
-  <article class="nieuwsbrief__article container">
-    <h4 class="heading-2 titel__home">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h4>
+  <div class="container nieuwsbrief__article">
+    <h3 class="heading-2 titel__home">Wil je op de hoogte blijven van onze laatste nieuwtjes?</h3>
     <p class='nieuwsbrief__tekst body__home'>Schrijf je dan in op onze nieuwsbrief.</p>
-    <form action="" class='nieuwsbrief__form'>
-      <input type="hidden" action="" value="">
-      <label for="email" class="body__home email__label">e-mailadres:
-      <input type="text" name="email" class=" body__home email">
-      </label>
-      <input type="submit" value="Houd me op de hoogte!" name="submit" class=" body__home nieuwsbrief__submit">
+    <form action="index.php#nieuwsbrief" method="post" class='nieuwsbrief__form'>
+      <input type="hidden" action="action" value="insert">
+      <div class="nieuwsbrief__field">
+        <input type="text" name="email" class=" body__home email" placeholder='E-mailadres'>
+        <input type="submit" value="Houd me op de hoogte" name="action" class=" body__home nieuwsbrief__submit">
+      </div>
     </form>
+  </div>
   </article>
+
+<article class="video__article">
+  <div class="container video">
+    <h3 class="heading-2 titel__home video__titel">Kortom, een weekend vol verwondering en bewondering!</span></h3>
+    <video class="video__film" controls poster='assets/img/video/sfeer3.jpg'>
+     <source src='assets/img/video/video.mp4' type='video/mp4'>
+    </video>
+  </div>
 </article>
+
 
 <article class="bereikbaarheid">
   <h3 class="heading-2 hidden">Praktisch</h3>

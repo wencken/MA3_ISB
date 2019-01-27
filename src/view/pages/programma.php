@@ -5,7 +5,7 @@
 </header>
 
   <section class="filter_section">
-    <h3 class="heading-2 filter__heading container">Filter  <span>&#10095;</span></h3>
+    <h3 class="heading-2 filter__heading container">Filter <span class="pijltje">&#10095;</span></h3>
     <form action="index.php" method="get" class="filter container">
     <input type="hidden" name="page" value="programma"/>
       <div class="filter__group toon">
@@ -13,15 +13,15 @@
           <ul class="checkbox">
             <li class= "filter__li">
               <input type="checkbox" value="dag" id="vrijdag" name="vrijdag" class="filter__input">
-              <label for="vrijdag" class="filter__label <?php if (isset($_GET['vrijdag'])){echo 'checked';}?>">Vrijdag</label>
+              <label for="vrijdag" class="filter__label <?php if (isset($_GET['vrijdag'])){echo 'checked';}?>">vrijdag</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="dag" id="zaterdag" name="zaterdag" class="filter__input">
-              <label for="zaterdag" class="filter__label <?php if (isset($_GET['zaterdag'])){echo 'checked';}?>">Zaterdag</label>
+              <label for="zaterdag" class="filter__label <?php if (isset($_GET['zaterdag'])){echo 'checked';}?>">zaterdag</label>
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="dag" id="zondag" name="zondag" class="filter__input">
-              <label for="zondag" class="filter__label <?php if (isset($_GET['zondag'])){echo 'checked';}?>">Zondag</label>
+              <label for="zondag" class="filter__label <?php if (isset($_GET['zondag'])){echo 'checked';}?>">zondag</label>
             </li>
           </ul>
       </div>
@@ -53,9 +53,10 @@
     </form>
   </section>
 
-  <section class="container">
+  <section class="container resultaten">
     <h3 class="heading-2">Resultaten</h3>
-    <div class='act__section'>
+    <!-- <div class="laadmeer" id="acts"> -->
+      <div class='act__section'>
       <?php
         foreach($acts as $act){
           ?>
@@ -63,7 +64,7 @@
           <a class='act_link' href="index.php?page=detail&amp;id=<?php echo $act["act_id"];?>">
           <p class='<?php echo $act["type"];?>_color act__type'><?php echo $act["type"];?></p>
           <div class="act__img">
-          <picture class="act__image">
+          <picture>
               <source
               type="image/webp"
               srcset="
@@ -102,7 +103,7 @@
               (min-width: 0)  30rem
               "
               />
-              <img
+              <img class="act__image"
               src="./assets/img/<?php echo $act["afbeelding"];?>_100.jpg"
               alt="<?php echo $act['act_naam'];?>" />
             </picture>
@@ -112,7 +113,7 @@
             <div class='act__info'>
                 <h4 class='heading-2 act__naam'><?php echo $act["artiest_naam"];?> (<?php echo $act["land"];?>)</h4>
                 <h5 class='heading-3 act__titel'><?php echo $act["act_naam"];?></h5>
-                <p class='body-klein act__locatie'><?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?> | <?php echo $act["kinderen"];?></p>
+                <p class='body-klein act__locatie'><?php echo $act["locatie_naam"];?> | <?php echo $act["beginuur"];?></p>
             </div>
             </div>
           </a>
@@ -121,6 +122,8 @@
         }
       ?>
       </div>
+    <!-- </div>
+    <p class="laadmeer__button">Laad meer</p> -->
   </section>
 
  </section>
