@@ -1,6 +1,8 @@
 <section class="detail">
-<h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
-<span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
+<header class="">
+  <h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
+  <span class="detail__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
+</header>
 
 
 <article class="detail__header">
