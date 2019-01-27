@@ -105,6 +105,8 @@ class PagesDAO extends DAO {
     INNER JOIN `ISB_afbeelding` ON `ISB_act`.`id` = `ISB_afbeelding`.`act_id`
     WHERE `ISB_afbeelding`.`afbeelding` LIKE '%1'
     AND `ISB_programmatie`.`datum` = :id ORDER BY rand() LIMIT 4";
+
+
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();

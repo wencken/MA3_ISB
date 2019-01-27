@@ -90,7 +90,7 @@
   <div class="familiedag__info">
     <h3 class="heading-2 familiedag__lijn titel__home">Familiedag</h3>
     <p class="familiedag__tekst body__home">Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien <span class="strong">kinderkoptelefoons</span> en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
-    <p class="cta body__home familiedag__cta"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
+    <p class="cta body__home"><a class="underline--magical familiedag__cta" href="index.php?page=programma&zaterdag=dag">Onze familiedag</a></p>
   </div>
   <div class="familiedag__img">
     <picture class="familiedag__image">
@@ -106,8 +106,8 @@
       sizes="(min-width: 1440px) 50vw,
       (min-width: 1024px) 50vw,
       (min-width: 768px) 40vw,
-      (min-width: 320px) 50vw,
-      (min-width: 0) 50vw
+      (min-width: 320px) 100vw,
+      (min-width: 0) 100vw
       "
       />
       <source
@@ -122,8 +122,8 @@
       sizes="(min-width: 1440px) 50vw,
       (min-width: 1024px) 50vw,
       (min-width: 768px) 50vw,
-      (min-width: 320px) 50vw,
-      (min-width: 0) 50vw
+      (min-width: 320px) 100vw
+      (min-width: 0) 100vw
       "
       />
       <img class="familiedag__image"

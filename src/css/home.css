@@ -27,6 +27,7 @@
       );
     background-position: -2rem 0;
     padding-bottom: 6rem;
+    background-repeat: no-repeat;
   }
 
   @media (--lg) {
@@ -387,6 +388,12 @@
     width: 69rem;
     margin-right: 10rem;
   }
+}
+
+.familiedag__cta {
+  width: 17rem;
+  text-decoration: none;
+  color: var(--background-color);
 }
 
 /*-------NIEUWSBRIEF--------*/

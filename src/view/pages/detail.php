@@ -3,66 +3,75 @@
 <span class="header__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
 
 
-<article class="detail__header container">
+<article class="detail__header">
   <h3 class="heading-2 hidden">In de kijker</h3>
-  <p class="detail__terug"><a class="detail__link body__home terug" href="index.php?page=programma">Terug naar overzicht</a></p>
+  <p class="detail__terug"><a class="container detail__link body__home terug" href="index.php?page=programma">Terug naar programma</a></p>
 
   <section class="detail__informatie">
-    <div class="beeld__tekst">
+    <div class="beeld__tekst container">
       <h4 class="beeld__titel body__home"><?php echo $act["artiest_naam"]?> stelt voor</h4>
       <p class="heading-1 titel__home"><?php echo $act["act_naam"];?></p>
       <p class="detail__omschrijving body__home"><?php echo $act["omschrijving"];?></p>
-      <p><a class="detail__link body__home" href="https://www.facebook.com">Ik ben aanwezig</a></p>
+      <a class=" aanwezig detail__link body__home" href="https://www.facebook.com">
+        <img class = "facebook" src="./assets/img/social/facebook_67.webp" alt="Facebook">
+        <p class="aanwezig">Ik ben aanwezig</p>
+      </a>
     </div>
 
-    <div class="beeld__groot">
-    <picture>
+    <div class="beeld__groot container">
+    <picture class="beeld__headerimage">
             <source
             type="image/webp"
             srcset="
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 155w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 310w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 517w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 776w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 1034w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 1164w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp 1319w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1552w
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 100w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 195w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 480w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 640w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 720w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 816w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp  960w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1200w
             "
             sizes="(min-width: 1440px) 59rem,
             (min-width: 1024px) 47rem,
             (min-width: 768px) 36rem,
-            (min-width: 320px) 54rem,
+            (min-width: 320px) 30rem,
             (min-width: 0) 100vw
             "
             />
             <source
             type="image/jpg"
             srcset="
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.jpg 155w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.jpg 310w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.jpg 517w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.jpg 776w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.jpg 1034w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.jpg 1164w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.jpg 1319w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg 1552w
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 100w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 195w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 480w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 640w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 720w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 816w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp  960w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1200w
             "
             sizes="(min-width: 1440px) 59rem,
             (min-width: 1024px) 47rem,
             (min-width: 768px) 36rem,
-            (min-width: 320px) 54rem,
+            (min-width: 320px) 30rem,
             (min-width: 0) 100vw
             "
             />
             <img class="beeld__headerimg"
-            src="./assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg"
+            src="<?php echo $grootAfbeelding["afbeelding"];?>"
             alt="<?php echo $act["act_naam"];?>" />
         </picture>
+        </div>
+
+    <div class="informatie__mobile">
+      <p class="heading-1 titel__home container"><?php echo $act["act_naam"];?></p>
+      <p class="body__home colored__tekst container"><?php echo $act["datum"];?> | <?php echo $act["beginuur"];?></p>
     </div>
+
   </section>
 
-  <nav class="detail__bekijkmeer">
+  <nav class="detail__bekijkmeer container">
       <h4 class="hidden">Bekijk meer acts</h4>
       <a class="detail__link body__home" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>
       <a class="detail__link body__home" href="index.php?page=detail&amp;id=<?php echo $next ?>">next -></a>
@@ -265,12 +274,12 @@
 
 <article class='socials'>
   <div class="container detail__socials">
-  <h3 class="heading-2 titel__home">Ontdek meer op:</h3>
+  <h3 class="heading-2 titel__home ontdek">Ontdek meer op:</h3>
   <p class="body__home"><?php echo $act["website"];?></p>
   <ul class="socials__media">
-    <li><a class="social__link" href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.webp" alt="Facebook"></a></li>
-    <li><a class="social__link" href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.webp" alt="Instagram"></a></li>
-    <li><a class="social__link" href="https://twitter.com"><img src="./assets/img/social/twitter_50.webp" alt="Twitter"></a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.webp" alt="Facebook"></a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.webp" alt="Instagram"></a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://twitter.com"><img src="./assets/img/social/twitter_50.webp" alt="Twitter"></a></li>
   </ul>
   </div>
 </article>
@@ -339,7 +348,7 @@
     }
   ?>
   </div>
-  <p class="cta"><a class="underline--magical body__home cta__link" href="index.php?page=programma">Ontdek meer</a></p>
+  <p class="ontdekking cta"><a class="underline--magical body__home cta__link" href="index.php?page=programma&<?php echo $day["datum"];?>=dag">Ontdek meer</a></p>
 </article>
 
 </section>

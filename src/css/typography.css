@@ -103,6 +103,10 @@
 .color {
   color: var(--color-accent);
 }
+
+.colored__tekst {
+  color: var(--color-light);
+}
 /*--------HOME----------*/
 
 .titel__home {

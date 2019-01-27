@@ -281,7 +281,7 @@
           <div class="wrapper2">
             <article class="footer__link">
                 <h3 class="heading-5 titel__footer">Nuttige links</h3>
-                <ul>
+                <ul class=>
                   <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
                   <li><a class="link body-klein" href="index.php">Bereikbaarheid</a></li>
                   <li><a class="link body-klein" href="index.php">Voor het hele gezin</a></li>
@@ -308,6 +308,7 @@
                 <p class="body-klein accent strong">E <span><a class="link body-klein" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
             </article>
           </div>
+
         </div>
       </section>
     </main>
