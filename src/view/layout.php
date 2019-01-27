@@ -83,16 +83,200 @@
         <div class="footer-content container">
         <p class="totop"><a href="#top" class='totop__link'><span class='hidden'>Back to top</span></a></p>
           <article class="footer__sponsors">
-              <h3 class="heading-5 sponsors__titel">Onze partners</h3>
+              <h3 class="heading-5 sponsors__titel titel__footer">Onze partners</h3>
               <ul class="sponsors">
-                <li class="sponsor__link een"><a class="link" href="http://www.winkeldorp.be"><img src="./assets/img/sponsor/sponsor1_50.webp" alt="sponsor winkeldorpen"></a></li>
-                <li class="sponsor__link twee"><a class="link" href="http://beverse-feesten.be"><img src="./assets/img/sponsor/sponsor2_50.webp" alt="sponsor beverse feesten"></a></li>
-                <li class="sponsor__link drie"><a class="link" href="http://www.aouteneclats.be"><img src="./assets/img/sponsor/sponsor3_50.webp" alt="sponsor aout en eclats"></a></li>
-                <li class="sponsor__link vier"><a class="link" href="http://www.warandeshopping.be"><img src="./assets/img/sponsor/sponsor4_50.webp" alt="sponsor warande shopping"></a></li>
+                <li class="sponsor__link een">
+                  <a class="link" href="http://www.winkeldorp.be">
+                  <picture class="sponsor__image">
+                  <source
+                  type="image/webp"
+                  srcset="
+                  ./assets/img/sponsor/sponsor1_10.webp 24w,
+                  ./assets/img/sponsor/sponsor1_20.webp 49w,
+                  ./assets/img/sponsor/sponsor1_33.webp 81w,
+                  ./assets/img/sponsor/sponsor1_50.webp 122w,
+                  ./assets/img/sponsor/sponsor1_67.webp 163w,
+                  ./assets/img/sponsor/sponsor1_75.webp 183w,
+                  ./assets/img/sponsor/sponsor1_85.webp 207w,
+                  ./assets/img/sponsor/sponsor1_100.webp 244w
+                  "
+                  sizes="(min-width: 1440px)  10rem,
+                  (min-width: 1024px) 10rem,
+                  (min-width: 768px)  8rem,
+                  (min-width: 320px)  8rem,
+                  (min-width: 0)  8rem
+                  "
+                  />
+                  <source
+                  type="image/png"
+                  srcset="
+                  ./assets/img/sponsor/sponsor1_10.png 24w,
+                  ./assets/img/sponsor/sponsor1_20.png 49w,
+                  ./assets/img/sponsor/sponsor1_33.png 81w,
+                  ./assets/img/sponsor/sponsor1_50.png 122w,
+                  ./assets/img/sponsor/sponsor1_67.png 163w,
+                  ./assets/img/sponsor/sponsor1_75.png 183w,
+                  ./assets/img/sponsor/sponsor1_85.png 207w,
+                  ./assets/img/sponsor/sponsor1_100.png 244w
+                  "
+                  sizes="(min-width: 1440px)  10rem,
+                  (min-width: 1024px) 10rem,
+                  (min-width: 768px)  8rem,
+                  (min-width: 320px)  8rem,
+                  (min-width: 0)  8rem
+                  "
+                  />
+                  <img
+                  src="./assets/img/sponsor/sponsor1_50.png"
+                  alt="sponsor winkeldorpen">
+                  </picture>
+                  </a>
+                </li>
+                <li class="sponsor__link twee">
+                  <a class="link" href="http://beverse-feesten.be">
+                  <picture class="sponsor__image">
+                  <source
+                  type="image/webp"
+                  srcset="
+                  ./assets/img/sponsor/sponsor2_10.webp 28w,
+                  ./assets/img/sponsor/sponsor2_20.webp 57w,
+                  ./assets/img/sponsor/sponsor2_33.webp 95w,
+                  ./assets/img/sponsor/sponsor2_50.webp 142w,
+                  ./assets/img/sponsor/sponsor2_67.webp 189w,
+                  ./assets/img/sponsor/sponsor2_75.webp 213w,
+                  ./assets/img/sponsor/sponsor2_85.webp  241w,
+                  ./assets/img/sponsor/sponsor2_100.webp 284w
+                  "
+                  sizes="(min-width: 1440px)  10rem,
+                  (min-width: 1024px) 10rem,
+                  (min-width: 768px)  8rem,
+                  (min-width: 320px)  8rem,
+                  (min-width: 0)  8rem
+                  "
+                  />
+                  <source
+                  type="image/png"
+                  srcset="
+                  ./assets/img/sponsor/sponsor2_10.png 28w,
+                  ./assets/img/sponsor/sponsor2_20.png 57w,
+                  ./assets/img/sponsor/sponsor2_33.png 95w,
+                  ./assets/img/sponsor/sponsor2_50.png 142w,
+                  ./assets/img/sponsor/sponsor2_67.png 189w,
+                  ./assets/img/sponsor/sponsor2_75.png 213w,
+                  ./assets/img/sponsor/sponsor2_85.png  241w,
+                  ./assets/img/sponsor/sponsor2_100.png 284w
+                  "
+                  sizes="(min-width: 1440px)  10rem,
+                  (min-width: 1024px) 10rem,
+                  (min-width: 768px)  8rem,
+                  (min-width: 320px)  8rem,
+                  (min-width: 0)  8rem
+                  "
+                  />
+                  <img
+                  src="./assets/img/sponsor/sponsor2_50.png"
+                  alt="sponsor beverse feesten">
+                  </picture>
+                  </a>
+                </li>
+                <li class="sponsor__link drie">
+                  <a class="link" href="http://www.aouteneclats.be">
+                  <picture class="sponsor__image">
+                  <source
+                  type="image/webp"
+                  srcset="
+                  ./assets/img/sponsor/sponsor3_10.webp 14w,
+                  ./assets/img/sponsor/sponsor3_20.webp 28w,
+                  ./assets/img/sponsor/sponsor3_33.webp 47w,
+                  ./assets/img/sponsor/sponsor3_50.webp 70w,
+                  ./assets/img/sponsor/sponsor3_67.webp 93w,
+                  ./assets/img/sponsor/sponsor3_75.webp 107w,
+                  ./assets/img/sponsor/sponsor3_85.webp  119w,
+                  ./assets/img/sponsor/sponsor3_100.webp 140w
+                  "
+                  sizes="(min-width: 1440px) 7rem,
+                  (min-width: 1024px) 6rem,
+                  (min-width: 768px)  5rem,
+                  (min-width: 320px)  6rem,
+                  (min-width: 0)  5rem
+                  "
+                  />
+                  <source
+                  type="image/png"
+                  srcset="
+                  ./assets/img/sponsor/sponsor3_10.png 14w,
+                  ./assets/img/sponsor/sponsor3_20.png 28w,
+                  ./assets/img/sponsor/sponsor3_33.png 47w,
+                  ./assets/img/sponsor/sponsor3_50.png 70w,
+                  ./assets/img/sponsor/sponsor3_67.png 93w,
+                  ./assets/img/sponsor/sponsor3_75.png 107w,
+                  ./assets/img/sponsor/sponsor3_85.png  119w,
+                  ./assets/img/sponsor/sponsor3_100.png 140w
+                  "
+                  sizes="(min-width: 1440px) 7rem,
+                  (min-width: 1024px) 6rem,
+                  (min-width: 768px)  5rem,
+                  (min-width: 320px)  6rem,
+                  (min-width: 0)  5rem
+                  "
+                  />
+                  <img
+                  src="./assets/img/sponsor/sponsor3_50.png"
+                  alt="sponsor aout en eclats">
+                  </picture>
+                  </a>
+                </li>
+                <li class="sponsor__link vier">
+                  <a class="link" href="http://www.warandeshopping.be">
+                  <picture class="sponsor__image">
+                  <source
+                  type="image/webp"
+                  srcset="
+                  ./assets/img/sponsor/sponsor4_10.webp 20w,
+                  ./assets/img/sponsor/sponsor4_20.webp 39w,
+                  ./assets/img/sponsor/sponsor4_33.webp 65w,
+                  ./assets/img/sponsor/sponsor4_50.webp 98w,
+                  ./assets/img/sponsor/sponsor4_67.webp 131w,
+                  ./assets/img/sponsor/sponsor4_75.webp 147w,
+                  ./assets/img/sponsor/sponsor4_85.webp  167w,
+                  ./assets/img/sponsor/sponsor4_100.webp 196w
+                  "
+                  sizes="(min-width: 1440px) 8rem,
+                  (min-width: 1024px) 8rem,
+                  (min-width: 768px)  5rem,
+                  (min-width: 320px)  6rem,
+                  (min-width: 0)  5rem
+                  "
+                  />
+                  <source
+                  type="image/png"
+                  srcset="
+                  ./assets/img/sponsor/sponsor4_10.png 20w,
+                  ./assets/img/sponsor/sponsor4_20.png 39w,
+                  ./assets/img/sponsor/sponsor4_33.png 65w,
+                  ./assets/img/sponsor/sponsor4_50.png 98w,
+                  ./assets/img/sponsor/sponsor4_67.png 131w,
+                  ./assets/img/sponsor/sponsor4_75.png 147w,
+                  ./assets/img/sponsor/sponsor4_85.png  167w,
+                  ./assets/img/sponsor/sponsor4_100.png 196w
+                  "
+                  sizes="(min-width: 1440px) 8rem,
+                  (min-width: 1024px) 8rem,
+                  (min-width: 768px)  5rem,
+                  (min-width: 320px)  6rem,
+                  (min-width: 0)  5rem
+                  "
+                  />
+                  <img
+                  src="./assets/img/sponsor/sponsor4_50.png"
+                  alt="sponsor warande shopping">
+                  </picture>
+                  </a>
+                </li>
               </ul>
           </article>
           <article class="footer__link">
-              <h3 class="heading-5">Nuttige links</h3>
+              <h3 class="heading-5 titel__footer">Nuttige links</h3>
               <ul>
                 <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
                 <li><a class="link body-klein" href="index.php">Bereikbaarheid</a></li>
@@ -102,7 +286,7 @@
               </ul>
           </article>
           <article class="footer__volg">
-              <h3 class="heading-5">Volg ons</h3>
+              <h3 class="heading-5 titel__footer">Volg ons</h3>
               <ul>
                 <li><a class="link body-klein" href="https://www.facebook.com/">Facebook</a></li>
                 <li><a class="link body-klein" href="https://www.instagram.com/?hl=n">Instagram</a></li>
@@ -111,7 +295,7 @@
               </ul>
           </article>
           <article class="footer__contact">
-              <h3 class="heading-5">Contacteer ons</h3>
+              <h3 class="heading-5 titel__footer">Contacteer ons</h3>
               <address class="body-klein">
               Donkvijverstraat<br>
               9120 Beveren

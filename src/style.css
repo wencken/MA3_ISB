@@ -104,19 +104,18 @@ body {
   border-bottom: .2rem solid var(--color-accent);
 }
 
-/* .grid {
-  grid-auto-flow: dense;
-
-  @media (--md) {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 2.5rem;
-    margin-bottom: 5rem;
-  }
-
-  @media (--lg) {
-    grid-gap: 4rem;
-    margin-bottom: 10rem;
-  }
-} */
 /*---------------- BUTTONS ----------------*/
+
+textarea,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+input[type='date'],
+input[type='time'],
+input[type='email'],
+button,
+.input-checkbox {
+  appearance: none;
+  border-radius: 0;
+  border-width: 0;
+}

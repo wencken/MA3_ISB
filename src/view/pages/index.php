@@ -3,6 +3,26 @@
   <h2 class="heading-1 hidden">Home</h2>
   <a class="header__cta body__home" href="#spektakel"><span class="header__hidden">Ontdek</span></a>
   <a class="header__cta__mobile body__home" href="index.php?page=programma"><span class="header__mobile">Ontdek het programma</span></a>
+ <!-- <picture>
+    <source srcset="./assets/img/header/header4_100.webp" type="image/webp">
+    <source srcset="./assets/img/header/header4_100.png" type="image/png">
+    <img class="home__header" src="./assets/img/header/header4_100.png" alt="hoofdingsafbeelding">
+  </picture>
+  <picture>
+    <source srcset="./assets/img/header/header3_100.webp" type="image/webp">
+    <source srcset="./assets/img/header/header3_100.png" type="image/png">
+    <img class="home__header" src="./assets/img/header/header3_100.png" alt="hoofdingsafbeelding">
+  </picture>
+  <picture>
+    <source srcset="./assets/img/header/header2_100.webp" type="image/webp">
+    <source srcset="./assets/img/header/header2_100.png" type="image/png">
+    <img class="home__header" src="./assets/img/header/header2_100.png" alt="hoofdingsafbeelding">
+  </picture>
+  <picture>
+    <source srcset="./assets/img/header/header1_100.webp" type="image/webp">
+    <source srcset="./assets/img/header/header1_100.png" type="image/png">
+    <img class="home__header" src="./assets/img/header/header1_100.png" alt="hoofdingsafbeelding">
+  <picture> -->
 </header>
 
 <article class="spektakel container" id="spektakel">
@@ -121,8 +141,8 @@
     <p class='nieuwsbrief__tekst body__home'>Schrijf je dan in op onze nieuwsbrief.</p>
     <form action="" class='nieuwsbrief__form'>
       <input type="hidden" action="" value="">
-      <label for="email" class="body__home email__label">e-mailadres
-      <input type="text" name="email" class=" body__home email" style="border:none">
+      <label for="email" class="body__home email__label">e-mailadres:
+      <input type="text" name="email" class=" body__home email">
       </label>
       <input type="submit" value="Houd me op de hoogte!" name="submit" class=" body__home nieuwsbrief__submit">
     </form>

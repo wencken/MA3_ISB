@@ -42,7 +42,7 @@
             </li>
             <li class= "filter__li">
               <input type="checkbox" value="true" id="kinderen" name="kinderen" class="filter__input">
-              <label for="kinderen" class="filter__label <?php if (isset($_GET['kinderen'])){echo 'checked';}?>">Kinderen</label>
+              <label for="kinderen" class="filter__label <?php if (isset($_GET['kinderen'])){echo 'checked';}?>">kinderen</label>
             </li>
           </ul>
       </div>

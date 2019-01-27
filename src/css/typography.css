@@ -60,6 +60,38 @@
   font-family: Radikal, Helvetica, sans-serif;
   font-style: normal;
   font-weight: lighter;
+
+  @media (--md) {
+    font-size: 1.4rem;
+  }
+
+  @media (--lg) {
+    font-size: 1.6rem;
+  }
+
+  @media (--xl) {
+    font-size: 1.8rem;
+  }
+}
+
+.titel__footer {
+  font-size: 2.8rem;
+  padding-bottom: .6rem;
+
+  @media (--md) {
+    font-size: 2.5rem;
+    padding-bottom: .2rem;
+  }
+
+  @media (--lg) {
+    font-size: 2.4rem;
+    padding-bottom: .8rem;
+  }
+
+  @media (--xl) {
+    font-size: 2.7rem;
+    padding-bottom: .5rem;
+  }
 }
 
 .strong {
