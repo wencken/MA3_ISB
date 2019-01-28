@@ -110,8 +110,7 @@
       </picture>
       <article>
         <h4 class="body__home praktisch__subtitel">Tijdstip</h4>
-        <p class="body__home praktisch__tekst"><?php echo $act["beginuur"];?></p>
-        <p class="body__home praktisch__tekst"><?php echo $act["duur"];?></p>
+        <p class="body__home praktisch__tekst"><?php echo $act["beginuur"];?> | <?php echo $act["duur"];?></p>
       </article>
     </div>
 
@@ -123,9 +122,7 @@
       </picture>
       <article>
         <h4 class="body__home praktisch__subtitel">Locatie <?php echo $act["locatie_id"];?></h4>
-        <p class="body__home praktisch__tekst"><?php echo $act["locatie_naam"];?></p>
-        <p class="body__home praktisch__tekst">9120 Beveren</p>
-        <p class="body__home praktisch__tekst">Belgium</p>
+        <p class="body__home praktisch__tekst"><?php echo $act["locatie_naam"];?>, 9120 Beveren</p>
       </article>
     </div>
   </div>

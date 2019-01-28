@@ -54,6 +54,15 @@
 
 .terug {
   color: var(--background-color);
+
+  @media (--lg) {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    background-color: var(--background-color);
+    height: 12rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .terug::before {
@@ -96,7 +105,7 @@
   }
 
   @media (--xl) {
-    background-size: 16% .5rem;
+    background-size: 13rem .5rem;
     height: 8rem;
     width: 128rem;
   }
@@ -137,7 +146,7 @@
   }
 
   @media (--xl) {
-    height: 94rem;
+    height: 90rem;
   }
 }
 
@@ -228,6 +237,8 @@
 
   @media (--xl) {
     height: 78rem;
+    padding-top: 0;
+    align-items: flex-start;
   }
 }
 
@@ -255,6 +266,7 @@
 
   @media (--xl) {
     width: 61rem;
+    height: 50rem;
   }
 }
 
@@ -340,7 +352,8 @@
   }
 
   @media (--xl) {
-    height: 73rem;
+    height: 56rem;
+    justify-content: center;
   }
 }
 
@@ -354,7 +367,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 95vw;
-  height: 50rem;
+  height: 40rem;
   padding-bottom: 4rem;
 
   @media (--md) {
@@ -372,11 +385,12 @@
     display: flex;
     flex-flow: column;
     width: 34vw;
-    height: 54rem;
+    height: 47rem;
   }
 
   @media (--xl) {
-    height: 70rem;
+    height: 54rem;
+    width: 57rem;
     justify-content: space-between;
   }
 }
@@ -405,6 +419,12 @@
 .praktisch__tijdstip,
 .praktisch__locatie {
   display: flex;
+}
+
+.praktisch__datum article,
+.praktisch__tijdstip article,
+.praktisch__locatie article {
+  width: 18rem;
 }
 
 .praktisch__icon {
@@ -458,8 +478,8 @@
   }
 
   @media (--xl) {
-    width: 68rem;
-    height: 68rem;
+    width: 70rem;
+    height: 60rem;
     /* margin-top: 5rem;
     margin-right: 5rem; */
   }
@@ -541,7 +561,8 @@
   }
 
   @media (--xl) {
-    height: 60rem;
+    height: 50rem;
+    width: 69rem;
     padding-right: 6rem;
   }
 }

@@ -3,12 +3,12 @@
   <h2 class="heading-1 hidden">Home</h2>
   <a class="header__cta body__home" href="#spektakel"><span class="header__hidden">Ontdek</span></a>
   <a class="header__cta__mobile body__home" href="index.php?page=programma"><span class="header__mobile">Ontdek het programma</span></a>
-<!--
-  <picture>
-    <source media="(max-width: 768px)" srcset="./assets/img/header/header4_100.png, ./assets/img/header/header4_100.webp">
-    <source media="(max-width: 1024px)" srcset="./assets/img/header/header3_100.png, ./assets/img/header/header3_100.webp">
-    <source media="(max-width: 1440px)" srcset="./assets/img/header/header2_100.png, ./assets/img/header/header2_100.webp">
-    <source media="(max-width: 1560px)" srcset="./assets/img/header/header1_100.png, ./assets/img/header/header1_100.webp">
+
+  <!-- <picture>
+    <source media="(max-width: 768px)" srcset="./assets/img/header/4.png, ./assets/img/header/4@2.png 2x">
+    <source media="(max-width: 1024px)" srcset="./assets/img/header/3.png, ./assets/img/header/3@2.png 2x">
+    <source media="(max-width: 1440px)" srcset="./assets/img/header/2.png, ./assets/img/header/2@2.png 2x">
+    <source media="(max-width: 1560px)" srcset="./assets/img/header/1.png, ./assets/img/header/1@2.png 2x">
     <img class="home__header" src="./assets/img/header/header2_100.png" alt="hoofdingsafbeelding">
   </picture> -->
 </header>

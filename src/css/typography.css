@@ -138,12 +138,12 @@
   }
 
   @media (--lg) {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     line-height: 1.9;
   }
 
   @media (--xl) {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     line-height: 2.1;
   }
 }
