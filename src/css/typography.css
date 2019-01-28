@@ -107,6 +107,10 @@
 .colored__tekst {
   color: var(--color-light);
 }
+
+.underline {
+  text-decoration: underline;
+}
 /*--------HOME----------*/
 
 .titel__home {

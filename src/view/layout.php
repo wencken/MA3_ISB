@@ -34,26 +34,26 @@
       <div class="topright container">
           <ul class="social">
           <li><a href="https://www.facebook.com">
-      <picture>
-          <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
-          <source srcset="./assets/img/social/facebook_67.png" type="image/png">
-          <img src="./assets/img/social/facebook_67.webp" alt="Facebook">
-      </picture>
-    </a></li>
-    <li><a href="https://www.instagram.com">
-     <picture>
-          <source srcset="./assets/img/social/instagram_20.webp" type="image/webp">
-          <source srcset="./assets/img/social/instagram_20.png" type="image/png">
-          <img src="./assets/img/social/instagram_20.webp" alt="Instagram">
-      </picture>
-    </a></li>
-    <li><a href="https://twitter.com">
-      <picture>
-          <source srcset="./assets/img/social/twitter_50.webp" type="image/webp">
-          <source srcset="./assets/img/social/twitter_50.png" type="image/png">
-          <img src="./assets/img/social/twitter_50.webp" alt="Twitter">
-      </picture>
-   </a></li>
+          <picture>
+              <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
+              <source srcset="./assets/img/social/facebook_67.png" type="image/png">
+              <img src="./assets/img/social/facebook_67.webp" alt="Facebook">
+          </picture>
+          </a></li>
+          <li><a href="https://www.instagram.com">
+          <picture>
+                <source srcset="./assets/img/social/instagram_20.webp" type="image/webp">
+                <source srcset="./assets/img/social/instagram_20.png" type="image/png">
+                <img src="./assets/img/social/instagram_20.webp" alt="Instagram">
+            </picture>
+          </a></li>
+          <li><a href="https://twitter.com">
+          <picture>
+                <source srcset="./assets/img/social/twitter_50.webp" type="image/webp">
+                <source srcset="./assets/img/social/twitter_50.png" type="image/png">
+                <img src="./assets/img/social/twitter_50.webp" alt="Twitter">
+          </picture>
+          </a></li>
           </ul>
           <p class="body-klein">Donkvijverstraat, 9120 Beveren</p>
           <ul class="talen">
@@ -87,11 +87,11 @@
           </nav>
         </div>
 
-        <div class="menu-icon">
+        <button class="menu-icon">
           <span class="line"></span>
           <span class="line line--second"></span>
           <span class="line line--third"></span>
-        </div>
+        </button>
       </header>
 
     <main class="main">
@@ -300,20 +300,20 @@
             <article class="footer__link">
                 <h3 class="heading-5 titel__footer">Nuttige links</h3>
                 <ul class=>
-                  <li><a class="link body-klein" href="index.php?page=programma">Programma</a></li>
-                  <li><a class="link body-klein" href="index.php">Bereikbaarheid</a></li>
-                  <li><a class="link body-klein" href="index.php">Voor het hele gezin</a></li>
-                  <li><a class="link body-klein" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
-                  <li><a class="link body-klein" href="index.php">Veelgestelde vragen</a></li>
+                  <li><a class="underline link body-klein" href="index.php?page=programma">Programma</a></li>
+                  <li><a class="underline link body-klein" href="index.php">Bereikbaarheid</a></li>
+                  <li><a class="underline link body-klein" href="index.php">Voor het hele gezin</a></li>
+                  <li><a class="underline link body-klein" href="index.php">Vrijwilligers/ jobs/ stage</a></li>
+                  <li><a class="underline link body-klein" href="index.php">Veelgestelde vragen</a></li>
                 </ul>
             </article>
             <article class="footer__volg">
                 <h3 class="heading-5 titel__footer">Volg ons</h3>
                 <ul>
-                  <li><a class="link body-klein" href="https://www.facebook.com/">Facebook</a></li>
-                  <li><a class="link body-klein" href="https://www.instagram.com/?hl=n">Instagram</a></li>
-                  <li><a class="link body-klein" href="https://twitter.com/?lang=nl">Twitter</a></li>
-                  <li><a class="link body-klein" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
+                  <li><a class="underline link body-klein" href="https://www.facebook.com/">Facebook</a></li>
+                  <li><a class="underline link body-klein" href="https://www.instagram.com/?hl=n">Instagram</a></li>
+                  <li><a class="underline link body-klein" href="https://twitter.com/?lang=nl">Twitter</a></li>
+                  <li><a class="underline link body-klein" href="https://straattheaterfestivalbeveren.wordpress.com/">Nieuwsbrief</a></li>
                 </ul>
             </article>
             <article class="footer__contact">
@@ -322,8 +322,8 @@
                 Donkvijverstraat<br>
                 9120 Beveren
                 </address>
-                <p class="body-klein accent strong">T <span><a class="link body-klein" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
-                <p class="body-klein accent strong">E <span><a class="link body-klein" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
+                <p class="body-klein accent strong">T <span><a class="link body-klein underline" href="tel:+32(0)3 750 16 29">+32(0)3 750 16 29</a></span></p>
+                <p class="body-klein accent strong">E <span><a class="link body-klein underline" href="mailto:erik.apers@beveren.be">erik.apers@beveren.be</a></span></p>
             </article>
           </div>
 
