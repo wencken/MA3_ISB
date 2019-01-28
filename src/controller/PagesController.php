@@ -5,8 +5,6 @@ require_once __DIR__ . '/../dao/PagesDAO.php';
 require_once __DIR__ . '/../dao/ImageDAO.php';
 
 class PagesController extends Controller {
-
-  // private $todoDAO;
   private $pagesDAO;
   private $imageDAO;
 

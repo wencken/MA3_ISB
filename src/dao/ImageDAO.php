@@ -21,7 +21,6 @@ class ImageDAO extends DAO {
     INNER JOIN `ISB_act` ON `ISB_afbeelding`.`act_id` = `ISB_act`.`id`
     WHERE `afbeelding` LIKE '%1' ORDER BY rand() LIMIT 3";
     $stmt = $this->pdo->prepare($sql);
-    // $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }

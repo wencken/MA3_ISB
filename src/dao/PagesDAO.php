@@ -11,7 +11,6 @@ class PagesDAO extends DAO {
   }
 
   public function filter($data){
-    // print_r($data);
     $sql = "SELECT * FROM ((((`ISB_programmatie`
     INNER JOIN `ISB_locatie` ON `ISB_programmatie`.`locatie_id` = `ISB_locatie`.`id`)
     INNER JOIN `ISB_act` ON `ISB_programmatie`.`act_id` = `ISB_act`.`id`

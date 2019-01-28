@@ -65,7 +65,8 @@
     </div>
 
     <header class="header__bg">
-      <div class=" header__top container">
+      <div class="header__top container">
+
         <div class="burger__titel">
           <h1 class="burger__h1 heading-0"><a class="navi" href="index.php">ISB </a></h1>
           <h2 class="burger__h2 body-0">
@@ -92,12 +93,16 @@
           <span class="line line--second"></span>
           <span class="line line--third"></span>
        </div>
-      </header>
+
+      </div>
+    </header>
 
     <main class="main">
       <?php echo $content;?>
+
       <section class="footer">
         <h2 class="heading-2 hidden">Footer</h2>
+
         <div class="footer-content container">
         <p class="totop"><a href="#top" class='totop__link'><span class='hidden'>Back to top</span></a></p>
         <div class="wrapper1">
