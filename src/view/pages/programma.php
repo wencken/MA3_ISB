@@ -55,7 +55,6 @@
 
   <section class="container resultaten">
     <h3 class="heading-2">Resultaten</h3>
-    <!-- <div class="laadmeer" id="acts"> -->
       <div class='act__section'>
       <?php
         foreach($acts as $act){
@@ -122,8 +121,6 @@
         }
       ?>
       </div>
-    <!-- </div>
-    <p class="laadmeer__button">Laad meer</p> -->
   </section>
 
  </section>

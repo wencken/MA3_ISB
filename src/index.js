@@ -10,7 +10,7 @@ require('./style.css');
   let forward = true;
 
   const filter = document.querySelector(`.filter__heading`);
-  let filteren = false;
+  let filteren = true;
 
   const init = () => {
     if ($filterForm) {
