@@ -1,7 +1,6 @@
-/*-------HEADER--------*/
+/*-----------HEADER------------*/
 
 .home__header {
-  /* overflow: hidden; */
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -9,7 +8,7 @@
   justify-content: center;
   height: 50rem;
   align-items: flex-end;
-  background-image: url('./../assets/img/header/header4_100.png');
+  background-image: url(./../assets/img/header/header4_100.png);
   /* background-image: url('./../assets/img/header/header4_100.webp'); */
   background-position-y: 2rem;
 
@@ -19,11 +18,10 @@
     align-items: flex-end;
     background-repeat: no-repeat;
     background-size: 104%;
-    background-image: url('./../assets/img/header/header3_100.png');
+    background-image: url(./../assets/img/header/header3_100.png);
     /* background-image: url(./../assets/img/header/header3_100.webp); */
     background-position: -2rem 0;
     padding-bottom: 6rem;
-    background-repeat: no-repeat;
   }
 
   @media (--lg) {
@@ -101,6 +99,7 @@
     transform: rotate(135deg);
   }
 }
+
 /*-------------------SPEKTAKEL--------------------*/
 
 .spektakel__naam {
@@ -131,7 +130,6 @@
 }
 
 .show__mobile {
-  display: block;
   align-self: center;
   margin: 5rem auto;
   width: 20rem;
@@ -152,30 +150,15 @@
 
   @media (--md) {
     display: block;
-    /*
-    width: 20rem;
-    height: 6rem;
-    background-color: var(--color-accent);
-    display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 }
 
 .hide__mobile {
   display: none;
 
-  /* width: 20rem;
-  height: 6rem;
-  background-color: var(--color-accent);
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-
   @media (--md) {
     text-decoration: none;
     color: var(--background-color);
-    display: block;
     width: 20rem;
     height: 6rem;
     background-color: var(--color-accent);
@@ -499,7 +482,7 @@
   }
 }
 
-/*-------NIEUWSBRIEF--------*/
+/*-------------NIEUWSBRIEF--------------*/
 
 .video__article {
   height: 55rem;

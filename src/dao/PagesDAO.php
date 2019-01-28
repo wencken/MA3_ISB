@@ -21,36 +21,42 @@ class PagesDAO extends DAO {
 
 
      if (!empty($data['vrijdag'])) {
-     $sql .= " AND `ISB_programmatie`.`datum` LIKE 'vr%' ";
+     $sql .= " AND (`ISB_programmatie`.`datum` LIKE 'vr%' ";
       if (!empty($data['zaterdag'])) {
         $sql .= " OR `ISB_programmatie`.`datum` LIKE 'za%' ";
       }
       if (!empty($data['zondag'])) {
         $sql .= " OR `ISB_programmatie`.`datum` LIKE 'zo%' ";
       }
+      $sql .= " ) ";
     } else if (!empty($data['zaterdag'])) {
-      $sql .=  " AND `ISB_programmatie`.`datum` LIKE 'za%' ";
+      $sql .=  " AND (`ISB_programmatie`.`datum` LIKE 'za%' ";
       if (!empty($data['zondag'])) {
         $sql .= " OR `ISB_programmatie`.`datum` LIKE 'zo%' ";
       }
+      $sql .= " ) ";
     } else if (!empty($data['zondag'])) {
-      $sql .=  " AND `ISB_programmatie`.`datum` LIKE 'zo%' ";
+      $sql .=  " AND (`ISB_programmatie`.`datum` LIKE 'zo%' ";
+      $sql .= " ) ";
     }
      if (!empty($data['voorstelling'])) {
-      $sql .= " AND `ISB_act`.`type` LIKE 'voorstelling%' ";
+      $sql .= " AND (`ISB_act`.`type` LIKE 'voorstelling%' ";
       if (!empty($data['straatact'])) {
         $sql .= " OR `ISB_act`.`type` LIKE 'straatact%' ";
       }
       if (!empty($data['activiteit'])) {
         $sql .= " OR `ISB_act`.`type` LIKE 'activiteit%' ";
       }
+      $sql .= " ) ";
     } else if (!empty($data['straatact'])) {
-      $sql .= " AND `ISB_act`.`type` LIKE 'straatact%' ";
+      $sql .= " AND (`ISB_act`.`type` LIKE 'straatact%' ";
       if (!empty($data['activiteit'])){
         $sql .= " OR `ISB_act`.`type` LIKE 'activiteit%' ";
       }
+      $sql .= " ) ";
     } else if (!empty($data['activiteit'])) {
-      $sql .= " AND `ISB_act`.`type` LIKE 'activiteit%' ";
+      $sql .= " AND (`ISB_act`.`type` LIKE 'activiteit%' ";
+      $sql .= " ) ";
     }
     if (!empty($data['kinderen'])) {
       $sql .=  " AND `ISB_act`.`kinderen` = '1' ";

@@ -35,20 +35,20 @@
   }
 
   @media (--lg) {
-    height: 70rem;
+    height: 100rem;
     top: 0;
-    background-size: 104%;
+    background-size: 101%;
     background-image: url(./../assets/img/bg/2_100.png);
     /* background-image: url(./../assets/img/bg/2_100.webp); */
-    background-position: -4rem -1rem;
+    background-position: -10px -1rem;
   }
 
   @media (--xl) {
-    height: 160rem;
-    background-size: 104%;
+    height: 165rem;
+    background-size: 100%;
     background-image: url(./../assets/img/bg/1_100.png);
     /* background-image: url(./../assets/img/bg/1_100.webp); */
-    background-position: -5rem -3rem;
+    background-position: 0 1.6rem;
   }
 }
 
@@ -59,7 +59,7 @@
     font-size: 1.8rem;
     color: var(--color-accent);
     background-color: var(--background-color);
-    height: 12rem;
+    height: 7rem;
     display: flex;
     align-items: center;
   }
@@ -82,7 +82,8 @@
   }
 
   @media (--xl) {
-    width: 29%;
+    width: 32%;
+    height: 4rem;
   }
 }
 
@@ -124,6 +125,7 @@
     height: 8rem;
   }
 }
+
 /*--------------INTRO-----------------*/
 
 .detail__header {
@@ -258,7 +260,6 @@
 
   @media (--lg) {
     line-height: 4.4rem;
-    /* height: 18rem; */
     width: 46rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -445,7 +446,6 @@
   height: 30rem;
   object-fit: cover;
   object-position: 50% 50%;
-  /* clip- ath: polygon(0 0, 100% 0, 100% 65%, 0 65%); */
 }
 
 /*--------------BEELDMATERIAAL-----------------*/
@@ -466,22 +466,16 @@
   @media (--md) {
     width: 38rem;
     height: 38rem;
-    /* margin-top: 5rem;
-    margin-right: 5rem; */
   }
 
   @media (--lg) {
     width: 48rem;
     height: 48rem;
-    /* margin-top: 5rem;
-    margin-right: 5rem; */
   }
 
   @media (--xl) {
     width: 70rem;
     height: 60rem;
-    /* margin-top: 5rem;
-    margin-right: 5rem; */
   }
 }
 
@@ -569,7 +563,6 @@
 
 .grootbeeld__image {
   width: 100%;
-  /* overflow: hidden; */
   height: 40rem;
 
   @media (--md) {
@@ -582,7 +575,6 @@
   }
 
   @media (--xl) {
-    width: ;
     height: 65rem;
   }
 }
@@ -623,6 +615,7 @@
     height: 65rem;
   }
 }
+
 /*--------------SOCIAL-----------------*/
 
 .socials {

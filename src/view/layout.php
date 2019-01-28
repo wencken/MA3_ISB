@@ -87,11 +87,11 @@
           </nav>
         </div>
 
-        <button class="menu-icon">
+        <div class="menu-icon">
           <span class="line"></span>
           <span class="line line--second"></span>
           <span class="line line--third"></span>
-        </button>
+       </div>
       </header>
 
     <main class="main">
