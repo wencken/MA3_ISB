@@ -12,18 +12,20 @@
   background-image: url(./../assets/img/header/header4_100.png);
   background-image:
     -webkit-image-set(
-      url(./../assets/img/header/header4_100.webp) 1x
+      url(./../assets/img/header/header4_100.webp)
     );
   background-position-y: 0;
 
   @media (--md) {
     height: 78vw;
+    width: 100%;
     align-items: flex-end;
+    background-repeat: no-repeat;
     background-size: 104%;
-    background-image: url(./../assets/img/header/header3_100.webp);
+    background-image: url(./../assets/img/header/header3_100.png);
     background-image:
       -webkit-image-set(
-        url(./../assets/img/header/header3_100.webp) 1x
+        url(./../assets/img/header/header3_100.webp)
       );
     background-position: -2rem 0;
     padding-bottom: 6rem;
@@ -32,11 +34,13 @@
 
   @media (--lg) {
     height: 70vw;
+    width: 100%;
     background-size: 108%;
-    background-image: url(./../assets/img/header/header2_100.webp);
+    background-repeat: no-repeat;
+    background-image: url(./../assets/img/header/header2_100.png);
     background-image:
       -webkit-image-set(
-        url(./../assets/img/header/header2_100.webp) 1x
+        url(./../assets/img/header/header2_100.webp)
       );
     background-position: -4rem -11rem;
   }
@@ -44,10 +48,11 @@
   @media (--xl) {
     height: 55vw;
     background-size: 103%;
-    background-image: url(./../assets/img/header/header1_100.webp);
+    background-repeat: no-repeat;
+    background-image: url(./../assets/img/header/header1_100.png);
     background-image:
       -webkit-image-set(
-        url(./../assets/img/header/header1_100.webp) 1x
+        url(./../assets/img/header/header1_100.webp)
       );
     background-position: -3rem -9rem;
   }
@@ -137,34 +142,103 @@
   }
 }
 
-.hide__mobile {
-  visibility: hidden;
+.show__mobile {
+  display: block;
+  align-self: center;
+  margin: 5rem auto;
+  width: 20rem;
+  height: 6rem;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (--md) {
+    display: none;
+    align-self: start;
+  }
+}
+
+.hidden__mobile {
+  display: none;
 
   @media (--md) {
     display: block;
+    /*
+    width: 20rem;
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+}
+
+.hide__mobile {
+  display: none;
+
+  /* width: 20rem;
+  height: 6rem;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  @media (--md) {
+    text-decoration: none;
+    color: var(--background-color);
+    display: block;
+    width: 20rem;
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (--lg) {
+    width: 24rem;
+    height: 8rem;
+  }
+
+  @media (--xl) {
+    width: 29rem;
+    height: 10rem;
   }
 }
 
 .spektakel__groep {
   display: flex;
   flex-flow: column;
+  height: 33rem;
+  justify-content: space-around;
+  margin: 1rem auto 3rem;
 
   @media (--md) {
     display: flex;
     justify-content: space-evenly;
     flex-flow: row;
     width: 100%;
+    height: 18rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
 
   @media (--lg) {
+    height: 14rem;
     justify-content: space-between;
   }
 
   @media (--xl) {
+    height: 18rem;
     justify-content: space-between;
   }
+}
+
+.spektakel__titel {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 .spektakel__lijn {
@@ -173,8 +247,8 @@
   width: 100%;
 
   @media (--md) {
-    width: 52.6rem;
-    padding-left: 4rem;
+    width: 36.6rem;
+    padding-left: 5rem;
   }
 
   @media (--lg) {
@@ -280,9 +354,10 @@
 /*-------------------FAMILIEDAG--------------------*/
 
 .familiedag {
-  height: 65rem;
+  height: 67rem;
   background-color: var(--primary-color);
   display: flex;
+  flex-flow: column;
   align-items: center;
 
   @media (--lg) {
@@ -296,14 +371,18 @@
 
 .home__familiedag {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
 
   @media (--md) {
-    height: 50rem;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
   }
 
   @media (--xl) {
-    height: 56rem;
+    height: 100%;
   }
 }
 
@@ -336,14 +415,35 @@
   flex-flow: column;
   justify-content: space-between;
   height: 49rem;
+  margin-top: 4rem;
 
   @media (--md) {
     justify-content: space-evenly;
-    height: 100%;
+    height: 80%;
+    margin-top: 0;
   }
 
   @media (--lg) {
+    height: 52%;
     justify-content: space-between;
+  }
+
+  @media (--xl) {
+    height: 55%;
+  }
+}
+
+.mobile__image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  backface-visibility: hidden;
+  margin: 3rem auto;
+
+  @media (--md) {
+    display: none;
   }
 }
 
@@ -380,20 +480,35 @@
   }
 
   @media (--lg) {
-    width: 44rem;
+    width: 48rem;
     margin-right: 5rem;
   }
 
   @media (--xl) {
-    width: 69rem;
+    width: 64rem;
     margin-right: 10rem;
   }
 }
 
 .familiedag__cta {
-  width: 17rem;
   text-decoration: none;
   color: var(--background-color);
+  width: 20rem;
+  height: 6rem;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (--lg) {
+    width: 24rem;
+    height: 8rem;
+  }
+
+  @media (--xl) {
+    width: 29rem;
+    height: 10rem;
+  }
 }
 
 /*-------NIEUWSBRIEF--------*/

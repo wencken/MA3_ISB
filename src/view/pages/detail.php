@@ -1,7 +1,29 @@
 <section class="detail">
 <header class="">
   <h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
-  <span class="detail__prog"><img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"></span>
+  <div class="detail__prog">
+    <!-- <picture class="praktisch__1">
+        <source type="image/webp" srcset="./assets/img/bg/1_100.webp">
+        <source type="image/png" srcset="./assets/img/bg/1_100.png">
+        <img src="./assets/img/bg/1_100.png" alt="background detailpagina">
+      </picture>
+      <picture class="praktisch__2">
+        <source type="image/webp" srcset="./assets/img/bg/2_100.webp">
+        <source type="image/png" srcset="./assets/img/bg/2_100.png">
+        <img src="./assets/img/bg/2_100.png" alt="background detailpagina">
+      </picture>
+      <picture class="praktisch__3">
+        <source type="image/webp" srcset="./assets/img/bg/3_100.webp">
+        <source type="image/png" srcset="./assets/img/bg/3_100.png">
+        <img src="./assets/img/bg/3_100.png" alt="background detailpagina">
+      </picture>
+      <picture class="praktisch__4">
+        <source type="image/webp" srcset="./assets/img/bg/detail_100.webp">
+        <source type="image/png" srcset="./assets/img/bg/detail_100.png">
+        <img src="./assets/img/bg/detail_100.png" alt="background detailpagina">
+      </picture> -->
+    <!-- <img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"> -->
+  </div>
 </header>
 
 
@@ -14,10 +36,14 @@
       <h4 class="beeld__titel body__home"><?php echo $act["artiest_naam"]?> stelt voor</h4>
       <p class="heading-1 titel__home"><?php echo $act["act_naam"];?></p>
       <p class="detail__omschrijving body__home"><?php echo $act["omschrijving"];?></p>
-      <a class=" aanwezig detail__link body__home" href="https://www.facebook.com">
-        <img class = "facebook" src="./assets/img/social/facebook_67.webp" alt="Facebook">
+      <button class=" aanwezig detail__link body__home" href="https://www.facebook.com">
+        <picture>
+          <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
+          <source srcset="./assets/img/social/facebook_67.png" type="image/png">
+          <img class = "facebook" src="./assets/img/social/facebook_67.webp" alt="Facebook">
+        </picture>
         <p class="aanwezig">Ik ben aanwezig</p>
-      </a>
+      </button>
     </div>
 
     <div class="beeld__groot container">
@@ -279,9 +305,27 @@
   <h3 class="heading-2 titel__home ontdek">Ontdek meer op:</h3>
   <p class="body__home"><?php echo $act["website"];?></p>
   <ul class="socials__media">
-    <li><a class=" aanwezig__li detail__link body__home" href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.webp" alt="Facebook"></a></li>
-    <li><a class=" aanwezig__li detail__link body__home" href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.webp" alt="Instagram"></a></li>
-    <li><a class=" aanwezig__li detail__link body__home" href="https://twitter.com"><img src="./assets/img/social/twitter_50.webp" alt="Twitter"></a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://www.facebook.com">
+      <picture>
+          <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
+          <source srcset="./assets/img/social/facebook_67.png" type="image/png">
+          <img src="./assets/img/social/facebook_67.webp" alt="Facebook">
+      </picture>
+    </a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://www.instagram.com">
+     <picture>
+          <source srcset="./assets/img/social/instagram_20.webp" type="image/webp">
+          <source srcset="./assets/img/social/instagram_20.png" type="image/png">
+          <img src="./assets/img/social/instagram_20.webp" alt="Instagram">
+      </picture>
+    </a></li>
+    <li><a class=" aanwezig__li detail__link body__home" href="https://twitter.com">
+      <picture>
+          <source srcset="./assets/img/social/twitter_50.webp" type="image/webp">
+          <source srcset="./assets/img/social/twitter_50.png" type="image/png">
+          <img src="./assets/img/social/twitter_50.webp" alt="Twitter">
+      </picture>
+   </a></li>
   </ul>
   </div>
 </article>

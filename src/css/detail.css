@@ -8,6 +8,7 @@
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-repeat: no-repeat;
 
   @media (--sm) {
     height: 58rem;
@@ -15,8 +16,9 @@
     background-image: url(./../assets/img/bg/detail_100.png);
     background-image:
       -webkit-image-set(
-        url(./../assets/img/bg/detail_100.webp) 1x
+        url(./../assets/img/bg/detail_100.webp)
       );
+    background-repeat: no-repeat;
   }
 
   @media (--md) {
@@ -24,8 +26,9 @@
     top: 6rem;
     background-size: 104%;
     background-image: url(./../assets/img/bg/3_100.png);
-    background-image: -webkit-image-set(url(./../assets/img/bg/3_100.webp) 1x);
+    background-image: -webkit-image-set(url(./../assets/img/bg/3_100.webp));
     background-position: -2rem 2rem;
+    background-repeat: no-repeat;
   }
 
   @media (--lg) {
@@ -33,16 +36,18 @@
     top: 0;
     background-size: 104%;
     background-image: url(./../assets/img/bg/2_100.png);
-    background-image: -webkit-image-set(url(./../assets/img/bg/2_100.webp) 1x);
+    background-image: -webkit-image-set(url(./../assets/img/bg/2_100.webp));
     background-position: -4rem -1rem;
+    background-repeat: no-repeat;
   }
 
   @media (--xl) {
     height: 160rem;
     background-size: 104%;
     background-image: url(./../assets/img/bg/1_100.png);
-    background-image: -webkit-image-set(url(./../assets/img/bg/1_100.webp) 1x);
+    background-image: -webkit-image-set(url(./../assets/img/bg/1_100.webp));
     background-position: -5rem -3rem;
+    background-repeat: no-repeat;
   }
 }
 
@@ -362,12 +367,6 @@
 .praktisch__tijdstip,
 .praktisch__locatie {
   display: flex;
-
-  @media (--md) {
-  }
-
-  @media (--lg) {
-  }
 }
 
 .praktisch__icon {

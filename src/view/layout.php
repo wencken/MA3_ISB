@@ -33,9 +33,27 @@
     <div class="topbar">
       <div class="topright container">
           <ul class="social">
-              <li><a href="https://www.facebook.com"><img src="./assets/img/social/facebook_67.webp" alt="Facebook"></a></li>
-              <li><a href="https://www.instagram.com"><img src="./assets/img/social/instagram_20.webp" alt="Instagram"></a></li>
-              <li><a href="https://twitter.com"><img src="./assets/img/social/twitter_50.webp" alt="Twitter"></a></li>
+          <li><a href="https://www.facebook.com">
+      <picture>
+          <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
+          <source srcset="./assets/img/social/facebook_67.png" type="image/png">
+          <img src="./assets/img/social/facebook_67.webp" alt="Facebook">
+      </picture>
+    </a></li>
+    <li><a href="https://www.instagram.com">
+     <picture>
+          <source srcset="./assets/img/social/instagram_20.webp" type="image/webp">
+          <source srcset="./assets/img/social/instagram_20.png" type="image/png">
+          <img src="./assets/img/social/instagram_20.webp" alt="Instagram">
+      </picture>
+    </a></li>
+    <li><a href="https://twitter.com">
+      <picture>
+          <source srcset="./assets/img/social/twitter_50.webp" type="image/webp">
+          <source srcset="./assets/img/social/twitter_50.png" type="image/png">
+          <img src="./assets/img/social/twitter_50.webp" alt="Twitter">
+      </picture>
+   </a></li>
           </ul>
           <p class="body-klein">Donkvijverstraat, 9120 Beveren</p>
           <ul class="talen">

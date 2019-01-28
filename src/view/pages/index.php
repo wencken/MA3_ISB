@@ -27,9 +27,9 @@
 
 <article class="spektakel container" id="spektakel">
   <div class="spektakel__groep">
-    <div>
+    <div class="spektakel__titel">
       <h3 class="heading-2 titel__home">Een onvergetelijk spektakel</h3>
-      <p class="cta hide__mobile body__home"><a class="underline--magical cta__link" href="index.php?page=programma">Programma</a></p>
+      <p class="hide__mobile body__home"><a class="cta__link" href="index.php?page=programma">Programma</a></p>
     </div>
     <p class="spektakel__lijn body__home">Humor, acrobatie, stuntwerk van de bovenste plank uit ruim <span class="strong">15 verschillende </span>landen! Bovenal geniet u van dit festival volledig <span class="strong">GRATIS</span>.</p>
   </div>
@@ -83,14 +83,52 @@
     }
     ?>
   </div>
+  <p class="show__mobile body__home"><a class="cta__link" href="index.php?page=programma">Programma</a></p>
 </article>
 
 <article class="familiedag">
   <div class="container home__familiedag">
   <div class="familiedag__info">
     <h3 class="heading-2 familiedag__lijn titel__home">Familiedag</h3>
-    <p class="familiedag__tekst body__home">Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. Wij voorzien <span class="strong">kinderkoptelefoons</span> en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</p>
-    <p class="cta body__home"><a class="underline--magical familiedag__cta" href="index.php?page=programma&zaterdag=dag">Onze familiedag</a></p>
+    <picture class="mobile__img">
+        <source
+          type="image/webp"
+          srcset="
+          assets/img/familie/1_20.webp 200w,
+          assets/img/familie/1_33.webp 333w,
+          assets/img/familie/1_50.webp 500w,
+          assets/img/familie/1_67.webp 666w,
+          assets/img/familie/1_75.webp 750w
+          "
+          sizes="(min-width: 1440px) 50vw,
+          (min-width: 1024px) 50vw,
+          (min-width: 768px) 40vw,
+          (min-width: 320px) 100vw,
+          (min-width: 0) 100vw
+          "
+          />
+          <source
+          type="image/jpg"
+          srcset="
+          assets/img/familie/1_20.jpg 200w,
+          assets/img/familie/1_33.jpg 333w,
+          assets/img/familie/1_50.jpg 500w,
+          assets/img/familie/1_67.jpg 666w,
+          assets/img/familie/1_75.jpg 750w
+          "
+          sizes="(min-width: 1440px) 50vw,
+          (min-width: 1024px) 50vw,
+          (min-width: 768px) 50vw,
+          (min-width: 320px) 100vw
+          (min-width: 0) 100vw
+          "
+          />
+          <img class="mobile__image"
+          src="./assets/img/familie/1_67.jpg"
+          alt="sfeerfoto 1 familiedag">
+        </picture>
+    <p class="familiedag__tekst body__home">Ook dit jaar geniet je op zaterdag opnieuw van vaste voorstellingen gericht op de hele familie. <span class="hidden__mobile">Wij voorzien <span class="strong">kinderkoptelefoons</span> en voor de allerkleinste oorkappen. Mis dit niet en beleef dit avontuur samen!</span> </p>
+    <p class="hide__mobile body__home"><a class="familiedag__cta" href="index.php?page=programma&zaterdag=dag">Onze familiedag</a></p>
   </div>
   <div class="familiedag__img">
     <picture class="familiedag__image">
@@ -131,6 +169,7 @@
       alt="sfeerfoto 1 familiedag">
     </picture>
   </div>
+  <p class="show__mobile body__home"><a class="familiedag__cta" href="index.php?page=programma&zaterdag=dag">Onze familiedag</a></p>
   </div>
 </article>
 
