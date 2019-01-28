@@ -1,28 +1,7 @@
 <section class="detail">
-<header class="">
+<header>
   <h2 class="heading-1 hidden"><?php echo $act["act_naam"];?></h2>
   <div class="detail__prog">
-    <!-- <picture class="praktisch__1">
-        <source type="image/webp" srcset="./assets/img/bg/1_100.webp">
-        <source type="image/png" srcset="./assets/img/bg/1_100.png">
-        <img src="./assets/img/bg/1_100.png" alt="background detailpagina">
-      </picture>
-      <picture class="praktisch__2">
-        <source type="image/webp" srcset="./assets/img/bg/2_100.webp">
-        <source type="image/png" srcset="./assets/img/bg/2_100.png">
-        <img src="./assets/img/bg/2_100.png" alt="background detailpagina">
-      </picture>
-      <picture class="praktisch__3">
-        <source type="image/webp" srcset="./assets/img/bg/3_100.webp">
-        <source type="image/png" srcset="./assets/img/bg/3_100.png">
-        <img src="./assets/img/bg/3_100.png" alt="background detailpagina">
-      </picture>
-      <picture class="praktisch__4">
-        <source type="image/webp" srcset="./assets/img/bg/detail_100.webp">
-        <source type="image/png" srcset="./assets/img/bg/detail_100.png">
-        <img src="./assets/img/bg/detail_100.png" alt="background detailpagina">
-      </picture> -->
-    <!-- <img src="./assets/img/bg/1_100.png" alt="achtergrond" class="hidden"> -->
   </div>
 </header>
 
@@ -31,23 +10,23 @@
   <h3 class="heading-2 hidden">In de kijker</h3>
   <p class="detail__terug"><a class="container detail__link body__home terug" href="index.php?page=programma">Terug naar programma</a></p>
 
-  <section class="detail__informatie">
-    <div class="beeld__tekst container">
+  <section class="detail__informatie container">
+    <div class="beeld__tekst">
       <h4 class="beeld__titel body__home"><?php echo $act["artiest_naam"]?> stelt voor</h4>
       <p class="heading-1 titel__home"><?php echo $act["act_naam"];?></p>
       <p class="detail__omschrijving body__home"><?php echo $act["omschrijving"];?></p>
-      <button class=" aanwezig detail__link body__home" href="https://www.facebook.com">
+      <a class="facebook__link detail__link body__home" href="https://www.facebook.com">
         <picture>
           <source srcset="./assets/img/social/facebook_67.webp" type="image/webp">
           <source srcset="./assets/img/social/facebook_67.png" type="image/png">
           <img class = "facebook" src="./assets/img/social/facebook_67.webp" alt="Facebook">
         </picture>
         <p class="aanwezig">Ik ben aanwezig</p>
-      </button>
+      </a>
     </div>
 
-    <div class="beeld__groot container">
-    <picture class="beeld__headerimage">
+    <div class="beeld__groot">
+      <picture class="beeld__headerimage">
             <source
             type="image/webp"
             srcset="
@@ -70,14 +49,14 @@
             <source
             type="image/jpg"
             srcset="
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.webp 100w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.webp 195w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.webp 480w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.webp 640w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.webp 720w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.webp 816w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.webp  960w,
-            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.webp 1200w
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_10.jpg 100w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_20.jpg 195w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_33.jpg 480w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_50.jpg 640w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_67.jpg 720w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_75.jpg 816w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_85.jpg  960w,
+            assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg 1200w
             "
             sizes="(min-width: 1440px) 59rem,
             (min-width: 1024px) 47rem,
@@ -87,23 +66,23 @@
             "
             />
             <img class="beeld__headerimg"
-            src="<?php echo $grootAfbeelding["afbeelding"];?>"
+            src="assets/img/<?php echo $grootAfbeelding["afbeelding"];?>_100.jpg"
             alt="<?php echo $act["act_naam"];?>" />
         </picture>
         </div>
 
     <div class="informatie__mobile">
-      <p class="heading-1 titel__home container"><?php echo $act["act_naam"];?></p>
-      <p class="body__home colored__tekst container"><?php echo $act["datum"];?> | <?php echo $act["beginuur"];?></p>
+      <p class="heading-1 titel__home"><?php echo $act["act_naam"];?></p>
+      <p class="body__home colored__tekst"><?php echo $act["datum"];?> | <?php echo $act["beginuur"];?></p>
     </div>
-
+    <nav class="detail__bekijkmeer">
+      <h4 class="hidden">Bekijk meer acts</h4>
+      <a class="detail__link body__home bekijkmeer" href="index.php?page=detail&amp;id=<?php echo $previous ?>">&#10094;</a>
+      <a class="detail__link body__home bekijkmeer" href="index.php?page=detail&amp;id=<?php echo $next ?>">&#10095;</a>
+    </nav>
   </section>
 
-  <nav class="detail__bekijkmeer container">
-      <h4 class="hidden">Bekijk meer acts</h4>
-      <a class="detail__link body__home" href="index.php?page=detail&amp;id=<?php echo $previous ?>"><- previous</a>
-      <a class="detail__link body__home" href="index.php?page=detail&amp;id=<?php echo $next ?>">next -></a>
-  </nav>
+
 </article>
 
 <article class='detail__praktisch'>

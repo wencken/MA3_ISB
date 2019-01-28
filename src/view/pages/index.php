@@ -1,28 +1,16 @@
 <section class="home">
-<header class="home__header">
+<header class="home__header" >
   <h2 class="heading-1 hidden">Home</h2>
   <a class="header__cta body__home" href="#spektakel"><span class="header__hidden">Ontdek</span></a>
   <a class="header__cta__mobile body__home" href="index.php?page=programma"><span class="header__mobile">Ontdek het programma</span></a>
- <!-- <picture>
-    <source srcset="./assets/img/header/header4_100.webp" type="image/webp">
-    <source srcset="./assets/img/header/header4_100.png" type="image/png">
-    <img class="home__header" src="./assets/img/header/header4_100.png" alt="hoofdingsafbeelding">
-  </picture>
+<!--
   <picture>
-    <source srcset="./assets/img/header/header3_100.webp" type="image/webp">
-    <source srcset="./assets/img/header/header3_100.png" type="image/png">
-    <img class="home__header" src="./assets/img/header/header3_100.png" alt="hoofdingsafbeelding">
-  </picture>
-  <picture>
-    <source srcset="./assets/img/header/header2_100.webp" type="image/webp">
-    <source srcset="./assets/img/header/header2_100.png" type="image/png">
+    <source media="(max-width: 768px)" srcset="./assets/img/header/header4_100.png, ./assets/img/header/header4_100.webp">
+    <source media="(max-width: 1024px)" srcset="./assets/img/header/header3_100.png, ./assets/img/header/header3_100.webp">
+    <source media="(max-width: 1440px)" srcset="./assets/img/header/header2_100.png, ./assets/img/header/header2_100.webp">
+    <source media="(max-width: 1560px)" srcset="./assets/img/header/header1_100.png, ./assets/img/header/header1_100.webp">
     <img class="home__header" src="./assets/img/header/header2_100.png" alt="hoofdingsafbeelding">
-  </picture>
-  <picture>
-    <source srcset="./assets/img/header/header1_100.webp" type="image/webp">
-    <source srcset="./assets/img/header/header1_100.png" type="image/png">
-    <img class="home__header" src="./assets/img/header/header1_100.png" alt="hoofdingsafbeelding">
-  <picture> -->
+  </picture> -->
 </header>
 
 <article class="spektakel container" id="spektakel">
